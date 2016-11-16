@@ -550,3 +550,1380 @@ WHERE fk.referenced_column_name is not null
   [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `users`
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (9.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateGenderTypes (20161115210217)
+  [1m[35m (25.6ms)[0m  CREATE TABLE `gender_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210217')
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCivilStatusTypes (20161115210249)
+  [1m[35m (22.4ms)[0m  CREATE TABLE `civil_status_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210249')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRegions (20161115210256)
+  [1m[35m (29.8ms)[0m  CREATE TABLE `regions` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210256')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProvinces (20161115210307)
+  [1m[35m (28.2ms)[0m  CREATE TABLE `provinces` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `region_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210307')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCommunes (20161115210319)
+  [1m[35m (29.5ms)[0m  CREATE TABLE `communes` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `province_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210319')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRetirementSystemTypes (20161115210621)
+  [1m[35m (27.9ms)[0m  CREATE TABLE `retirement_system_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210621')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActivityTypes (20161115210626)
+  [1m[35m (30.0ms)[0m  CREATE TABLE `activity_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210626')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocialRecordStatusTypes (20161115210631)
+  [1m[35m (29.1ms)[0m  CREATE TABLE `social_record_status_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210631')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRelationshipTypes (20161115210635)
+  [1m[35m (29.1ms)[0m  CREATE TABLE `relationship_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210635')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBenefitTypes (20161115210639)
+  [1m[35m (29.6ms)[0m  CREATE TABLE `benefit_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210639')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProjectStateTypes (20161115210644)
+  [1m[35m (28.5ms)[0m  CREATE TABLE `project_state_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210644')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSupportTypes (20161115210649)
+  [1m[35m (28.7ms)[0m  CREATE TABLE `support_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210649')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOwnerTypes (20161115210654)
+  [1m[35m (28.6ms)[0m  CREATE TABLE `owner_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210654')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMiningPropertiesConstitutionTypes (20161115210702)
+  [1m[35m (28.3ms)[0m  CREATE TABLE `mining_properties_constitution_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210702')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOperationTypes (20161115210708)
+  [1m[35m (28.9ms)[0m  CREATE TABLE `operation_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210708')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExtractedMineralTypes (20161115210713)
+  [1m[35m (29.7ms)[0m  CREATE TABLE `extracted_mineral_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210713')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'activity_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `activity_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'asociative_users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `asociative_users`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'benefit_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `benefit_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'civil_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `civil_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'communes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `communes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'extracted_mineral_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `extracted_mineral_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'gender_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `gender_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'mining_properties_constitution_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mining_properties_constitution_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'operation_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `operation_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'owner_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `owner_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'project_state_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `project_state_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'provinces'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `provinces`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'regions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `regions`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'relationship_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `relationship_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'retirement_system_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `retirement_system_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'social_record_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `social_record_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'support_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `support_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Masculino', '2016-11-16 14:20:13', '2016-11-16 14:20:13')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Femenino', '2016-11-16 14:20:13', '2016-11-16 14:20:13')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateScholarshipTypes (20161116143929)
+  [1m[35m (25.9ms)[0m  CREATE TABLE `scholarship_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116143929')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTrainingTypes (20161116144614)
+  [1m[35m (28.8ms)[0m  CREATE TABLE `training_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116144614')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMiningInformationAvailableTypes (20161116152820)
+  [1m[35m (5.9ms)[0m  CREATE TABLE `mining_information_available_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116152820')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'activity_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `activity_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'asociative_users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `asociative_users`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'benefit_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `benefit_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'civil_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `civil_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'communes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `communes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'extracted_mineral_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `extracted_mineral_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'gender_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `gender_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'mining_information_available_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mining_information_available_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'mining_properties_constitution_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mining_properties_constitution_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'operation_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `operation_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'owner_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `owner_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'project_state_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `project_state_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'provinces'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `provinces`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'regions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `regions`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'relationship_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `relationship_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'retirement_system_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `retirement_system_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'scholarship_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `scholarship_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'social_record_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `social_record_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'support_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `support_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'training_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `training_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Masculino', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Femenino', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Soltero/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Casado/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Divorciado/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Viudo/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Básica Completa', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Básica incompleta', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Media Completa', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Media Incompleta', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Técnica Completa', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Técnica Incompleta', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Universitaria Completa', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Universitaria Incompleta', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Ninguna', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('No Cotiza', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('AFP', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('INP', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('Jubilación', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Comercio', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Servicio', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('No tiene otra actividad', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Minería', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Agricultura', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Pesca', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Industrial', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Registro Social de Hogares (RSH)', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('No posee Ficha', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Ficha en trámite', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Jefe de Hogar', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Cónyuge', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Hijo/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Tío/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Hermano/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Cuñado/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Sobrino/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Nieto/a', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Yerno/Nuera', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Madre', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Padre', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Allegado', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Coviviente', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Otro', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Desarrollo de Labores', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Compra de equipos', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Capacitación', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Asistencia Técnica', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('En Gestación', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('En Desarrollo', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('Rechazado', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('Finalizado', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Municipalidad', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('ONG', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Fosis', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Prodesal', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('SAG', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sernam', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Proempleo', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('ChileBarrio', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sence', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sercotec', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Corfo', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Otros', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Ninguno', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `owner_types` (`name`, `created_at`, `updated_at`) VALUES ('Propia', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `owner_types` (`name`, `created_at`, `updated_at`) VALUES ('Arrendada', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Manifestación', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Mensura', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Sentencia Constitutiva', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Desmonte', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Pique', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Socavón', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Rajo Abierto', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Minerales Extraídos', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Óxido de Cobre', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Sulfuro de Cobre', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Otros Minerales Extraídos', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Topografía', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Geología', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Sondaje', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Plan de Explotación', '2016-11-16 15:30:52', '2016-11-16 15:30:52')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('No Tiene', '2016-11-16 15:30:52', '2016-11-16 15:30:52')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mMiningPropertiesConstitutionType Load (0.4ms)[0m  [1mSELECT `mining_properties_constitution_types`.* FROM `mining_properties_constitution_types`[0m
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20161114202632)
+  [1m[35m (27.5ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (4.3ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (3.7ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161114202632')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20161114202643)
+  [1m[35m (26.8ms)[0m  CREATE TABLE `admins` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (4.3ms)[0m  [1mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  [1m[35m (4.1ms)[0m  CREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161114202643')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAsociativeUsers (20161115175201)
+  [1m[35m (26.4ms)[0m  CREATE TABLE `asociative_users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (4.9ms)[0m  [1mCREATE UNIQUE INDEX `index_asociative_users_on_email`  ON `asociative_users` (`email`) [0m
+  [1m[35m (4.5ms)[0m  CREATE UNIQUE INDEX `index_asociative_users_on_reset_password_token`  ON `asociative_users` (`reset_password_token`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115175201')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGenderTypes (20161115210217)
+  [1m[35m (29.1ms)[0m  CREATE TABLE `gender_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210217')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCivilStatusTypes (20161115210249)
+  [1m[35m (28.9ms)[0m  CREATE TABLE `civil_status_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210249')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRegions (20161115210256)
+  [1m[35m (26.9ms)[0m  CREATE TABLE `regions` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210256')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProvinces (20161115210307)
+  [1m[35m (27.1ms)[0m  CREATE TABLE `provinces` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `region_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210307')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCommunes (20161115210319)
+  [1m[35m (27.4ms)[0m  CREATE TABLE `communes` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `province_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210319')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRetirementSystemTypes (20161115210621)
+  [1m[35m (27.9ms)[0m  CREATE TABLE `retirement_system_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210621')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActivityTypes (20161115210626)
+  [1m[35m (28.8ms)[0m  CREATE TABLE `activity_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210626')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocialRecordStatusTypes (20161115210631)
+  [1m[35m (26.6ms)[0m  CREATE TABLE `social_record_status_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210631')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRelationshipTypes (20161115210635)
+  [1m[35m (27.6ms)[0m  CREATE TABLE `relationship_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210635')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBenefitTypes (20161115210639)
+  [1m[35m (27.6ms)[0m  CREATE TABLE `benefit_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210639')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProjectStateTypes (20161115210644)
+  [1m[35m (26.7ms)[0m  CREATE TABLE `project_state_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210644')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSupportTypes (20161115210649)
+  [1m[35m (26.9ms)[0m  CREATE TABLE `support_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210649')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOwnerTypes (20161115210654)
+  [1m[35m (26.8ms)[0m  CREATE TABLE `owner_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210654')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMiningPropertiesConstitutionTypes (20161115210702)
+  [1m[35m (27.0ms)[0m  CREATE TABLE `mining_properties_constitution_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210702')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOperationTypes (20161115210708)
+  [1m[35m (28.5ms)[0m  CREATE TABLE `operation_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210708')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExtractedMineralTypes (20161115210713)
+  [1m[35m (27.6ms)[0m  CREATE TABLE `extracted_mineral_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161115210713')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScholarshipTypes (20161116143929)
+  [1m[35m (5.8ms)[0m  CREATE TABLE `scholarship_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116143929')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTrainingTypes (20161116144614)
+  [1m[35m (4.9ms)[0m  CREATE TABLE `training_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116144614')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMiningInformationAvailableTypes (20161116152820)
+  [1m[35m (4.7ms)[0m  CREATE TABLE `mining_information_available_types` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161116152820')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'activity_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `activity_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'asociative_users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `asociative_users`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'benefit_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `benefit_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'civil_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `civil_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'communes'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `communes`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'extracted_mineral_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `extracted_mineral_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'gender_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `gender_types`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'mining_information_available_types'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `mining_information_available_types`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'mining_properties_constitution_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mining_properties_constitution_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'operation_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `operation_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'owner_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `owner_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'project_state_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `project_state_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'provinces'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `provinces`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'regions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `regions`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'relationship_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `relationship_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'retirement_system_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `retirement_system_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'scholarship_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `scholarship_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'social_record_status_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `social_record_status_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'support_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `support_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'training_types'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `training_types`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'pamma_dev'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Masculino', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `gender_types` (`name`, `created_at`, `updated_at`) VALUES ('Femenino', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Soltero/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Casado/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Divorciado/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `civil_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Viudo/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Básica Completa', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Básica incompleta', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Media Completa', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Media Incompleta', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Técnica Completa', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Técnica Incompleta', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Universitaria Completa', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Universitaria Incompleta', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `scholarship_types` (`name`, `created_at`, `updated_at`) VALUES ('Ninguna', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('No Cotiza', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('AFP', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('INP', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `retirement_system_types` (`name`, `created_at`, `updated_at`) VALUES ('Jubilación', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Comercio', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Servicio', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('No tiene otra actividad', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `activity_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Minería', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Agricultura', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Pesca', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Industrial', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `training_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Registro Social de Hogares (RSH)', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('No posee Ficha', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `social_record_status_types` (`name`, `created_at`, `updated_at`) VALUES ('Ficha en trámite', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Jefe de Hogar', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Cónyuge', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Hijo/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Tío/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Hermano/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Cuñado/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Sobrino/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Nieto/a', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Yerno/Nuera', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Madre', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Padre', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Allegado', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Coviviente', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `relationship_types` (`name`, `created_at`, `updated_at`) VALUES ('Otro', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Desarrollo de Labores', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Compra de equipos', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Capacitación', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Asistencia Técnica', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `benefit_types` (`name`, `created_at`, `updated_at`) VALUES ('Otra', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('En Gestación', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('En Desarrollo', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('Rechazado', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `project_state_types` (`name`, `created_at`, `updated_at`) VALUES ('Finalizado', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Municipalidad', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('ONG', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Fosis', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Prodesal', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('SAG', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sernam', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Proempleo', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('ChileBarrio', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sence', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Sercotec', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Corfo', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Otros', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `support_types` (`name`, `created_at`, `updated_at`) VALUES ('Ninguno', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `owner_types` (`name`, `created_at`, `updated_at`) VALUES ('Propia', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `owner_types` (`name`, `created_at`, `updated_at`) VALUES ('Arrendada', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Manifestación', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Mensura', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `mining_properties_constitution_types` (`name`, `created_at`, `updated_at`) VALUES ('Sentencia Constitutiva', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Desmonte', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Pique', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Socavón', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Rajo Abierto', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `operation_types` (`name`, `created_at`, `updated_at`) VALUES ('Minerales Extraídos', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Óxido de Cobre', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Sulfuro de Cobre', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `extracted_mineral_types` (`name`, `created_at`, `updated_at`) VALUES ('Otros Minerales Extraídos', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Topografía', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Geología', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Sondaje', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('Plan de Explotación', '2016-11-16 15:31:34', '2016-11-16 15:31:34')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `mining_information_available_types` (`name`, `created_at`, `updated_at`) VALUES ('No Tiene', '2016-11-16 15:31:34', '2016-11-16 15:31:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProjectStateType Load (0.3ms)[0m  [1mSELECT `project_state_types`.* FROM `project_state_types`[0m
