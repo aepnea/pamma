@@ -1,3 +1,8 @@
+<%= link_to destroy_user_session_path, method: :delete do%>
+  <p class="current">Salir</p>
+<% end %>
+
+
 <div class="intro mdl-cell mdl-cell--6-col">
   <p>El programa PAMMA se define como un instrumento destinado al mejoramiento cualitativo y de gestión del sector minero artesanal que presenta dificultades de operación, siendo fuente de trabajo para un significativo número de pequeños productores, especialmente en el norte del país.</p>
 
@@ -13,8 +18,10 @@
     <h3>¿Quieres recibir beneficios de PAMMA?</h3>
     <p>Es facil, debes crear una cuenta...</p>
 
-    <%= link_to "Crear ficha individual", new_user_session_path, :class => "button-individual" %>
+    <%= link_to "Crear ficha individual", new_user_registration_path, :class => "button-individual" %>
 
-    <%= link_to "Crear ficha asociativa", new_user_session_path, :class => "button-asociativa" %>
+    <%= link_to "Crear ficha asociativa", new_asociative_user_registration_path, :class => "button-asociativa" %>
   </div>
+
+
 </div>

@@ -20,6 +20,30 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+### Validando campos al registrarse
+
+
+validates :minning_society_name, presence: true
+validates :minning_society_rut, presence: true
+validates :first_name, presence: true
+validates :last_name, presence: true
+validates :surname, presence: true
+validates :rut, presence: true
+validates :birthdate, presence: true
+validates :gender_id, presence: true
+validates :civil_status_id, presence: true
+validates :address, presence: true
+validates :village, presence: true
+validates :mobile, presence: true
+validates :landline, presence: true
+validates :region_id, presence: true
+validates :province_id, presence: true
+validates :commune_id, presence: true
+
+
+
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
