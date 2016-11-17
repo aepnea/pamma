@@ -272,11 +272,6 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-<<<<<<< HEAD
 config.scoped_views = true
 
-=======
-
-  config.scoped_views = true
->>>>>>> origin/login
 end
