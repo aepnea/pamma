@@ -10,7 +10,7 @@ default: &default
 #  password: ""
 #  socket: /tmp/mysql.sock
 #### kana
-  password: "root"
+  password: ""
   socket: /tmp/mysql.sock
 
 

@@ -11,17 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161116202632) do
-=======
-ActiveRecord::Schema.define(version: 20161116152820) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
->>>>>>> master
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
