@@ -6,9 +6,13 @@ default: &default
 ### dev
 #  password: "nodriza.01"
 #  socket: /var/lib/mysql/mysql.sock
-####mac
-  password: ""
+#### juano
+#  password: ""
+#  socket: /tmp/mysql.sock
+#### kana
+  password: "root"
   socket: /tmp/mysql.sock
+
 
 development:
   <<: *default
