@@ -601,3 +601,2823 @@ Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-11-15 20:32:20 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 13:06:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (296.6ms)
+Completed 200 OK in 962ms (Views: 882.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 13:25:14 -0300
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'home/index'` to `controller: 'home/index'`. (called from block (2 levels) in <top (required)> at /Users/oroborusm/Dropbox/pamma/config/routes.rb:18)
+
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  config/routes.rb:18:in `block (2 levels) in <top (required)>'
+  config/routes.rb:13:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (161.9ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (265.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 13:27:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4332ms (Views: 4310.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-16 13:27:08 -0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-16 13:27:08 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 13:35:15 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 728ms (Views: 727.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 13:35:16 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 13:35:26 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 13:35:26 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 14:04:18 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 9 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    2: <html>
+    3: <head>
+    4:   <title>Pamma</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/app.sass:5
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___4287016152777046370_70308904367080'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.9ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (140.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 14:05:44 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+WARNING on line 5 of /Users/oroborusm/Dropbox/pamma/app/assets/stylesheets/app.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 16 of /Users/oroborusm/Dropbox/pamma/app/assets/stylesheets/app.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 27 of /Users/oroborusm/Dropbox/pamma/app/assets/stylesheets/app.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 39 of /Users/oroborusm/Dropbox/pamma/app/assets/stylesheets/app.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: Only properties may be nested beneath properties.):
+    2: <html>
+    3: <head>
+    4:   <title>Pamma</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/app.sass:5
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___4287016152777046370_70308904367080'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.1ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 14:06:49 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 373ms (Views: 372.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-846c7bcde26c87ab8318fb870a4ff5ed26beb37af0f24d6780268382f3a1e85e.css?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 14:06:50 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 14:23:05 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 269ms (Views: 268.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 14:23:06 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 14:23:27 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/gobcl_regular-webfont.woff2"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (149.0ms)
+
+
+Started GET "/assets/gobcl_regular-webfont.woff" for ::1 at 2016-11-16 14:23:28 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/gobcl_regular-webfont.woff"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (117.2ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (93.1ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (212.6ms)
+
+
+Started GET "/assets/gobcl_regular-webfont.ttf" for ::1 at 2016-11-16 14:23:28 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/gobcl_regular-webfont.ttf"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (115.0ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (183.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 14:25:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1592ms (Views: 1570.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 14:25:34 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 14:25:46 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:33:43 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 256ms (Views: 250.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:33:43 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:34:18 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:34:18 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:40:13 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 111ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:40:13 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:41:07 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:41:07 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:41:09 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:41:09 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 16:44:53 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:44:53 -0300
+
+
+Started GET "/images/logo-ministerio.png" for ::1 at 2016-11-16 16:44:53 -0300
+
+ActionController::RoutingError (No route matches [GET] "/images/logo-ministerio.png"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/oroborusm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (200.1ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (180.3ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/oroborusm/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (264.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 16:45:25 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 500ms (Views: 499.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 16:45:25 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:11:49 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 340ms (Views: 339.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/app.self-f437300ffc005c45382fd1243f8f0f398e2204482254cee4840d198472e5aad3.css?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 17:11:49 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:26:56 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 658ms (Views: 653.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 17:26:57 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:49:28 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7014ms (Views: 7007.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-b497bd83848ba10687f3f10087d9499dd2cd7fdf982601036bfee9c6ac2b42b9.css?body=1" for ::1 at 2016-11-16 17:49:36 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 17:49:37 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:51:43 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1939ms (Views: 1932.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 17:51:45 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 17:51:45 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/app.self-b497bd83848ba10687f3f10087d9499dd2cd7fdf982601036bfee9c6ac2b42b9.css?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 17:51:46 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 17:51:47 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:52:16 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4091ms (Views: 4069.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/app.self-faf7c782b03c0ed72ca254a3113d251cbc9fcb3e905ef60b30c66adca8d641b0.css?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 17:52:21 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:53:32 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4875ms (Views: 4872.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/app.self-3c62a36fa581ab3d1c64036b99ae045b636e0890845f0c0d26407edad053d6ab.css?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 17:53:38 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 17:53:39 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 17:53:39 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 17:59:25 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 66079ms (Views: 63293.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 18:01:03 -0300
+
+
+Started GET "/assets/app.self-af4e0d11e356628552ab24ef955986bac8af5cb5fdbec51cb0aec59bf928aaa2.css?body=1" for ::1 at 2016-11-16 18:01:09 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 18:01:09 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 18:01:09 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 18:01:10 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 18:01:10 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 18:01:11 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 18:01:13 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 18:01:13 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 18:01:14 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 18:01:14 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 18:03:28 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3856ms (Views: 3755.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 18:03:51 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 18:03:55 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 18:03:56 -0300
+
+
+Started GET "/assets/app.self-af4e0d11e356628552ab24ef955986bac8af5cb5fdbec51cb0aec59bf928aaa2.css?body=1" for ::1 at 2016-11-16 18:03:56 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 18:03:56 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 18:03:56 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 18:03:57 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 18:03:57 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 18:03:57 -0300
+
+
+Started GET "/assets/logo-ministerio-07314a5daa3544ba8a8974c147f150da118366f1996112af9374283cffc7dae4.png" for ::1 at 2016-11-16 18:03:58 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:02:52 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1018ms (Views: 966.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:02:54 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:05:45 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:05:45 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:05:52 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 150ms (Views: 149.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:05:52 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:09:58 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 553ms (Views: 552.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-1ef97f9e1dfaf823ab11767036fffb314de20c9f5534bd8912d3ff90a59c0444.css?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:09:59 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:23:51 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 140ms (Views: 139.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/app.self-f7696aaf38d24685b693c9b96cbeb88d43adb1e47d731c3af16aebf6af652147.css?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:23:51 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:24:32 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 121ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-8eff82e5310733d67853b42181157e6e3cf7b480a22ee03e66adc3082af5c408.css?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:24:32 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:24:33 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:28:50 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 208ms (Views: 207.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:28:50 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:28:50 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:28:50 -0300
+
+
+Started GET "/assets/app.self-fea870f2324ad06811dbccaaf8726b57465b96bd4016f059252cb1703819a3e1.css?body=1" for ::1 at 2016-11-16 20:28:50 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:28:51 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:32:20 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-fea870f2324ad06811dbccaaf8726b57465b96bd4016f059252cb1703819a3e1.css?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:32:20 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:33:53 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 142ms (Views: 141.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/app.self-43cefc19d76b7042d3a1acfd1d351d1215f594d67a67ca76a491bac2ed8269b8.css?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:33:53 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:33:54 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:33:54 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:34:52 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/app.self-43cefc19d76b7042d3a1acfd1d351d1215f594d67a67ca76a491bac2ed8269b8.css?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:34:52 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:34:53 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:35:05 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/app.self-f66740d2013143f2dc0cfbf724d222a5f904e500e4913510ddf1d8e038d3cd89.css?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:35:05 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:35:06 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:35:32 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-36050533d995d643ca6f3a02dd27d4b7320a2ec8005d263d731ebbe203a682f8.css?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:35:33 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:35:46 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/app.self-e4897fd6826d6ea1cb650043f87b077d1b1ca2559e1a38b30a1869f7cb2adf43.css?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:35:46 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:35:47 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:36:12 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 142ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/app.self-75e855f1e6b6af52fc052deefcaf14622e7e16a3a6661804113a5cad712e6e89.css?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:36:12 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:37:56 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 422ms (Views: 421.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-255729546da42e58211bd4010f45cafd7d9eea2cfb7a1f19862f17e79361de79.css?body=1" for ::1 at 2016-11-16 20:37:56 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 20:37:56 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:37:57 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:39:13 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 240ms (Views: 238.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-81323729bd1db7d91d0474fa0d0c9e580d2e1f95284e6357c49cc4efb42bc543.css?body=1" for ::1 at 2016-11-16 20:39:14 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:39:14 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:46:10 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-81323729bd1db7d91d0474fa0d0c9e580d2e1f95284e6357c49cc4efb42bc543.css?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:46:10 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:47:21 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 135ms (Views: 134.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-f03d1d06a70d0aa22ec44525714971932330382d84e51c9793314bdfd9b87149.css?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:47:21 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 20:48:03 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 150ms (Views: 149.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/app.self-b0b75e559e5ae181e5bcc087364b41e53702960083f2fed794eda9d82659bd9d.css?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 20:48:03 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 22:14:47 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 86ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 22:14:47 -0300
+
+
+Started GET "/assets/app.self-b0b75e559e5ae181e5bcc087364b41e53702960083f2fed794eda9d82659bd9d.css?body=1" for ::1 at 2016-11-16 22:14:47 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 22:14:47 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 22:14:48 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:02:27 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/app.self-b0b75e559e5ae181e5bcc087364b41e53702960083f2fed794eda9d82659bd9d.css?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:02:27 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:06:23 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 172ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/app.self-b0b75e559e5ae181e5bcc087364b41e53702960083f2fed794eda9d82659bd9d.css?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:06:23 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:09:47 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 150ms (Views: 149.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/app.self-b0b75e559e5ae181e5bcc087364b41e53702960083f2fed794eda9d82659bd9d.css?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:09:47 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:09:48 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:09:48 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:10:07 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 234ms (Views: 232.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/app.self-3472c1081199e46b09fcbe25802ac52a2542768848a344c3a3c0437e09fc54a3.css?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:10:07 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:10:58 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 154ms (Views: 153.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/app.self-9c3d2f4d9aac2fae9056542ab7b0c27fda0f79c10edfecaefd2d4dd1dea27e0a.css?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:10:58 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:10:59 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:10:59 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:11:45 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-9c3d2f4d9aac2fae9056542ab7b0c27fda0f79c10edfecaefd2d4dd1dea27e0a.css?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:11:45 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:13:16 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/app.self-9c3d2f4d9aac2fae9056542ab7b0c27fda0f79c10edfecaefd2d4dd1dea27e0a.css?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:13:16 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:13:26 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/app.self-9c3d2f4d9aac2fae9056542ab7b0c27fda0f79c10edfecaefd2d4dd1dea27e0a.css?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:13:26 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:20:28 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 328ms (Views: 327.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:20:28 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:20:29 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:20:29 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:20:29 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:20:29 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:22:27 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:22:27 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:28:53 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:28:53 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:29:04 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:29:04 -0300
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:29:05 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:29:54 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:29:54 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:34:41 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/app.self-d8d45763dfcc340bad088fb92a30405408f8603be3902594b76720d810b78591.css?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:34:41 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:36:04 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 328ms (Views: 327.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-ed740145ad375119349df8b72426f19e3a2e3f4f7c3c7cf46195dfc022242096.css?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:36:05 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:38:31 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 176ms (Views: 175.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-54754595d992a76727eafb83dfc6cd7ba1366773ff92c8b33810d7a190a7b185.css?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:38:31 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:38:32 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:38:32 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:38:32 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:38:32 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:39:37 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 136ms (Views: 135.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/app.self-0442c0c5dc7bd7837f7288b05dee83a1da92fe3c70dfb45d02c546552af6baf1.css?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:39:37 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:39:38 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:39:58 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 144ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-53d6f65461e24f58e8acdcfc1bb68123c0aefdc91acbc19fce54171950410cc4.css?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:39:59 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:41:51 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 162ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-eb9856c367f1627fe254ee28cdf00f342daafdf70f86904148c0a71d998c8cb1.css?body=1" for ::1 at 2016-11-16 23:41:51 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:41:51 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:41:51 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:43:32 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 179ms (Views: 178.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-67a9038768c5326f965946eabe7b6ef02023413abb65b8f6da619ce9bf44f178.css?body=1" for ::1 at 2016-11-16 23:43:32 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:43:32 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:43:32 -0300
+
+
+Started GET "/assets/gobcl_light-webfont.woff2" for ::1 at 2016-11-16 23:43:32 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:43:49 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 174ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-0bba968c7691cb472edb82d424ac67c69b13168975f310dfc0e0de82669c59f3.css?body=1" for ::1 at 2016-11-16 23:43:49 -0300
+
+
+Started GET "/assets/gobcl_light-webfont.woff2" for ::1 at 2016-11-16 23:43:49 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:43:49 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:43:49 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:44:26 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 358ms (Views: 357.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/app.self-1924ae91dc12cf9e0dd147b158637217f22fd73b525403f0fabaaf7eb7bf0a27.css?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/gobcl_light-webfont.woff2" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:44:27 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:44:40 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 184ms (Views: 183.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-1a059d161de219bccf75e39423f5ec837a3eff9eab49eae4e3ff413ff0d60bfe.css?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:44:40 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:44:41 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:44:41 -0300
+
+
+Started GET "/assets/gobcl_light-webfont.woff2" for ::1 at 2016-11-16 23:44:41 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:44:41 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:44:41 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:44:52 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 177ms (Views: 176.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/app.self-8b025778ab1ec5068aac96f6d9ff83b1340cecc15649ee2355b254c2840e42f9.css?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:44:53 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:47:36 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/app.self-8b025778ab1ec5068aac96f6d9ff83b1340cecc15649ee2355b254c2840e42f9.css?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:47:36 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:49:03 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+WARNING on line 96 of /Users/oroborusm/Dropbox/pamma/app/assets/stylesheets/app.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Completed 200 OK in 188ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/app.self-53d53571da47dccaf940a844159178931bf39d066d94271f8d42d3b99e16bde8.css?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:49:03 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:49:25 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 165ms (Views: 164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/app.self-efeb0f0f3d9c4829ee8e083be958df03beb2ec012f518ec3dbbf65226e5b08fd.css?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:49:25 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:49:26 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:49:26 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:49:37 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 176ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-712f959b8274ba871ad99d2798e58f79e4b79c20f52842565844613ec90c40b1.css?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:49:37 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:50:02 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 164ms (Views: 163.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/app.self-868c6aaa5740b54bbf1dc2c39fea41f0b713422372cfb23af924bf987461aec5.css?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:50:03 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:50:20 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 197ms (Views: 196.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-79702529e8b3ca578bd593db184a266c7c9f2de1847407907b9bb21abc6150d6.css?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:50:21 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:51:37 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157ms (Views: 156.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/material.self-edf91baa5f145acee1ef4f2686b840ab9a85020243790c45695dd9fd5beb9684.css?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/app.self-a61e32574dfb6cd692c6978a52b21070c389cd7657e2a2017a4c4def6c938b53.css?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/material.self-59066ca1157c794a94e55f42c49e74f1cb60002b787783f3234aaef5c76fdb8c.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/app.self-8642f6a0b04cbeea8004e8f31dc38291bef37ee02fa45a4f23532be83bb3b6cb.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/logo-ministerio-daefaf80818b1b51c1c85dc7c2b509e0173ef9188a6cb088fe5df559a562c35b.png" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/assets/logo-footer-540a846975524924a2bc9f44cda8dfc4a147a4b798b0b17cc089de9563974065.png" for ::1 at 2016-11-16 23:51:38 -0300
+
+
+Started GET "/" for ::1 at 2016-11-16 23:51:57 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 163ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-0d32f543bec8c1e86973d35205ff70c5d3943d9d096e4860cff3c31b1ec93e16.css?body=1" for ::1 at 2016-11-16 23:51:57 -0300
+
+
+Started GET "/assets/gobcl_regular-webfont.woff2" for ::1 at 2016-11-16 23:51:58 -0300
+
+
+Started GET "/assets/gobcl_bold-webfont.woff2" for ::1 at 2016-11-16 23:51:58 -0300

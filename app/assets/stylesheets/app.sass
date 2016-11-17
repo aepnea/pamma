@@ -1,0 +1,113 @@
+@font-face
+  font-family: 'gobclbold'
+  src: url('/assets/gobcl_bold-webfont.eot')
+  src: url('/assets/gobcl_bold-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_bold-webfont.woff2') format('woff2'),url('/assets/gobcl_bold-webfont.woff') format('woff'),url('/assets/gobcl_bold-webfont.ttf') format('truetype'),url('/assets/gobcl_bold-webfont.svg#gobclbold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'gobclheavy'
+  src: url('/assets/gobcl_heavy-webfont.eot')
+  src: url('/assets/gobcl_heavy-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_heavy-webfont.woff2') format('woff2'),url('/assets/gobcl_heavy-webfont.woff') format('woff'),url('/assets/gobcl_heavy-webfont.ttf') format('truetype'),url('/assets/gobcl_heavy-webfont.svg#gobclheavy') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'gobcllight'
+  src: url('/assets/gobcl_light-webfont.eot')
+  src: url('/assets/gobcl_light-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_light-webfont.woff2') format('woff2'),url('/assets/gobcl_light-webfont.woff') format('woff'),url('/assets/gobcl_light-webfont.ttf') format('truetype'),url('/assets/gobcl_light-webfont.svg#gobcllight') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'gobclregular'
+  src: url('/assets/gobcl_regular-webfont.eot')
+  src: url('/assets/gobcl_regular-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_regular-webfont.woff2') format('woff2'),url('/assets/gobcl_regular-webfont.woff') format('woff'),url('/assets/gobcl_regular-webfont.ttf') format('truetype'),url('/assets/gobcl_regular-webfont.svg#gobclregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+html,
+body
+  font-family: 'gobclregular'
+header
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  flex-wrap: nowrap
+  justify-content: flex-start
+  height: initial
+  transition-property: max-height, box-shadow
+  .mdl-layout__header-row
+    height: 100%
+    margin: 0 auto
+    max-width: 1100px
+    padding: 0
+    width: 100%
+    .logo-container
+      width: 150px
+      img.logo
+        width: 100%
+    .txt-logo
+      font-size: 16px
+      font-family: 'gobclregular'
+      margin: 0
+      padding: 0 0 0 10px
+footer
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  flex-wrap: nowrap
+  justify-content: flex-start
+  height: initial
+  transition-property: max-height, box-shadow
+  .mdl-layout__header-row
+    height: 100%
+    margin: 0 auto
+    max-width: 1100px
+    padding: 0
+    width: 100%
+    .logo-footer-container
+      width: 150px
+      img
+        width: 100%
+.login
+  align-items: center
+  background-color: #ACBEC8
+  display: flex
+  justify-content: center
+  max-height: 300px
+  .login-row
+    width: 60%
+    h3
+      color: #133044
+      font-family: 'gobclbold'
+      font-size: 15px
+      line-height: 18px
+      margin: 0
+      text-align: center
+    p
+      color: white
+      font-family: 'gobclregular'
+      font-size: 15px
+      text-align: center
+    .button-individual,
+    .button-asociativa
+      background-color: #274863
+      border: none
+      color: white
+      font-family: 'gobclregular'
+      font-size: 15px
+      margin: 10px auto
+      padding: 10px
+      width: 100%
+.mdl-layout__content
+  display: flex
+  margin: 0 auto
+  max-width: 1100px
+  width: 100%
+  .intro
+    padding: 0 0 0 4px

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :asociative_users
   devise_for :admins
   devise_for :users
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
      get "login", to: "devise/sessions#new"
      get "logout", to: "devise/sessions#destroy"
 
-     root "devise/sessions#new"
+     root "home#index"
   end
 
   # Example of regular route:

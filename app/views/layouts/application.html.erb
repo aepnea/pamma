@@ -2,13 +2,35 @@
 <html>
 <head>
   <title>Pamma</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div class="mdl-layout__header-row">
+      <div class="index">
+        <div class="logo-container">
+          <%= image_tag("logo-ministerio.png", :class => "logo") %>
+        </div>
+        <h2 class="txt-logo">Programa de asistencia y modernización de la mineria artesanal</h2>
+      </div>
+    </div>
+  </header>
 
-<%= yield %>
+
+  <%= yield %>
+
+  <footer>
+    <div class="mdl-layout__header-row">
+      <div class="logo-footer-container">
+        <%= image_tag("logo-footer.png", :class => "logo") %>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

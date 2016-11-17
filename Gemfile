@@ -53,3 +53,6 @@ gem 'devise'
 
 gem 'annotate'
 
+### materal design
+gem 'material_design_lite-rails', '~> 1.2'
+
