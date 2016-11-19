@@ -24,22 +24,23 @@ class User < ActiveRecord::Base
 ### Validando campos al registrarse
 
 
-validates :minning_society_name, presence: true
-validates :minning_society_rut, presence: true
-validates :first_name, presence: true
-validates :last_name, presence: true
-validates :surname, presence: true
-validates :rut, presence: true
-validates :birthdate, presence: true
-validates :gender_id, presence: true
-validates :civil_status_id, presence: true
-validates :address, presence: true
-validates :village, presence: true
-validates :mobile, presence: true
-validates :landline, presence: true
-validates :region_id, presence: true
-validates :province_id, presence: true
-validates :commune_id, presence: true
+  #validates_presence_of :minning_society_name, presence: true, message: "Este campo es requerido para la inscripción"
+  #validates_presence_of :minning_society_rut, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :first_name, presence: true, message: "Tu nombre es requerido para la inscripción"
+  validates_presence_of :last_name, presence: true, message: "Tu apellido es requerido para la inscripción"
+  validates_presence_of :surname, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :rut, presence: true, message: "Tu rut es requerido para la inscripción"
+  validates_presence_of :birthdate, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :gender_id, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :civil_status_id, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :address, presence: true, message: "Tu dirección es requerida para la inscripción"
+  validates_presence_of :village, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :mobile, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :landline, presence: true, message: "Este campo es requerido para la inscripción"
+  # validates_presence_of :region_id, presence: true, message: "Este campo es requerido para la inscripción"
+  # validates_presence_of :province_id, presence: true, message: "Este campo es requerido para la inscripción"
+  # validates_presence_of :commune_id, presence: true, message: "Este campo es requerido para la inscripción"
+  validates_presence_of :password_confirmation, presence: true, message: "Necesitas confirmar una password"
 
 
 

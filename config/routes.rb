@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :asociative_users
   devise_for :admins
-  devise_for :users
+  #devise_for :users
+  devise_for :users, :controllers => {registrations: 'user/registrations'}
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,11 +13,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   devise_scope :user do
-     get "signup", to: "devise/registrations#new"
-     get "login", to: "devise/sessions#new"
-     get "logout", to: "devise/sessions#destroy"
+    get "signup", to: "devise/registrations#new"
+    get "login", to: "devise/sessions#new"
+    get "logout", to: "devise/sessions#destroy"
 
-     root "home#index"
+    root "home#index"
   end
 
   # Example of regular route:
