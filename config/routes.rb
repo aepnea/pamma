@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :asociative_users
   devise_for :admins
-  #devise_for :users
+  
+  # create via ajax en controlador
   devise_for :users, :controllers => {registrations: 'user/registrations'}
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,13 +12,29 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  devise_scope :user do
-    get "signup", to: "devise/registrations#new"
-    get "login", to: "devise/sessions#new"
-    get "logout", to: "devise/sessions#destroy"
-
-    root "home#index"
+  # si es admin
+  authenticated :admin do
+    root "home#admin", as: "admin_root"
   end
+
+  # si es user
+  authenticated :user do
+    root "home#index_user", as: "authenticated_user_root"
+  end
+
+  # si es asociado
+  authenticated :asociative_user do
+    root "home#index_user_asociative",  as: "authenticated_user_asociative_root"
+  end
+
+  # si no esta logeado
+
+  unauthenticated :user do
+    devise_scope :user do
+      root 'home#index', as: 'unregistered_root'
+    end
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

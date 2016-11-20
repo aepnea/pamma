@@ -14,22 +14,23 @@
     <div class="mdl-layout__header-row">
       <div class="index">
         <div class="logo-container">
-          <%= link_to root_path do %>
-            <%= image_tag("logo-ministerio.png", :class => "logo") %>
-          <% end %>
+          <%= image_tag("logo-ministerio.png", :class => "logo") %>
         </div>
         <h2 class="txt-logo">Programa de asistencia y modernización de la mineria artesanal</h2>
       </div>
       <div class="status-user">
         <% if user_signed_in?%>
           <%= current_user.first_name %>
-        <% end %>
-        <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
-          Salir
+          <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
+            Salir
+          <% end %>
         <% end %>
       </div>
     </div>
   </header>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <main class="mdl-layout__content">
     <%= yield %>
