@@ -2,6 +2,19 @@ class AsociativeUser::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 
+
+
+### Sanitizando parametros
+private
+  def sign_up_params
+    params.require(:asociative_user).permit(:name, :rut, :address, :village,  :mobile, :landline, :region_id, :province_id, :commune_id, :date_foundation, :partners_number, :email, :password, :password_confirmation)
+  end
+
+  def account_update_params
+    params.require(:asociative_user).permit(:name, :rut, :address, :village,  :mobile, :landline, :region_id, :province_id, :commune_id, :date_foundation, :partners_number, :email, :password, :password_confirmation, :current_password)
+  end
+
+
   # GET /resource/sign_up
   # def new
   #   super

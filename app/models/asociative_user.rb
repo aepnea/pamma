@@ -22,4 +22,21 @@ class AsociativeUser < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+
+
+         validates_presence_of :name, presence: true, message: "Tu nombre es requerido para la inscripción"
+         validates_presence_of :date_foundation, presence: true, message: "Tu apellido es requerido para la inscripción"
+         validates_presence_of :rut, presence: true, message: "Tu rut es requerido para la inscripción"
+         validates_presence_of :address, presence: true, message: "Tu dirección es requerida para la inscripción"
+         validates_presence_of :village, presence: true, message: "Este campo es requerido para la inscripción"
+         validates_presence_of :mobile, presence: true, message: "Este campo es requerido para la inscripción"
+         validates_presence_of :landline, presence: true, message: "Este campo es requerido para la inscripción"
+         validates_presence_of :partners_number, presence: true, message: "Este campo es requerido para la inscripción"
+         # validates_presence_of :region_id, presence: true, message: "Este campo es requerido para la inscripción"
+         # validates_presence_of :province_id, presence: true, message: "Este campo es requerido para la inscripción"
+         # validates_presence_of :commune_id, presence: true, message: "Este campo es requerido para la inscripción"
+         validates_presence_of :password_confirmation, presence: true, message: "Necesitas confirmar una password"
+
 end

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :asociative_users
+
   devise_for :admins
 
   # create via ajax en controlador
   devise_for :users, :controllers => {registrations: 'user/registrations'}
-
+  devise_for :asociative_users, :controllers => { registrations: 'asociative_user/registrations' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   unauthenticated :admin do
   unauthenticated :user do
   unauthenticated :asociative_user do
-    root to: 'home#index' 
+    root to: 'home#index'
   end
   end
   end
