@@ -2,13 +2,80 @@
 <html>
 <head>
   <title>Pamma</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="shortcut icon" href="/favicon.png">
 </head>
 <body>
+  <div id="modal-login" class="modal-login">
+    <div class="login-row">
+      <div class="close" id="close">X</div>
+      <div class="login-user">
+        user
+      </div>
+      <div class="login-user-asociative">
+        user_asociative
+      </div>
+    </div>
+  </div>
+  <header data-turbolinks-permanent="true">
+    <div class="mdl-layout__header-row relative">
+      <div class="index">
+        <div class="logo-container">
+          <%= link_to root_path do %>
+            <%= image_tag("logo-ministerio.png", :class => "logo") %>
+          <% end %>
+        </div>
+        <h2 class="txt-logo">Programa de asistencia y modernización de la mineria artesanal</h2>
+      </div>
+      <div class="status-user">
+        <% if user_signed_in?%>
+          <div class="current-row">
+            <%= current_user.first_name %>
+            <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
+        <% elsif asociative_user_signed_in? %>
+          <div class="current-row">
+            <%= current_asociative_user.email %>
+            <%= link_to destroy_asociative_user_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
+        <% elsif admin_signed_in? %>
+          <div class="current-row">
+            <%= current_admin.email %>
+            <%= link_to destroy_admin_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
+        <% else %>
+          <div class="current-row">
+            <p class="current">¿Tienes cuenta?</p>
+            <button class="current-button" id="login-button">Ingresa</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </header>
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <main class="mdl-layout__content">
+    <%= yield %>
+  </main>
+  <footer>
+    <div class="mdl-layout__header-row">
+      <div class="logo-footer-container">
+        <%= image_tag("logo-footer.png", :class => "logo") %>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,209 @@
+@font-face
+  font-family: 'gobclbold'
+  src: url('/assets/gobcl_bold-webfont.eot')
+  src: url('/assets/gobcl_bold-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_bold-webfont.woff2') format('woff2'),url('/assets/gobcl_bold-webfont.woff') format('woff'),url('/assets/gobcl_bold-webfont.ttf') format('truetype'),url('/assets/gobcl_bold-webfont.svg#gobclbold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'gobclheavy'
+  src: url('/assets/gobcl_heavy-webfont.eot')
+  src: url('/assets/gobcl_heavy-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_heavy-webfont.woff2') format('woff2'),url('/assets/gobcl_heavy-webfont.woff') format('woff'),url('/assets/gobcl_heavy-webfont.ttf') format('truetype'),url('/assets/gobcl_heavy-webfont.svg#gobclheavy') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'gobcllight'
+  src: url('/assets/gobcl_light-webfont.eot')
+  src: url('/assets/gobcl_light-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_light-webfont.woff2') format('woff2'),url('/assets/gobcl_light-webfont.woff') format('woff'),url('/assets/gobcl_light-webfont.ttf') format('truetype'),url('/assets/gobcl_light-webfont.svg#gobcllight') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'gobclregular'
+  src: url('/assets/gobcl_regular-webfont.eot')
+  src: url('/assets/gobcl_regular-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/gobcl_regular-webfont.woff2') format('woff2'),url('/assets/gobcl_regular-webfont.woff') format('woff'),url('/assets/gobcl_regular-webfont.ttf') format('truetype'),url('/assets/gobcl_regular-webfont.svg#gobclregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+$azulito: #1B75BB
+$rojo: rgb(235, 60, 70)
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+a
+  color: $rojo
+html,
+body
+  font-family: 'gobclregular'
+h1,h2
+  font-family: 'gobclbold'
+
+header
+  background: url('/assets/background-header.jpg')
+  background-size: cover
+  background-position: center
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  flex-wrap: nowrap
+  justify-content: flex-start
+  height: 270px
+  transition-property: max-height, box-shadow
+  .mdl-layout__header-row
+    align-items: stretch
+    height: 100%
+    margin: 0 auto
+    max-width: 1100px
+    padding: 0
+    justify-content: space-between
+    width: 100%
+    .logo-container
+      width: 170px
+      img.logo
+        width: 100%
+    .status-user
+      bottom: 20px
+      position: absolute
+      right: 0
+      .current
+        color: white
+        font-family: 'gobclregular'
+        font-size: 16px
+        margin-right: 16px
+      .current,
+      .current-button
+        display: inline-block
+      .current-button
+        background: $azulito
+        border: 0
+        border-radius: 3px
+        color: white
+        cursor: pointer
+        font-family: 'gobclregular'
+        font-size: 16px
+        padding: 5px 0
+        text-align: center
+        width: 180px
+    .txt-logo
+      color: white
+      font-size: 20px
+      font-family: 'gobclregular'
+      line-height: normal
+      margin: 16px 0 0 0
+      text-transform: uppercase
+      width: 275px
+footer
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  flex-wrap: nowrap
+  justify-content: flex-start
+  height: initial
+  transition-property: max-height, box-shadow
+  .mdl-layout__header-row
+    height: 100%
+    margin: 0 auto
+    max-width: 1100px
+    padding: 0
+    width: 100%
+    .logo-footer-container
+      width: 150px
+      img
+        width: 100%
+.blank
+  font-size: 0
+  margin: 0
+.error_form
+  color: $rojo
+  font-family: 'gobcllight'
+  font-style: italic
+  margin: 0
+.field_with_errors
+  input[type="text"]
+    border: 1px solid $rojo
+.login
+  .login-row
+    background-color: #DFE1DF
+    border-top: 2px solid $azulito
+    padding: 40px
+    width: 100%
+    h3
+      color: $azulito
+      border-bottom: 1px solid $azulito
+      font-family: 'gobclbold'
+      font-size: 15px
+      line-height: 18px
+      margin: 0 0 40px 0
+      padding-bottom: 16px
+      text-align: left
+      width: 100px
+    p
+      color: $azulito
+      font-family: 'gobclregular'
+      font-size: 15px
+      margin-bottom: 25px
+      text-align: left
+    .button-individual,
+    .button-asociativa
+      background-color: $rojo
+      border: none
+      border-radius: 3px
+      color: white
+      display: block
+      font-family: 'gobclregular'
+      font-size: 15px
+      margin: 10px auto
+      padding: 10px
+      text-align: center
+      text-decoration: none
+      width: 100%
+.login-form
+  input[type="text"]
+    padding: 5px 10px
+    width: 100%
+.mdl-layout__content
+  display: flex
+  margin: 0 auto
+  max-width: 1100px
+  width: 100%
+  .intro
+    padding: 0 0 0 4px
+  .titulo-intro
+    border-bottom: 1px solid $rojo
+    color: $rojo
+    font-size: 20px
+    padding-bottom: 16px
+.modal-login
+  background: rgba(black, .4)
+  height: 100%
+  opacity: 0
+  position: fixed
+  transition: .35s
+  visibility: hidden
+  width: 100%
+  z-index: -10
+  .login-row
+    background: white
+    left: 50%
+    max-width: 500px
+    position: absolute
+    top: 50%
+    transform: translate(-50% , -50%)
+    width: 80%
+.modal-login.modal-activo
+  opacity: 1
+  visibility: visible
+  z-index: 100
+.relative
+  position: relative
+.title
+  font-size: 20px
+  display: block
+  margin: 0 
+
+
+
+
