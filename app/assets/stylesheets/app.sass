@@ -27,6 +27,7 @@
   font-weight: normal
   font-style: normal
 
+$azulito: #1B75BB
 $rojo: rgb(235, 60, 70)
 
 *
@@ -41,12 +42,15 @@ h1,h2
   font-family: 'gobclbold'
 
 header
+  background: url('/assets/background-header.jpg')
+  background-size: cover
+  background-position: center
   display: flex
   flex-direction: column
   flex-shrink: 0
   flex-wrap: nowrap
   justify-content: flex-start
-  height: 160px
+  height: 270px
   transition-property: max-height, box-shadow
   .mdl-layout__header-row
     align-items: stretch
@@ -57,7 +61,7 @@ header
     justify-content: space-between
     width: 100%
     .logo-container
-      width: 150px
+      width: 170px
       img.logo
         width: 100%
     .status-user
@@ -65,10 +69,13 @@ header
         line-height: 160px
         padding: 10px 20px
     .txt-logo
-      font-size: 16px
-      font-family: 'gobclbold'
-      margin: 0
-      padding: 0 0 0 10px
+      color: white
+      font-size: 20px
+      font-family: 'gobclregular'
+      line-height: normal
+      margin: 16px 0 0 0
+      text-transform: uppercase
+      width: 275px
 footer
   display: flex
   flex-direction: column
@@ -99,29 +106,32 @@ footer
   input[type="text"]
     border: 1px solid $rojo
 .login
-  align-items: center
-  background-color: #ACBEC8
-  display: flex
-  justify-content: center
-  max-height: 300px
   .login-row
-    width: 60%
+    background-color: #DFE1DF
+    border-top: 2px solid $azulito
+    padding: 40px
+    width: 100%
     h3
-      color: #133044
+      color: $azulito
+      border-bottom: 1px solid $azulito
       font-family: 'gobclbold'
       font-size: 15px
       line-height: 18px
-      margin: 0
-      text-align: center
+      margin: 0 0 40px 0
+      padding-bottom: 16px
+      text-align: left
+      width: 100px
     p
-      color: white
+      color: $azulito
       font-family: 'gobclregular'
       font-size: 15px
-      text-align: center
+      margin-bottom: 25px
+      text-align: left
     .button-individual,
     .button-asociativa
-      background-color: #274863
+      background-color: $rojo
       border: none
+      border-radius: 3px
       color: white
       display: block
       font-family: 'gobclregular'
@@ -142,6 +152,11 @@ footer
   width: 100%
   .intro
     padding: 0 0 0 4px
+  .titulo-intro
+    border-bottom: 1px solid $rojo
+    color: $rojo
+    font-size: 20px
+    padding-bottom: 16px
 .title
   font-size: 20px
   display: block
