@@ -65,9 +65,28 @@ header
       img.logo
         width: 100%
     .status-user
+      bottom: 20px
+      position: absolute
+      right: 0
       .current
-        line-height: 160px
-        padding: 10px 20px
+        color: white
+        font-family: 'gobclregular'
+        font-size: 16px
+        margin-right: 16px
+      .current,
+      .current-button
+        display: inline-block
+      .current-button
+        background: $azulito
+        border: 0
+        border-radius: 3px
+        color: white
+        cursor: pointer
+        font-family: 'gobclregular'
+        font-size: 16px
+        padding: 5px 0
+        text-align: center
+        width: 180px
     .txt-logo
       color: white
       font-size: 20px
@@ -157,6 +176,29 @@ footer
     color: $rojo
     font-size: 20px
     padding-bottom: 16px
+.modal-login
+  background: rgba(black, .4)
+  height: 100%
+  opacity: 0
+  position: fixed
+  transition: .35s
+  visibility: hidden
+  width: 100%
+  z-index: -10
+  .login-row
+    background: white
+    left: 50%
+    max-width: 500px
+    position: absolute
+    top: 50%
+    transform: translate(-50% , -50%)
+    width: 80%
+.modal-login.modal-activo
+  opacity: 1
+  visibility: visible
+  z-index: 100
+.relative
+  position: relative
 .title
   font-size: 20px
   display: block

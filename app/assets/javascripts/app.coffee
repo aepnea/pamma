@@ -6,6 +6,10 @@ $(document).on "turbolinks:load turbolinks:fetch ready", ()->
   componentHandler.upgradeDom()
   console.log('cambie')
 
+  $('#login-button').on "click", ()->
+    $('#modal-login').addClass "modal-activo"
+  $('#close').on "click", ()->
+    $('#modal-login').removeClass "modal-activo"
 
 $(document).on "ajax:beforeSend", "#login-form", (e, data, status, xhr) ->
   #console.log(data)
@@ -117,3 +121,4 @@ $(document).on "ajax:success", "#login-form", (e, data, status, xhr) ->
 
 $(document).on "ajax:error", "#login-form", (e, data, status, xhr) ->
   #console.log e
+

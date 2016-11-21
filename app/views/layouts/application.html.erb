@@ -10,8 +10,19 @@
   <link rel="shortcut icon" href="/favicon.png">
 </head>
 <body>
+  <div id="modal-login" class="modal-login">
+    <div class="login-row">
+      <div class="close" id="close">X</div>
+      <div class="login-user">
+        user
+      </div>
+      <div class="login-user-asociative">
+        user_asociative
+      </div>
+    </div>
+  </div>
   <header data-turbolinks-permanent="true">
-    <div class="mdl-layout__header-row">
+    <div class="mdl-layout__header-row relative">
       <div class="index">
         <div class="logo-container">
           <%= link_to root_path do %>
@@ -22,22 +33,31 @@
       </div>
       <div class="status-user">
         <% if user_signed_in?%>
-          <%= current_user.first_name %>
-          <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
-            Salir
-          <% end %>
+          <div class="current-row">
+            <%= current_user.first_name %>
+            <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
         <% elsif asociative_user_signed_in? %>
-          <%= current_asociative_user.email %>
-          <%= link_to destroy_asociative_user_session_path, :class => "current", method: :delete do%>
-            Salir
-          <% end %>
+          <div class="current-row">
+            <%= current_asociative_user.email %>
+            <%= link_to destroy_asociative_user_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
         <% elsif admin_signed_in? %>
-          <%= current_admin.email %>
-          <%= link_to destroy_admin_session_path, :class => "current", method: :delete do%>
-            Salir
-          <% end %>
+          <div class="current-row">
+            <%= current_admin.email %>
+            <%= link_to destroy_admin_session_path, :class => "current", method: :delete do%>
+              Salir
+            <% end %>
+          </div>
         <% else %>
-          <p class="current">¿Tienes cuenta?</p>
+          <div class="current-row">
+            <p class="current">¿Tienes cuenta?</p>
+            <button class="current-button" id="login-button">Ingresa</button>
+          </div>
         <% end %>
       </div>
     </div>
