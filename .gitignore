@@ -14,5 +14,3 @@
 config/database.yml
 
 log/development.log
-
-config/database.yml

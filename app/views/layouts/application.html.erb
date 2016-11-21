@@ -14,7 +14,9 @@
     <div class="mdl-layout__header-row">
       <div class="index">
         <div class="logo-container">
-          <%= image_tag("logo-ministerio.png", :class => "logo") %>
+          <%= link_to root_path do %>
+            <%= image_tag("logo-ministerio.png", :class => "logo") %>
+          <% end %>
         </div>
         <h2 class="txt-logo">Programa de asistencia y modernización de la mineria artesanal</h2>
       </div>
@@ -24,6 +26,18 @@
           <%= link_to destroy_user_session_path, :class => "current", method: :delete do%>
             Salir
           <% end %>
+        <% elsif asociative_user_signed_in? %>
+          <%= current_asociative_user.email %>
+          <%= link_to destroy_asociative_user_session_path, :class => "current", method: :delete do%>
+            Salir
+          <% end %>
+        <% elsif admin_signed_in? %>
+          <%= current_admin.email %>
+          <%= link_to destroy_admin_session_path, :class => "current", method: :delete do%>
+            Salir
+          <% end %>
+        <% else %>
+          <p class="current">¿Tienes cuenta?</p>
         <% end %>
       </div>
     </div>
