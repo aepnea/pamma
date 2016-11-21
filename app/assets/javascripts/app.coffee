@@ -7,9 +7,11 @@ $(document).on "turbolinks:load turbolinks:fetch ready", ()->
   console.log('cambie')
 
   $('#login-button').on "click", ()->
-    $('#modal-login').addClass "modal-activo"
-  $('#close').on "click", ()->
-    $('#modal-login').removeClass "modal-activo"
+    $('#login-row-header').addClass "login-activo"
+    $('.current-row').css('opacity', '0')
+  $('#close-login').on "click", ()->
+    $('#login-row-header').removeClass "login-activo"
+    $('.current-row').css('opacity', '1')
 
 $(document).on "ajax:beforeSend", "#login-form", (e, data, status, xhr) ->
   #console.log(data)
