@@ -51,12 +51,14 @@ header
   flex-wrap: nowrap
   justify-content: flex-start
   height: 270px
+  position: relative
   transition-property: max-height, box-shadow
   .mdl-layout__header-row
     align-items: stretch
     height: 100%
     margin: 0 auto
     max-width: 1100px
+    overflow: hidden
     padding: 0
     justify-content: space-between
     width: 100%
@@ -68,6 +70,10 @@ header
       bottom: 20px
       position: absolute
       right: 0
+      width: 50%
+      .current-row
+        text-align: right
+        transition: .35s
       .current
         color: white
         font-family: 'gobclregular'
@@ -87,6 +93,44 @@ header
         padding: 5px 0
         text-align: center
         width: 180px
+      .login-row-header
+        opacity: 0
+        position: absolute
+        right: -600px
+        text-align: right
+        top: 0
+        transition: .35s
+        visibility: hidden
+        //width: 100%
+        .close-login
+          background: white
+          border-radius: 50%
+          cursor: pointer
+          height: 30px
+          line-height: 30px
+          text-align: center
+          width: 30px
+          svg
+            width: 15px
+        .close-login,
+        .login-user,
+        .login-user-asociative
+          display: inline-block
+          vertical-align: middle
+        .login-user,
+        .login-user-asociative
+          background: $azulito
+          border-radius: 3px
+          padding: 5px 20px
+          a
+            color: white
+            font-family: 'gobclregular'
+            font-size: 16px
+            text-decoration: none
+      .login-row-header.login-activo
+        opacity: 1
+        right: 0
+        visibility: visible
     .txt-logo
       color: white
       font-size: 20px
@@ -124,6 +168,25 @@ footer
 .field_with_errors
   input[type="text"]
     border: 1px solid $rojo
+.filter
+  background: linear-gradient(to bottom, rgba(76,76,76,0) 0%,rgba(19,19,19,0.5) 100%)
+  height: 100%
+  position: absolute
+  width: 100%
+.form-session
+  background-color: #DFE1DF
+  border-top: 2px solid $azulito
+  margin: 20px 0
+  padding: 40px
+  input[type="email"],
+  input[type="password"]
+    margin-bottom: 16px
+    padding: 5px
+    width: 100%
+  label
+    font-family: 'gobclbold'
+    font-size: 13px
+    text-transform: uppercase
 .login
   .login-row
     background-color: #DFE1DF
@@ -176,23 +239,6 @@ footer
     color: $rojo
     font-size: 20px
     padding-bottom: 16px
-.modal-login
-  background: rgba(black, .4)
-  height: 100%
-  opacity: 0
-  position: fixed
-  transition: .35s
-  visibility: hidden
-  width: 100%
-  z-index: -10
-  .login-row
-    background: white
-    left: 50%
-    max-width: 500px
-    position: absolute
-    top: 50%
-    transform: translate(-50% , -50%)
-    width: 80%
 .modal-login.modal-activo
   opacity: 1
   visibility: visible
