@@ -1,2 +1,11 @@
 <h1>Hola <%= current_user.first_name %></h1>
+
+
 <p> <%= link_to "editar", edit_user_registration_path  %> </p>
+
+
+<h4>Datos del Inscrito</h4>
+<p>Nombre: <%= current_user.first_name %></p>
+<p>Apellido: <%= current_user.last_name %></p>
+<p>RUT: <%= current_user.last_name %></p>
+<p>Teléfono Móvil: <%= current_user.mobile %></p>

@@ -11,9 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116202632) do
+ActiveRecord::Schema.define(version: 20161124201713) do
 
   create_table "activity_types", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "admin_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
@@ -55,10 +61,55 @@ ActiveRecord::Schema.define(version: 20161116202632) do
   add_index "asociative_users", ["email"], name: "index_asociative_users_on_email", unique: true, using: :btree
   add_index "asociative_users", ["reset_password_token"], name: "index_asociative_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "beneficiaries", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "rut",        limit: 255
+    t.string   "address",    limit: 255
+    t.integer  "age",        limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "benefit_requesteds", force: :cascade do |t|
+    t.integer  "benefit_type_id",      limit: 4
+    t.integer  "estimated_investment", limit: 4
+    t.text     "comments",             limit: 65535
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
   create_table "benefit_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "characterization_works", force: :cascade do |t|
+    t.string   "work_name",                              limit: 255
+    t.string   "localization",                           limit: 255
+    t.string   "sector",                                 limit: 255
+    t.string   "mountain_range",                         limit: 255
+    t.integer  "region_id",                              limit: 4
+    t.integer  "province_id",                            limit: 4
+    t.integer  "commune_id",                             limit: 4
+    t.integer  "utm_north_coordinate",                   limit: 4
+    t.integer  "utm_east_coordinate",                    limit: 4
+    t.string   "buyer_power",                            limit: 255
+    t.integer  "distance",                               limit: 4
+    t.string   "mining_district",                        limit: 255
+    t.integer  "number_workers",                         limit: 4
+    t.integer  "owner_type_id",                          limit: 4
+    t.integer  "mining_properties_constitution_type_id", limit: 4
+    t.integer  "operation_type_id",                      limit: 4
+    t.integer  "extracted_mineral_type_id",              limit: 4
+    t.integer  "mining_information_available_type_id",   limit: 4
+    t.boolean  "drill"
+    t.boolean  "winch"
+    t.boolean  "compressor"
+    t.boolean  "electric_generator"
+    t.boolean  "wagon"
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
   end
 
   create_table "civil_status_types", force: :cascade do |t|
@@ -78,6 +129,16 @@ ActiveRecord::Schema.define(version: 20161116202632) do
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "family_groups", force: :cascade do |t|
+    t.string   "name",                 limit: 255
+    t.integer  "age",                  limit: 4
+    t.integer  "relationship_type_id", limit: 4
+    t.string   "activity",             limit: 255
+    t.integer  "scholarship_type_id",  limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "gender_types", force: :cascade do |t|
@@ -106,6 +167,45 @@ ActiveRecord::Schema.define(version: 20161116202632) do
 
   create_table "owner_types", force: :cascade do |t|
     t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "pamma_participations", force: :cascade do |t|
+    t.boolean  "previous_beneficiary"
+    t.integer  "number_times",          limit: 4
+    t.integer  "benefit_type_id",       limit: 4
+    t.integer  "project_state_type_id", limit: 4
+    t.integer  "support_type_id",       limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "personal_backgrounds", force: :cascade do |t|
+    t.integer  "scholarship_type_id",          limit: 4
+    t.integer  "retirement_system_type_id",    limit: 4
+    t.integer  "activity_type",                limit: 4
+    t.integer  "training_type_id",             limit: 4
+    t.integer  "social_record_status_type_id", limit: 4
+    t.integer  "score",                        limit: 4
+    t.date     "last_poll"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  create_table "postulation_dates", force: :cascade do |t|
+    t.string   "name",                    limit: 255
+    t.date     "date_begin"
+    t.date     "date_end"
+    t.string   "user_type",               limit: 255
+    t.integer  "postulation_standard_id", limit: 4
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  create_table "postulation_standards", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "weighing",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -160,6 +260,12 @@ ActiveRecord::Schema.define(version: 20161116202632) do
   end
 
   create_table "training_types", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "user_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

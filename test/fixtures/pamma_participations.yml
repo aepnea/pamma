@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  previous_beneficiary: false
+  number_times: 1
+  benefit_type_id: 1
+  project_state_type_id: 1
+  support_type_id: 1
+
+two:
+  previous_beneficiary: false
+  number_times: 1
+  benefit_type_id: 1
+  project_state_type_id: 1
+  support_type_id: 1

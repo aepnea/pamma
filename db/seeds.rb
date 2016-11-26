@@ -8,6 +8,13 @@
 
 
 ## Tablas Estaticas
+UserType.create([{ name: 'Individual' }, \
+               { name: 'Asociativo' }])
+
+AdminType.create([{ name: 'PAMMA' }, \
+                  { name: 'Sernageomin' }, \
+                  { name: 'Enami' }])
+
 GenderType.create([{ name: 'Masculino' }, \
                { name: 'Femenino' }])
 
@@ -108,3 +115,7 @@ MiningInformationAvailableType.create([{ name: 'Topografía' }, \
                       { name: 'Sondaje' }, \
                       { name: 'Plan de Explotación' }, \
                       { name: 'No Tiene' }])
+
+
+
+####### DATOS DE PRUEBA

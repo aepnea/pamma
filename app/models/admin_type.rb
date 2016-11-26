@@ -1,0 +1,2 @@
+class AdminType < ActiveRecord::Base
+end
