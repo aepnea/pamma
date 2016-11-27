@@ -15,6 +15,17 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  name                   :string(255)
+#  rut                    :string(255)
+#  address                :string(255)
+#  village                :string(255)
+#  mobile                 :string(255)
+#  landline               :string(255)
+#  region_id              :integer
+#  province_id            :integer
+#  commune_id             :integer
+#  date_foundation        :date
+#  partners_number        :integer
 #
 
 require 'test_helper'

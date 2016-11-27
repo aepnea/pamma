@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20161124201713) do
-=======
-ActiveRecord::Schema.define(version: 20161121202632) do
->>>>>>> master
+ActiveRecord::Schema.define(version: 20161126025754) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -81,6 +77,7 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.string   "rut",        limit: 255
     t.string   "address",    limit: 255
     t.integer  "age",        limit: 4
+    t.integer  "user_id",    limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -89,6 +86,8 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.integer  "benefit_type_id",      limit: 4
     t.integer  "estimated_investment", limit: 4
     t.text     "comments",             limit: 65535
+    t.integer  "user_id",              limit: 4
+    t.integer  "asociative_user_id",   limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
   end
@@ -123,6 +122,8 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.boolean  "compressor"
     t.boolean  "electric_generator"
     t.boolean  "wagon"
+    t.integer  "user_id",                                limit: 4
+    t.integer  "asociative_user_id",                     limit: 4
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
   end
@@ -152,6 +153,7 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.integer  "relationship_type_id", limit: 4
     t.string   "activity",             limit: 255
     t.integer  "scholarship_type_id",  limit: 4
+    t.integer  "user_id",              limit: 4
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
   end
@@ -192,6 +194,8 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.integer  "benefit_type_id",       limit: 4
     t.integer  "project_state_type_id", limit: 4
     t.integer  "support_type_id",       limit: 4
+    t.integer  "user_id",               limit: 4
+    t.integer  "asociative_user_id",    limit: 4
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end
@@ -204,6 +208,7 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.integer  "social_record_status_type_id", limit: 4
     t.integer  "score",                        limit: 4
     t.date     "last_poll"
+    t.integer  "user_id",                      limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end
@@ -248,6 +253,24 @@ ActiveRecord::Schema.define(version: 20161121202632) do
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "representatives", force: :cascade do |t|
+    t.string   "first_name",         limit: 255
+    t.string   "last_name",          limit: 255
+    t.string   "surname",            limit: 255
+    t.string   "rut",                limit: 255
+    t.integer  "gender_id",          limit: 4
+    t.string   "address",            limit: 255
+    t.string   "village",            limit: 255
+    t.integer  "region_id",          limit: 4
+    t.integer  "province_id",        limit: 4
+    t.integer  "commune_id",         limit: 4
+    t.string   "mobile",             limit: 255
+    t.string   "landline",           limit: 255
+    t.integer  "asociative_user_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "retirement_system_types", force: :cascade do |t|
