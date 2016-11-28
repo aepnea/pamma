@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  asociative_user_id: 1
+  personal_backgrounds_id: 1
+  family_group_id: 1
+  pamma_participation_id: 1
+  beneficiary_id: 1
+  characterization_work_id: 1
+  benefit_requested_id: 1
+  representative_id: 1
+
+two:
+  user_id: 1
+  asociative_user_id: 1
+  personal_backgrounds_id: 1
+  family_group_id: 1
+  pamma_participation_id: 1
+  beneficiary_id: 1
+  characterization_work_id: 1
+  benefit_requested_id: 1
+  representative_id: 1

@@ -49,6 +49,7 @@ class User < ActiveRecord::Base
   has_many :benefit_requesteds
   #
   has_many :family_groups
+  has_many :postulations
 
 
 

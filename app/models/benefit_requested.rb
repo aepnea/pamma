@@ -16,4 +16,6 @@ class BenefitRequested < ActiveRecord::Base
   belongs_to :benefit_type
   belongs_to :user
   belongs_to :asociative_user
+
+  has_many :postulations
 end

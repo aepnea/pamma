@@ -35,6 +35,7 @@ class AsociativeUser < ActiveRecord::Base
   belongs_to :province
   belongs_to :commune
   has_many :characterization_works
+  has_many :postulations
 # parece que es 1:1
   has_many :pamma_participations
   has_many :benefit_requesteds

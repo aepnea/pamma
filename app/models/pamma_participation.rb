@@ -20,5 +20,7 @@ class PammaParticipation < ActiveRecord::Base
   belongs_to :support_type
   belongs_to :user
   belongs_to :asociative_user
-  
+
+  has_many :postulations
+
 end

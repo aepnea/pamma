@@ -27,5 +27,7 @@ class Representative < ActiveRecord::Base
   belongs_to :commune
   belongs_to :asociative_user
 
-  
+  has_many :postulations
+
+
 end

@@ -44,5 +44,7 @@ belongs_to :mining_information_available_type
 belongs_to :user
 belongs_to :asociative_user
 
+has_many :postulations
+
 
 end
