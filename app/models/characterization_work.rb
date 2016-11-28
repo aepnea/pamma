@@ -33,4 +33,16 @@
 #
 
 class CharacterizationWork < ActiveRecord::Base
+belongs_to :region
+belongs_to :province
+belongs_to :commune
+belongs_to :owner_type
+belongs_to :mining_properties_constitution_type
+belongs_to :operation_type
+belongs_to :extracted_mineral_type
+belongs_to :mining_information_available_type
+belongs_to :user
+belongs_to :asociative_user
+
+
 end

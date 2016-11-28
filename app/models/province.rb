@@ -12,4 +12,9 @@
 class Province < ActiveRecord::Base
   has_many :communes
   belongs_to :region
+  has_many :provinces
+  has_many :asociative_users
+  has_many :users
+  has_many :characterization_works
+  has_many :representatives
 end

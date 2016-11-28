@@ -29,8 +29,20 @@
 #
 
 class AsociativeUser < ActiveRecord::Base
+#relaciones
+
+  belongs_to :region
+  belongs_to :province
+  belongs_to :commune
+  has_many :characterization_works
+# parece que es 1:1
+  has_many :pamma_participations
+  has_many :benefit_requesteds
+  has_one :representative
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

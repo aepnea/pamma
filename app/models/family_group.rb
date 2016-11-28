@@ -14,4 +14,7 @@
 #
 
 class FamilyGroup < ActiveRecord::Base
+  belongs_to :relationship_type
+  belongs_to :scholarship_type
+  belongs_to :user
 end

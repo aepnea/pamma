@@ -9,4 +9,6 @@
 #
 
 class RetirementSystemType < ActiveRecord::Base
+  has_many :personal_backgrounds
+
 end

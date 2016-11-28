@@ -9,4 +9,6 @@
 #
 
 class BenefitType < ActiveRecord::Base
+  has_many :pamma_participations
+  has_many :benefit_requesteds
 end

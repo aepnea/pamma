@@ -21,4 +21,11 @@
 #
 
 class Representative < ActiveRecord::Base
+  belongs_to :gender
+  belongs_to :region
+  belongs_to :province
+  belongs_to :commune
+  belongs_to :asociative_user
+
+  
 end

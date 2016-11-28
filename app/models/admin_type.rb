@@ -9,4 +9,5 @@
 #
 
 class AdminType < ActiveRecord::Base
+  has_many :admin_types
 end

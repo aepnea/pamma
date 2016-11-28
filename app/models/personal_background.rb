@@ -16,4 +16,10 @@
 #
 
 class PersonalBackground < ActiveRecord::Base
+  belongs_to :scholarship_type
+  belongs_to :retirement_system_type
+  belongs_to :training_type
+  belongs_to :activity_type
+  belongs_to :user
+
 end

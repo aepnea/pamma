@@ -9,4 +9,5 @@
 #
 
 class ProjectStateType < ActiveRecord::Base
+  has_many :pamma_participations
 end

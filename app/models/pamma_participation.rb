@@ -15,4 +15,10 @@
 #
 
 class PammaParticipation < ActiveRecord::Base
+  belongs_to :benefit_type
+  belongs_to :project_state_type
+  belongs_to :support_type
+  belongs_to :user
+  belongs_to :asociative_user
+  
 end

@@ -34,6 +34,25 @@
 #
 
 class User < ActiveRecord::Base
+#relaciones
+
+  belongs_to :region
+  belongs_to :province
+  belongs_to :commune
+  belongs_to :gender
+  belongs_to :civil_status
+  has_many :beneficiaries
+  # parece que es 1:1
+  has_many :characterization_works
+  has_many :pamma_participations
+  has_many :personal_backgrounds
+  has_many :benefit_requesteds
+  #
+  has_many :family_groups
+
+
+
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 

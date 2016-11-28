@@ -9,4 +9,6 @@
 #
 
 class MiningInformationAvailableType < ActiveRecord::Base
+  has_many :characterization_works
+
 end

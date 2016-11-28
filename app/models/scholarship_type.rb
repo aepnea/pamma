@@ -9,4 +9,5 @@
 #
 
 class ScholarshipType < ActiveRecord::Base
+  has_many :personal_backgrounds
 end
