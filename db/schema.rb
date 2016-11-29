@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126025754) do
+ActiveRecord::Schema.define(version: 20161128033038) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -203,7 +203,7 @@ ActiveRecord::Schema.define(version: 20161126025754) do
   create_table "personal_backgrounds", force: :cascade do |t|
     t.integer  "scholarship_type_id",          limit: 4
     t.integer  "retirement_system_type_id",    limit: 4
-    t.integer  "activity_type",                limit: 4
+    t.integer  "activity_type_id",             limit: 4
     t.integer  "training_type_id",             limit: 4
     t.integer  "social_record_status_type_id", limit: 4
     t.integer  "score",                        limit: 4
@@ -211,6 +211,13 @@ ActiveRecord::Schema.define(version: 20161126025754) do
     t.integer  "user_id",                      limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+  end
+
+  create_table "postulation_date_postulation_standards", force: :cascade do |t|
+    t.integer  "postulation_date_id",     limit: 4
+    t.integer  "postulation_standard_id", limit: 4
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "postulation_dates", force: :cascade do |t|
@@ -228,6 +235,24 @@ ActiveRecord::Schema.define(version: 20161126025754) do
     t.integer  "weighing",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "postulations", force: :cascade do |t|
+    t.integer  "user_id",                  limit: 4
+    t.integer  "asociative_user_id",       limit: 4
+    t.integer  "personal_backgrounds_id",  limit: 4
+    t.integer  "family_group_id",          limit: 4
+    t.integer  "pamma_participation_id",   limit: 4
+    t.integer  "beneficiary_id",           limit: 4
+    t.integer  "characterization_work_id", limit: 4
+    t.integer  "benefit_requested_id",     limit: 4
+    t.integer  "representative_id",        limit: 4
+    t.string   "milestone_name",           limit: 255
+    t.text     "milestone_description",    limit: 65535
+    t.date     "milestone_date_begin"
+    t.date     "milestone_date_end"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "project_state_types", force: :cascade do |t|

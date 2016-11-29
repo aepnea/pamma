@@ -12,6 +12,8 @@
 #  updated_at           :datetime         not null
 #
 
+
+
 class BenefitRequested < ActiveRecord::Base
   belongs_to :benefit_type
   belongs_to :user

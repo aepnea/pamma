@@ -53,7 +53,7 @@ SocialRecordStatusType.create([{ name: 'Registro Social de Hogares (RSH)' }, \
                                { name: 'No posee Ficha' }, \
                                { name: 'Ficha en trámite' }])
 
-RelationshipType.create([{ name: 'Jefe de Hogar' }, \
+RelationshipType.create([{ name: 'Jefe/a de Hogar' }, \
                         { name: 'Cónyuge' }, \
                         { name: 'Hijo/a' }, \
                         { name: 'Tío/a' }, \

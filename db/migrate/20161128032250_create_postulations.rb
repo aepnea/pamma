@@ -10,6 +10,10 @@ class CreatePostulations < ActiveRecord::Migration
       t.integer :characterization_work_id
       t.integer :benefit_requested_id
       t.integer :representative_id
+      t.string :milestone_name
+      t.text :milestone_description
+      t.date :milestone_date_begin
+      t.date :milestone_date_end
 
       t.timestamps null: false
     end
