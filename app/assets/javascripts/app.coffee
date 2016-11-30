@@ -6,12 +6,29 @@ $(document).on "turbolinks:load turbolinks:fetch ready", ()->
   componentHandler.upgradeDom()
   console.log('cambie')
 
+
   $('#login-button').on "click", ()->
     $('#login-row-header').addClass "login-activo"
     $('.current-row').css('opacity', '0')
   $('#close-login').on "click", ()->
     $('#login-row-header').removeClass "login-activo"
     $('.current-row').css('opacity', '1')
+
+  focus_indicator = ($el)->
+    $el.addClass("active")
+
+  $(".path-step").on "click",(ev)->
+    position = $(this).data("position")+1
+    focus_indicator($(".step#{position}"))
+    $(".step.active").removeClass("active")
+    $(".step#{position}").addClass("active")
+
+  $(".back-step").on "click",(ev)->
+    position = $(this).data("position")
+    focus_indicator($(".step#{position}"))
+    $(".step.active").removeClass("active")
+    $(".step#{position}").addClass("active")
+    console.log position
 
 $(document).on "ajax:beforeSend", "#login-form", (e, data, status, xhr) ->
   #console.log(data)
