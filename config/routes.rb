@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :asociative_users
   devise_for :admins
-
-  # create via ajax en controlador
-  devise_for :users, :controllers => {registrations: 'user/registrations'}
+  devise_for :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.
