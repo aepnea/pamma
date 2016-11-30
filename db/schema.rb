@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161128033038) do
+ActiveRecord::Schema.define(version: 20161130025509) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 20161128033038) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
+    t.integer  "region_id",              limit: 4
+    t.integer  "admin_type_id",          limit: 4
+    t.integer  "seremi_zone_id",         limit: 4
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end
@@ -226,6 +229,7 @@ ActiveRecord::Schema.define(version: 20161128033038) do
     t.date     "date_end"
     t.string   "user_type",               limit: 255
     t.integer  "postulation_standard_id", limit: 4
+    t.boolean  "state"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -233,6 +237,12 @@ ActiveRecord::Schema.define(version: 20161128033038) do
   create_table "postulation_standards", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "weighing",   limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "postulation_states", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -247,6 +257,8 @@ ActiveRecord::Schema.define(version: 20161128033038) do
     t.integer  "characterization_work_id", limit: 4
     t.integer  "benefit_requested_id",     limit: 4
     t.integer  "representative_id",        limit: 4
+    t.integer  "postulation_date_id",      limit: 4
+    t.integer  "postulation_state_id",     limit: 4
     t.string   "milestone_name",           limit: 255
     t.text     "milestone_description",    limit: 65535
     t.date     "milestone_date_begin"
@@ -306,6 +318,13 @@ ActiveRecord::Schema.define(version: 20161128033038) do
 
   create_table "scholarship_types", force: :cascade do |t|
     t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "seremi_zones", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "region_id",  limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

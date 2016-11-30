@@ -13,6 +13,7 @@
 #
 
 class PostulationDate < ActiveRecord::Base
+  has_many :postulations
   has_many :postulation_date_postulation_standard
   has_many :postulation_standards, :through => :postulation_date_postulation_standard
 

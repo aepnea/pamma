@@ -5,7 +5,7 @@
 #  id                           :integer          not null, primary key
 #  scholarship_type_id          :integer
 #  retirement_system_type_id    :integer
-#  activity_type                :integer
+#  activity_type_id             :integer
 #  training_type_id             :integer
 #  social_record_status_type_id :integer
 #  score                        :integer

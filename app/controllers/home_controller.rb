@@ -6,7 +6,6 @@ class HomeController < ApplicationController
   end
 
   def index_user_dashboard
-
   end
 
   def index_user_asociative_dashboard

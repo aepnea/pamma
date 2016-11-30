@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'user_postulations/list'
+
+  get 'user_postulations/postulation_period'
+
+  get 'user_postulations/postulate'
+
   devise_for :admins
 
   # create via ajax en controlador
