@@ -165,12 +165,15 @@ footer
       img
         width: 100%
 .actions
-  text-align: center
+  margin: 0 auto
+  max-width: 350px
+  text-align: left
+  width: 80%
   .submit
-    background: transparent
-    border: 3px solid $rojo
+    background: $azulito
+    border: 0
     border-radius: 3px
-    color: $rojo
+    color: white
     cursor: pointer
     font-family: 'gobclregular'
     font-size: 16px
@@ -178,8 +181,8 @@ footer
     transition: .35s
     width: 180px
     &:hover
-      background: white
-      box-shadow: 0 0 4px rgba($rojo, .7)
+      //background: white
+      box-shadow: 0px 15px 25px -10px rgba(0, 0, 0, 0.8)
 .align-center
   text-align: center
 .blank
@@ -226,8 +229,8 @@ footer
     input[type="password"]
       font-family: sans-serif
     label
-      font-size: 14px
-      font-style: italic
+      font-size: 16px
+      //font-style: italic
       margin-left: 5px
   .title-h3
     position: relative
@@ -252,6 +255,10 @@ footer
       margin-right: 16px
       //position: absolute
       //left: 10px
+.input[type="checkbox"]
+  border: 1px solid $grisClaro
+  height: 14px
+  width: 14px
 .login
   .login-row
     background-color: $clarito
@@ -326,9 +333,11 @@ footer
       a
         color: $azulito
 .shared-links
-  margin-top: 16px
+  margin: 26px auto
+  max-width: 350px
+  width: 80%
   a
-    color: $azulito
+    color: $rojo
     font-size: 14px
     margin-bottom: 5px
 
