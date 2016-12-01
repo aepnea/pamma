@@ -29,6 +29,8 @@
 
 $azulito: #1B75BB
 $clarito: #DFE1DF
+$gris: #787878
+$grisClaro: #B3B3B3
 $rojo: rgb(235, 60, 70)
 
 *
@@ -39,6 +41,8 @@ a
 html,
 body
   font-family: 'gobclregular'
+  font-size: 16px
+  height: 100%
 h1,h2
   font-family: 'gobclbold'
 
@@ -54,13 +58,14 @@ header
   height: 270px
   position: relative
   transition-property: max-height, box-shadow
-  .mdl-layout__header-row
+  .header-inner-container
     align-items: stretch
     height: 100%
     margin: 0 auto
     max-width: 1100px
     overflow: hidden
     padding: 0
+    position: relative
     justify-content: space-between
     width: 100%
     .logo-container
@@ -99,7 +104,7 @@ header
         position: absolute
         right: -600px
         text-align: right
-        top: 0
+        top: 10px
         transition: .35s
         visibility: hidden
         //width: 100%
@@ -109,6 +114,7 @@ header
           cursor: pointer
           height: 30px
           line-height: 30px
+          padding: 3.5px
           text-align: center
           width: 30px
           svg
@@ -148,7 +154,7 @@ footer
   justify-content: flex-start
   height: initial
   transition-property: max-height, box-shadow
-  .mdl-layout__header-row
+  .footer
     height: 100%
     margin: 0 auto
     max-width: 1100px
@@ -158,40 +164,99 @@ footer
       width: 150px
       img
         width: 100%
+.actions
+  text-align: center
+  .submit
+    background: transparent
+    border: 3px solid $rojo
+    border-radius: 3px
+    color: $rojo
+    cursor: pointer
+    font-family: 'gobclregular'
+    font-size: 16px
+    padding: 5px 20px
+    transition: .35s
+    width: 180px
+    &:hover
+      background: white
+      box-shadow: 0 0 4px rgba($rojo, .7)
+.align-center
+  text-align: center
 .blank
   font-size: 0
   margin: 0
-.error_form
-  color: $rojo
-  font-family: 'gobcllight'
-  font-style: italic
-  margin: 0
-.field_with_errors
-  input[type="text"]
-    border: 1px solid $rojo
 .filter
   background: linear-gradient(to bottom, rgba(76,76,76,0) 0%,rgba(19,19,19,0.5) 100%)
   height: 100%
   position: absolute
   width: 100%
 .form-session
-  background-color: $clarito
-  border-top: 2px solid $azulito
-  margin: 20px 0
-  padding: 40px
-  input[type="email"],
-  input[type="password"]
-    margin-bottom: 16px
-    padding: 5px
-    width: 100%
-  label
-    font-family: 'gobclbold'
-    font-size: 13px
-    text-transform: uppercase
+  width: 100%
+.form-session-inner
+  background: $clarito
+  border-radius: 3px
+  box-shadow: 0px 50px 30px -30px rgba(0, 0, 0, 0.3)
+  display: inline-block
+  height: initial
+  padding: 20px 0
+  vertical-align: top
+  width: 32%
+  .field
+    display: block
+    margin: 0 auto 10px auto
+    max-width: 350px
+    position: relative
+    width: 80%
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="password"],
+    select
+      background-color: white !important
+      border: 1px solid $grisClaro
+      border-radius: 3px
+      color: #697689
+      font-family: 'gobclregular'
+      outline: none
+      padding: 5px 10px
+      position: relative
+      width: 100%
+      &:focus
+        border: 1px solid #FF6F00
+    input[type="password"]
+      font-family: sans-serif
+    label
+      font-size: 14px
+      font-style: italic
+      margin-left: 5px
+  .title-h3
+    position: relative
+    text-align: center
+    margin-bottom: 0
+    margin-top: 10px
+    p
+      color: $azulito
+      font-family: 'gobclregular'
+      font-size: 20px
+      margin: 0 auto
+      max-width: 350px
+    p,
+    span
+      display: inline-block
+      vertical-align: middle
+    span
+      color: $azulito
+      font-family: 'gobcllight'
+      font-size: 54px
+      font-weight: 100
+      margin-right: 16px
+      //position: absolute
+      //left: 10px
 .login
   .login-row
     background-color: $clarito
     border-top: 2px solid $azulito
+    margin-top: 16px
     padding: 40px
     width: 100%
     h3
@@ -224,25 +289,21 @@ footer
       text-align: center
       text-decoration: none
       width: 100%
-.login-form
-  position: relative
-  input[type="text"]
-    padding: 5px 10px
-    width: 100%
-.mdl-layout__content
+.layout-content
   display: flex
-  margin: 0 auto
+  margin: 25px auto 
   max-width: 1100px
-  overflow-x: initial
-  overflow-y: initial
   width: 100%
   .intro
+    color: $gris
     padding: 0 0 0 4px
   .titulo-intro
     border-bottom: 1px solid $rojo
     color: $rojo
     font-size: 20px
     padding-bottom: 16px
+.margin-text
+  margin-bottom: 1em !important
 .modal-login.modal-activo
   opacity: 1
   visibility: visible
@@ -251,72 +312,157 @@ footer
   display: none
 .relative
   position: relative
+.formulario
+  display: block
+  padding-top: 30px
+  position: relative
+  width: 100%
+  .title-row
+    margin: 16px auto
+    p
+      color: $gris
+      font-size: 14px
+      text-align: center
+      a
+        color: $azulito
+.shared-links
+  margin-top: 16px
+  a
+    color: $azulito
+    font-size: 14px
+    margin-bottom: 5px
+
 .steps
-  background: $clarito
-  border-top: 3px solid $azulito
-  height: 400px
-  margin: 0 auto
-  max-width: 550px
+  //background: $clarito
+  //height: 500px
+  margin: 0 auto 30px auto
+  //max-width: 550px
   position: relative
   width: 100%
   .login-form
-    height: 100%
-  .step1,
-  .step2,
-  .step3,
+    .step-container
+      display: flex
+      justify-content: space-around
+  .step
+    background: $clarito
+    border-radius: 3px
+    box-shadow: 0px 50px 30px -30px rgba(0, 0, 0, 0.3)
+    display: inline-block
     height: initial
-    left: 0
-    position: absolute
-    top: 0
-    width: 100%
-    .field
-      display: block
-      margin: 0 auto
+    padding: 20px 0
+    vertical-align: top
+    width: 32%
+    .step-inner
+      position: relative
+      .field
+        display: block
+        margin: 0 auto 10px auto
+        max-width: 350px
+        position: relative
+        width: 80%
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"],
+        select
+          background-color: white !important
+          border: 1px solid $grisClaro
+          border-radius: 3px
+          color: #697689
+          font-family: 'gobclregular'
+          outline: none
+          padding: 5px 10px
+          position: relative
+          width: 100%
+          &:focus
+            border: 1px solid #FF6F00
+        input[type="password"]
+          font-family: sans-serif
+        .field_with_errors
+          position: relative
+          input[type="text"]
+            //border: 1px solid $rojo
+            border: 1px solid $grisClaro
+          label.message
+            color: $rojo
+            font-family: 'gobclregular'
+            font-size: 14px
+            font-style: italic
+            margin: 0
+        input[type="date"],
+        select
+          font-family: 'gobclregular'
+          font-size: 14px
+          height: 27px
+        select
+          option
+            padding: 5px 10px
+        label
+          font-size: 14px
+          font-style: italic
+          margin-left: 5px
+      .maps
+        border-bottom: 1px solid $azulito
+        padding: 5px
+        text-align: center
+        .map
+          background: white
+          border-radius: 50%
+          display: inline-block
+          height: 15px
+          margin: 0 5px
+          vertical-align: middle
+          width: 15px
+        .map-activo
+          background: $azulito
+    .nav-step
+      margin: 36px auto
       max-width: 350px
       width: 80%
-    .path-step
-      cursor: pointer
-      text-align: right
-      width: 80%
-      p
-        color: $rojo
-        font-family: 'gobclregular'
-        font-size: 16px
-        margin: 0
-      p,
-      svg
+      .back-step
+        text-align: left
+      .back-step,
+      .path-step
+        cursor: pointer
         display: inline-block
         vertical-align: middle
-      svg
-        width: 15px
+        width: 49%
+        p
+          color: $rojo
+          font-family: 'gobclregular'
+          font-size: 16px
+          margin: 0
+        p,
+        svg
+          display: inline-block
+          vertical-align: middle
+        svg
+          width: 15px
+      .path-step
+        text-align: right
   .title-h3
     position: relative
     text-align: center
-    margin-top: 37px
+    margin-bottom: 0
+    margin-top: 10px
     p
       color: $azulito
       font-family: 'gobclregular'
       font-size: 20px
       margin: 0 auto
       max-width: 350px
+    p,
     span
-      color: white
+      display: inline-block
+      vertical-align: middle
+    span
+      color: $azulito
       font-family: 'gobcllight'
       font-size: 54px
-      position: absolute
-      left: 10px
-  .step1
-    opacity: 0
-    visibility: hidden
-  .step2
-    opacity: 0
-    visibility: hidden
-  .step3
-    opacity: 0
-    visibility: hidden
-  .step.active
-    opacity: 1
-    visibility: visible
+      font-weight: 100
+      margin-right: 16px
+      //position: absolute
+      //left: 10px
 .title
   font-size: 20px
   display: block
@@ -333,8 +479,6 @@ footer
     font-size: 15px
 .title-row
   width: 100%
-  .title
-    max-width: 550px
 
 .login-form:nth-child(2)
   background: red !important
