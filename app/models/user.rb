@@ -24,23 +24,23 @@ class User < ActiveRecord::Base
 ### Validando campos al registrarse
 
 
-  #validates_presence_of :minning_society_name, presence: true, message: "Este campo es requerido para la inscripción"
-  #validates_presence_of :minning_society_rut, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :first_name, presence: true, message: "Tu nombre es requerido para la inscripción"
-  validates_presence_of :last_name, presence: true, message: "Tu apellido es requerido para la inscripción"
-  validates_presence_of :surname, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :rut, presence: true, message: "Tu rut es requerido para la inscripción"
-  validates_presence_of :birthdate, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :gender_id, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :civil_status_id, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :address, presence: true, message: "Tu dirección es requerida para la inscripción"
-  validates_presence_of :village, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :mobile, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :landline, presence: true, message: "Este campo es requerido para la inscripción"
-  # validates_presence_of :region_id, presence: true, message: "Este campo es requerido para la inscripción"
-  # validates_presence_of :province_id, presence: true, message: "Este campo es requerido para la inscripción"
-  # validates_presence_of :commune_id, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :password_confirmation, presence: true, message: "Necesitas confirmar una password"
+  #validates :minning_society_name, presence: {message: "Este campo es requerido para la inscripción"}
+  #validates :minning_society_rut, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :first_name, presence: {message: "Tu nombre es requerido para la inscripción"}
+  validates :last_name, presence: {message: "Tu apellido es requerido para la inscripción"}
+  validates :surname, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :rut, presence: {message: "Tu rut es requerido para la inscripción"}
+  validates :birthdate, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :gender_id, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :civil_status_id, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :address, presence: {message: "Tu dirección es requerida para la inscripción"}
+  validates :village, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :mobile, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :landline, presence: {message: "Este campo es requerido para la inscripción"}
+  # validates :region_id, presence: {message: "Este campo es requerido para la inscripción"}
+  # validates :province_id, presence: {message: "Este campo es requerido para la inscripción"}
+  # validates :commune_id, presence: {message: "Este campo es requerido para la inscripción"}
+  validates :password_confirmation, presence: {message: "Necesitas confirmar una password"}
 
 
 
