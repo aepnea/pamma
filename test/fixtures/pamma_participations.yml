@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: pamma_participations
+#
+#  id                    :integer          not null, primary key
+#  previous_beneficiary  :boolean
+#  number_times          :integer
+#  benefit_type_id       :integer
+#  project_state_type_id :integer
+#  support_type_id       :integer
+#  user_id               :integer
+#  asociative_user_id    :integer
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  previous_beneficiary: false
+  number_times: 1
+  benefit_type_id: 1
+  project_state_type_id: 1
+  support_type_id: 1
+
+two:
+  previous_beneficiary: false
+  number_times: 1
+  benefit_type_id: 1
+  project_state_type_id: 1
+  support_type_id: 1

@@ -9,4 +9,5 @@
 #
 
 class SupportType < ActiveRecord::Base
+  has_many :pamma_participations
 end

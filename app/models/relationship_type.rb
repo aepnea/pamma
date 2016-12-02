@@ -9,4 +9,6 @@
 #
 
 class RelationshipType < ActiveRecord::Base
+  has_many :family_groups
+  
 end

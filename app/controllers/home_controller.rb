@@ -1,13 +1,13 @@
 class HomeController < ApplicationController
-  def admin
+  def admin_dashboard
   end
-  
+
   def index
   end
 
-  def index_user
+  def index_user_dashboard
   end
 
-  def index_user_asociative
+  def index_user_asociative_dashboard
   end
 end

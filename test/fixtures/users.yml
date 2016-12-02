@@ -15,6 +15,22 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  minning_society_name   :string(255)
+#  minning_society_rut    :string(255)
+#  first_name             :string(255)
+#  last_name              :string(255)
+#  surname                :string(255)
+#  rut                    :string(255)
+#  birthdate              :date
+#  gender_id              :integer
+#  civil_status_id        :integer
+#  address                :string(255)
+#  village                :string(255)
+#  mobile                 :string(255)
+#  landline               :string(255)
+#  region_id              :integer
+#  province_id            :integer
+#  commune_id             :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

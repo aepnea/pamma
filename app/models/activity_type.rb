@@ -9,4 +9,6 @@
 #
 
 class ActivityType < ActiveRecord::Base
+  has_many :personal_backgrounds
+
 end
