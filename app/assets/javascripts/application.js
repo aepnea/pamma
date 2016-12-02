@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/widgets/datepicker
 //= require turbolinks
-//= require rails.validations
+//= require material
 //= require_tree .

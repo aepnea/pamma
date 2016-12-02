@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
 
 
+
+  get 'user_postulations/list'
+
+  get 'user_postulations/postulation_period'
+
+  get 'user_postulations/postulate'
+
+
   devise_for :admins
-  devise_for :asociative_users
-  #devise_for :users
+
+  # create via ajax en controlador
   devise_for :users, :controllers => {registrations: 'user/registrations'}
-  
+  devise_for :asociative_users, :controllers => { registrations: 'asociative_user/registrations' }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,17 +22,17 @@ Rails.application.routes.draw do
 
   # si es admin
   authenticated :admin do
-    root "home#admin", as: "admin_root"
+    root "home#admin_dashboard", as: "admin_root"
   end
 
   # si es user
   authenticated :user do
-    root "home#index_user", as: "user_root"
+    root "home#index_user_dashboard", as: "user_root"
   end
 
   # si es asociado
   authenticated :asociative_user do
-    root "home#index_user_asociative", as: "asociative_user_root"
+    root "home#index_user_asociative_dashboard", as: "asociative_user_root"
   end
 
   # si no esta logeado

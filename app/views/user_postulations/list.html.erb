@@ -1,0 +1,11 @@
+Postulaciones Anteriores
+<%@postulations_list.each do |p|%>
+  <p>Nombre Periodo de Postulación <%= p.postulation_date.name%></p>
+  <p>Hito: <%= p.milestone_name%></p>
+  <p>Descripción <%=p.milestone_description%></p>
+  <p>Fecha Inicio: <%= p.milestone_date_begin%></p>
+  <p>Fecha:        <%= p.milestone_date_end%></p>
+  <p>Estado Postulación:        <%= p.postulation_state.name%></p>
+<% end %>
+
+<%= link_to "Periodos de Postulación", user_postulations_postulation_period_path%>

@@ -12,7 +12,7 @@
 <body>
   <header data-turbolinks-permanent="true">
     <div class="filter"></div>
-    <div class="header-inner-container">
+    <div class="mdl-layout__header-row relative">
       <div class="index">
         <div class="logo-container">
           <%= link_to root_path do %>
@@ -65,19 +65,19 @@
     </div>
   </header>
 
-  <main class="layout-content">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <main class="mdl-layout__content">
     <%= yield %>
   </main>
   <footer>
-    <div class="footer">
+    <div class="mdl-layout__header-row">
       <div class="logo-footer-container">
         <%= image_tag("logo-footer.png", :class => "logo") %>
       </div>
     </div>
   </footer>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
 
 </body>
 </html>
