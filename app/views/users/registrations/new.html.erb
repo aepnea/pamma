@@ -1,130 +1,154 @@
-<div class="mdl-cell mdl-cell--6-col">
-  <h2 class="title">Registrate</h2>
-  <%= form_for(resource, as: resource_name, html: {id: "login-form", class: "login-form"}, remote: true,format: :json, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+<div class="formulario">
+  <div class="title-row">
+    <h2 class="title-form">Para ingresar necesitas llenar el siguiente formulario <span>(son solo 3 pasos..)</span></h2>
+    <p>¿Tienes cuenta? puedes <%= render "users/shared/links" %></p>
+  </div>
+  <div class="steps">
+    <%= form_for(resource, as: resource_name, html: {id: "login-form", class: "login-form"}, url: registration_path(resource_name),validate: true) do |f| %>
+      <div class="step-container">
+        <div class="step1 step">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map map-activo"></div>
+              <div class="map"></div>
+              <div class="map"></div>
+            </div>
+            <h3 class="title-h3">
+              <span>01</span><p> Datos personales</p>
+            </h3>
+            <div class="field">
+              <%= f.label "Nombre:" %><br />
+              <%= f.text_field :first_name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Nombre:" %><br />
-      <%= f.text_field :first_name, autofocus: true %>
-      <div id='error_nombre'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Apellido Paterno:" %><br />
+              <%= f.text_field :last_name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Apellido Paterno:" %><br />
-      <%= f.text_field :last_name, autofocus: true %>
-      <div id='error_apellido-p'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Apellido Materno:" %><br />
+              <%= f.text_field :surname %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Apellido Materno:" %><br />
-      <%= f.text_field :surname, autofocus: true %>
-      <div id='error_apellido-m'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Rut:" %><br />
+              <%= f.text_field :rut %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Rut:" %><br />
-      <%= f.text_field :rut, autofocus: true %>
-      <div id='error_rut'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Fecha Nacimiento:" %><br />
+              <%= f.date_field :birthdate, class: "datepicker" %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Fecha Nacimiento:" %><br />
-      <%= f.date_field :birthdate, autofocus: true %>
-      <div id='error_fecha-nacimiento'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Género:" %>
+              <%= f.collection_select :gender_id, GenderType.all, :id, :name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Género:" %>
-      <%= f.collection_select :gender_id, GenderType.all, :id, :name %>
-      <div id='error_genero'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Estado Civil:" %>
+              <%= f.collection_select :civil_status_id, CivilStatusType.all, :id, :name %>
+            </div>         
+          </div>
+        </div>
+        <!--fin step1  -->
+        
+        <div class="step2 step">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map"></div>
+              <div class="map map-activo"></div>
+              <div class="map"></div>
+            </div>
+            <h3 class="title-h3">
+              <span>02</span><p>Como ubicarte</p>
+            </h3>
+            <div class="field">
+              <%= f.label "Dirección:" %><br />
+              <%= f.text_field :address %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Estado Civil:" %>
-      <%= f.collection_select :civil_status_id, CivilStatusType.all, :id, :name %>
-      <div id='error_estad-civil'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Población o Villa:" %><br />
+              <%= f.text_field :village %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Dirección:" %><br />
-      <%= f.text_field :address, autofocus: true %>
-      <div id='error_direccion'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Teléfono Movil:" %><br />
+              <%= f.text_field :mobile %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Población o Villa:" %><br />
-      <%= f.text_field :village, autofocus: true %>
-      <div id='error_villa'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Teléfono Fijo:" %><br />
+              <%= f.text_field :landline %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Teléfono Movil:" %><br />
-      <%= f.text_field :mobile, autofocus: true %>
-      <div id='error_telefono-cel'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Región:" %>
+              <%= f.collection_select :region_id, Region.all, :id, :name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Teléfono Fijo:" %><br />
-      <%= f.text_field :landline, autofocus: true %>
-      <div id='error_telefono-fijo'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Provincia:" %>
+              <%= f.collection_select :province_id, Province.all, :id, :name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Región:" %>
-      <%= f.collection_select :region_id, Region.all, :id, :name %>
-      <div id='error_region'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Comuna:" %>
+              <%= f.collection_select :commune_id, Commune.all, :id, :name %>
+            </div>
+          </div>
+        </div>
+        <!-- fin step2-->
+      
+        
+        <div class="step3 step">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map"></div>
+              <div class="map"></div>
+              <div class="map map-activo"></div>
+            </div>
+            <h3 class="title-h3">
+              <span>03</span><p>Ultimos datos y contraseña</p>
+            </h3>
+            <div class="field">
+              <%= f.label "Nombre Sociedad Minera a la que Pertenece:" %><br />
+              <%= f.text_field :minning_society_name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Provincia:" %>
-      <%= f.collection_select :province_id, Province.all, :id, :name %>
-      <div id='error_provincia'></div>
-    </div>
+            <div class="field">
+              <%= f.label "RUT Sociedad Minera a la que Pertenece:" %><br />
+              <%= f.text_field :minning_society_rut %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Comuna:" %>
-      <%= f.collection_select :commune_id, Commune.all, :id, :name %>
-      <div id='error_comuna'></div>
-    </div>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Nombre Sociedad Minera a la que Pertenece:" %><br />
-      <%= f.text_field :minning_society_name, autofocus: true %>
-      <div id='error_sociedad'></div>
-    </div>
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
 
-    <div class="field">
-      <%= f.label "RUT Sociedad Minera a la que Pertenece:" %><br />
-      <%= f.text_field :minning_society_rut, autofocus: true %>
-      <div id='error_rut-sociedad'></div>
-    </div>
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-      <div id='error_email'></div>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-      <div id='error_password'></div>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      <div id='error_password-confirm'></div>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "users/shared/links" %>
-
+            <div class="actions">
+              <%= f.submit "Sign up", class: "submit" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+
