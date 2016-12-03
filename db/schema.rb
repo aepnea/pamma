@@ -230,6 +230,7 @@ ActiveRecord::Schema.define(version: 20161130025509) do
     t.string   "user_type",               limit: 255
     t.integer  "postulation_standard_id", limit: 4
     t.boolean  "state"
+    t.integer  "region_id",               limit: 4
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

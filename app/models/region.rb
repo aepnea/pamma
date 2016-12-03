@@ -14,5 +14,6 @@ class Region < ActiveRecord::Base
   has_many :users
   has_many :characterization_works
   has_many :representatives
+  has_many :postulation_dates
 
 end

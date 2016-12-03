@@ -7,6 +7,7 @@ class CreatePostulationDates < ActiveRecord::Migration
       t.string :user_type
       t.integer :postulation_standard_id
       t.boolean :state
+      t.integer :region_id
 
       t.timestamps null: false
     end
