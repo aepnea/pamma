@@ -1,8 +1,25 @@
-Postulaciones Anteriores
-<%@postulations_list.each do |p|%>
-  <p>Nombre Periodo de Postulación <%= p.postulation_date_id%></p>
-  
-  <p>Estado Postulación:        <%= p.postulation_state_id%></p>
-<% end %>
-
-<%= link_to "Periodos de Postulación", user_postulations_postulation_period_path%>
+<div class="col-md-12">
+  <div class="postulation-section">
+    <div class="postulation">
+        <h3 class="title-postulation">Postulaciones</h3>
+        <p>Desde aca puedes postular, ver periodos y tus postulaciones históricas.</p>
+    </div>
+    <div class="postulation-body col-md-8 center">
+      <h3>Postulaciones Anteriores</h3>
+      <%@postulations_list.each do |p|%>
+        <div class="row no-padding">
+          <div class="col-md-6">
+            <p class="postulation-info">Nombre Periodo de Postulación <%= p.postulation_date_id%></p>
+          </div>
+          <div class="col-md-6">
+            <p class="postulation-info">Estado Postulación:<%= p.postulation_state_id %></p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to user_postulations_postulation_period_path, class: "create-orange" do%>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.plus{fill:#F7925F;}</style></defs><title>plus</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="plus" points="12 4.5 7.5 4.5 7.5 0 4.5 0 4.5 4.5 0 4.5 0 7.5 4.5 7.5 4.5 12 7.5 12 7.5 7.5 12 7.5 12 4.5"/></g></g></svg>
+        Nueva postulación
+      <% end %>
+    </div>
+  </div>
+</div>

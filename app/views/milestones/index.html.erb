@@ -1,55 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="inner-file">
+      <div class="header-file">
+        <div class="col-md-8 center">
+          <div class="file-text">
+            <h3>Beneficiario</h3>
+            <p>Los beneficios que has logrado.</p>
+          </div>
+          <div class="file-count">04</div>
+        </div>
+      </div>
+      <div class="body-file">
+        <div class="col-md-8 center">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Date begin</th>
+                <th>Date end</th>
+                <th>User</th>
+                <th>Asociative user</th>
+              </tr>
+            </thead>
 
-<h1>Listing Milestones</h1>
+            <tbody>
+              <% @milestones.each do |milestone| %>
+                <tr>
+                  <td><%= best_in_place milestone, :name, as: :input %></td>
+                  <td><%= best_in_place milestone, :description, as: :input %></td>
+                  <td><%= best_in_place milestone, :date_begin, as: :input %></td>
+                  <td><%= best_in_place milestone, :date_end, as: :input %></td>
+                  <td class="destroy-table">
+                    <%= link_to milestone, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <%= link_to new_milestone_path, class: "create" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.plus{fill:#00b9b5;}</style></defs><title>plus</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="plus" points="12 4.5 7.5 4.5 7.5 0 4.5 0 4.5 4.5 0 4.5 0 7.5 4.5 7.5 4.5 12 7.5 12 7.5 7.5 12 7.5 12 4.5"/></g></g></svg>
+            Agregar nuevo
+          <% end %>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Date begin</th>
-      <th>Date end</th>
-      <th>User</th>
-      <th>Asociative user</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @milestones.each do |milestone| %>
-      <tr>
-        <td><%= milestone.name %></td>
-        <td><%= milestone.description %></td>
-        <td><%= milestone.date_begin %></td>
-        <td><%= milestone.date_end %></td>
-        <td><%= milestone.user_id %></td>
-        <td><%= milestone.asociative_user_id %></td>
-        <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
-        <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-=============
-<table>
-  <thead>
-    <tr>
-      <th>Tipo de Beneficio</th>
-      <th>Inversión Estimada</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @benefit_requesteds.each do |benefit_requested| %>
-      <tr>
-        <td><%= benefit_requested.benefit_type_id %></td>
-        <td><%= benefit_requested.estimated_investment %></td>
-        <td><%= benefit_requested.comments %></td>
-      </tr>
-    <%end%>
-  </tbody>
-</table>
-<br>
-
-<%= link_to 'New Milestone', new_milestone_path %>

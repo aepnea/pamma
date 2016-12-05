@@ -231,6 +231,19 @@ footer
   svg
     vertical-align: middle
     width: 16px
+.create-orange
+  background: white
+  border-radius: 3px
+  color: $naranjo
+  display: inline-block
+  font-family: 'gobclbold'
+  margin-left: 5px
+  margin-top: 16px
+  padding: 5px 30px
+  text-decoration: none
+  svg
+    vertical-align: middle
+    width: 16px
 .dashboard-row
   width: 100%
   .record-date
@@ -505,26 +518,58 @@ footer
       a
         color: $azulito
 .postulation-section
+  background: $naranjo
+  .postulation
+    background: $dark-naranjo
+    border-bottom: 1px solid white
+    h3,
+    p
+      color: white
+  .postulation-body
+    h3,
+    p
+      color: white
+    .postulation-info
+      background: white
+      color: $gris
+.postulation-section,
+.postulation-section-nocolor
   width: 100%
   .postulation
-    background: $naranjo
     border-radius: 3px 3px 0 0
     a
       text-decoration: none
     h3
-      background: $dark-naranjo
-      border-bottom: 1px solid white
-      border-radius: 3px 3px 0 0
-      color: white
       font-size: 20px
       margin: 0
       padding: 16px 25px
       text-align: right
     p
-      color: white
       margin: 0
       padding: 16px 25px
       text-align: right
+  .postulation-body
+    padding: 16px 0
+    h3
+      font-size: 20px
+      margin: 0
+      padding: 16px 0
+      text-align: left
+    p
+      margin: 0
+      padding: 16px 0
+      text-align: right
+    .postulation-info,
+    .postulation-info-orange
+      border-radius: 3px
+      margin-bottom: 10px
+      padding: 5px
+      text-align: left
+.postulation-section-nocolor
+  .postulation-body
+    .postulation-info-orange
+      background: $naranjo
+      color: white
 .row
   width: 100%
 .shared-links
@@ -692,3 +737,6 @@ footer
 .login-form:nth-child(2)
   background: red !important
 
+.width-total
+  display: block
+  width: 100%
