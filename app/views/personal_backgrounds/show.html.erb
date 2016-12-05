@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scholarship type:</strong>
+  <%= @personal_background.scholarship_type_id %>
+</p>
+
+<p>
+  <strong>Retirement system type:</strong>
+  <%= @personal_background.retirement_system_type_id %>
+</p>
+
+<p>
+  <strong>Activity type:</strong>
+  <%= @personal_background.activity_type_id %>
+</p>
+
+<p>
+  <strong>Training type:</strong>
+  <%= @personal_background.training_type_id %>
+</p>
+
+<p>
+  <strong>Social record status type:</strong>
+  <%= @personal_background.social_record_status_type_id %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @personal_background.score %>
+</p>
+
+<p>
+  <strong>Last poll:</strong>
+  <%= @personal_background.last_poll %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @personal_background.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_personal_background_path(@personal_background) %> |
+<%= link_to 'Back', personal_backgrounds_path %>

@@ -1,0 +1,2 @@
+module PammaParticipationsHelper
+end

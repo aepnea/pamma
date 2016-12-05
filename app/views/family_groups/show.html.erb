@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @family_group.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @family_group.age %>
+</p>
+
+<p>
+  <strong>Relationship type:</strong>
+  <%= @family_group.relationship_type_id %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @family_group.activity %>
+</p>
+
+<p>
+  <strong>Scholarship type:</strong>
+  <%= @family_group.scholarship_type_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @family_group.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_family_group_path(@family_group) %> |
+<%= link_to 'Back', family_groups_path %>

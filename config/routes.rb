@@ -2,13 +2,19 @@ Rails.application.routes.draw do
 
 
 
+  resources :personal_backgrounds
+  resources :pamma_participations
+  resources :family_groups
+  resources :characterization_works
+  resources :beneficiaries
+  resources :postulations
+
+  
   get 'user_postulations/list'
 
   get 'user_postulations/postulation_period'
 
-  get 'user_postulations/postulate'
-
-
+  #resource :postulation
   devise_for :admins
 
   # create via ajax en controlador

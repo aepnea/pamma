@@ -1,0 +1,73 @@
+<%= form_for(@postulation) do |f| %>
+  <% if @postulation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postulation.errors.count, "error") %> prohibited this postulation from being saved:</h2>
+
+      <ul>
+      <% @postulation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :asociative_users_id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :postulation_date_id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :postulation_state_id %>
+  </div>
+  <div class="field">
+    <%= f.label :personal_backgrounds_id %><br>
+    <%= f.number_field :personal_backgrounds_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_group_id %><br>
+    <%= f.number_field :family_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pamma_participation_id %><br>
+    <%= f.number_field :pamma_participation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :beneficiary_id %><br>
+    <%= f.number_field :beneficiary_id %>
+  </div>
+  <div class="field">
+    <%= f.label :characterization_work_id %><br>
+    <%= f.number_field :characterization_work_id %>
+  </div>
+  <div class="field">
+    <%= f.label :benefit_requested_id %><br>
+    <%= f.number_field :benefit_requested_id %>
+  </div>
+  <div class="field">
+    <%= f.label :representative_id %><br>
+    <%= f.number_field :representative_id %>
+  </div>
+  <div class="field">
+    <%= f.label :milestone_name %><br>
+    <%= f.text_field :milestone_name %>
+  </div>
+  <div class="field">
+    <%= f.label :milestone_description %><br>
+    <%= f.text_area :milestone_description %>
+  </div>
+  <div class="field">
+    <%= f.label :milestone_date_begin %><br>
+    <%= f.date_select :milestone_date_begin %>
+  </div>
+  <div class="field">
+    <%= f.label :milestone_date_end %><br>
+    <%= f.date_select :milestone_date_end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

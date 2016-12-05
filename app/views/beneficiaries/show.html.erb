@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beneficiary.name %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @beneficiary.rut %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @beneficiary.address %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @beneficiary.age %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @beneficiary.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
+<%= link_to 'Back', beneficiaries_path %>

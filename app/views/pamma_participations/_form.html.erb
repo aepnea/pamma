@@ -1,0 +1,45 @@
+<%= form_for(@pamma_participation) do |f| %>
+  <% if @pamma_participation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pamma_participation.errors.count, "error") %> prohibited this pamma_participation from being saved:</h2>
+
+      <ul>
+      <% @pamma_participation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :previous_beneficiary %><br>
+    <%= f.text_field :previous_beneficiary %>
+  </div>
+  <div class="field">
+    <%= f.label :number_times %><br>
+    <%= f.number_field :number_times %>
+  </div>
+  <div class="field">
+    <%= f.label :benefit_type_id %><br>
+    <%= f.number_field :benefit_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_state_type_id %><br>
+    <%= f.number_field :project_state_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :support_type_id %><br>
+    <%= f.number_field :support_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :asociative_user_id %><br>
+    <%= f.number_field :asociative_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

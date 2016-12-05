@@ -4,7 +4,7 @@
 #
 #  id                       :integer          not null, primary key
 #  user_id                  :integer
-#  asociative_user_id       :integer
+#  asociative_users_id      :integer
 #  personal_backgrounds_id  :integer
 #  family_group_id          :integer
 #  pamma_participation_id   :integer
@@ -16,6 +16,8 @@
 #  milestone_description    :text(65535)
 #  milestone_date_begin     :date
 #  milestone_date_end       :date
+#  postulation_date_id      :integer
+#  postulation_state_id     :integer
 #  created_at               :datetime         not null
 #  updated_at               :datetime         not null
 #

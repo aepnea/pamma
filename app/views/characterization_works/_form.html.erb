@@ -1,0 +1,97 @@
+<%= form_for(@characterization_work) do |f| %>
+  <% if @characterization_work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@characterization_work.errors.count, "error") %> prohibited this characterization_work from being saved:</h2>
+
+      <ul>
+      <% @characterization_work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :work_name %><br>
+    <%= f.text_field :work_name %>
+  </div>
+  <div class="field">
+    <%= f.label :localization %><br>
+    <%= f.text_field :localization %>
+  </div>
+  <div class="field">
+    <%= f.label :sector %><br>
+    <%= f.text_field :sector %>
+  </div>
+  <div class="field">
+    <%= f.label :mountain_range %><br>
+    <%= f.text_field :mountain_range %>
+  </div>
+  <div class="field">
+    <%= f.label :region_id %><br>
+    <%= f.number_field :region_id %>
+  </div>
+  <div class="field">
+    <%= f.label :province_id %><br>
+    <%= f.number_field :province_id %>
+  </div>
+  <div class="field">
+    <%= f.label :commune_id %><br>
+    <%= f.number_field :commune_id %>
+  </div>
+  <div class="field">
+    <%= f.label :utm_north_coordinate %><br>
+    <%= f.text_field :utm_north_coordinate %>
+  </div>
+  <div class="field">
+    <%= f.label :utm_east_coordinate %><br>
+    <%= f.text_field :utm_east_coordinate %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_power %><br>
+    <%= f.text_field :buyer_power %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.text_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :mining_district %><br>
+    <%= f.text_field :mining_district %>
+  </div>
+  <div class="field">
+    <%= f.label :number_workers %><br>
+    <%= f.number_field :number_workers %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_type_id %><br>
+    <%= f.number_field :owner_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mining_properties_constitution_type_id %><br>
+    <%= f.number_field :mining_properties_constitution_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :operation_type_id %><br>
+    <%= f.number_field :operation_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :extracted_mineral_type_id %><br>
+    <%= f.number_field :extracted_mineral_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mining_information_available_type_id %><br>
+    <%= f.number_field :mining_information_available_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :asociative_user_id %><br>
+    <%= f.number_field :asociative_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

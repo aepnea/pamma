@@ -1,2 +1,18 @@
-<h1>UserPostulations#postulate</h1>
-<p>Find me in app/views/user_postulations/postulate.html.erb</p>
+<%= form_for(@postulate_data) do |f| %>
+  <% if @postulate_data.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postulate_data.errors.count, "error") %> prohibited this postulate_data from being saved:</h2>
+
+      <ul>
+      <% @postulate_data.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Previous beneficiary:</strong>
+  <%= @pamma_participation.previous_beneficiary %>
+</p>
+
+<p>
+  <strong>Number times:</strong>
+  <%= @pamma_participation.number_times %>
+</p>
+
+<p>
+  <strong>Benefit type:</strong>
+  <%= @pamma_participation.benefit_type_id %>
+</p>
+
+<p>
+  <strong>Project state type:</strong>
+  <%= @pamma_participation.project_state_type_id %>
+</p>
+
+<p>
+  <strong>Support type:</strong>
+  <%= @pamma_participation.support_type_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pamma_participation.user_id %>
+</p>
+
+<p>
+  <strong>Asociative user:</strong>
+  <%= @pamma_participation.asociative_user_id %>
+</p>
+
+<%= link_to 'Edit', edit_pamma_participation_path(@pamma_participation) %> |
+<%= link_to 'Back', pamma_participations_path %>

@@ -20,17 +20,19 @@
 one:
   scholarship_type_id: 1
   retirement_system_type_id: 1
-  activity_type: 1
+  activity_type_id: 1
   training_type_id: 1
   social_record_status_type_id: 1
   score: 1
-  last_poll: 2016-11-24
+  last_poll: 2016-12-04
+  user_id: 1
 
 two:
   scholarship_type_id: 1
   retirement_system_type_id: 1
-  activity_type: 1
+  activity_type_id: 1
   training_type_id: 1
   social_record_status_type_id: 1
   score: 1
-  last_poll: 2016-11-24
+  last_poll: 2016-12-04
+  user_id: 1

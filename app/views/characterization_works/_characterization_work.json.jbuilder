@@ -1,0 +1,2 @@
+json.extract! characterization_work, :id, :work_name, :location, :sector, :mountain_range, :region_id, :province_id, :commune_id, :utm_north_coordinate, :utm_east_coordinate, :buyer_power, :distance, :mining_district, :number_workers, :owner_type_id, :mining_properties_constitution_type_id, :operation_type_id, :extracted_mineral_type_id, :mining_information_available_type_id, :user_id, :asociative_user_id, :created_at, :updated_at
+json.url characterization_work_url(characterization_work, format: :json)

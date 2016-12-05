@@ -1,0 +1,49 @@
+<%= form_for(@personal_background) do |f| %>
+  <% if @personal_background.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal_background.errors.count, "error") %> prohibited this personal_background from being saved:</h2>
+
+      <ul>
+      <% @personal_background.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scholarship_type_id %><br>
+    <%= f.number_field :scholarship_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :retirement_system_type_id %><br>
+    <%= f.number_field :retirement_system_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_type_id %><br>
+    <%= f.number_field :activity_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :training_type_id %><br>
+    <%= f.number_field :training_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :social_record_status_type_id %><br>
+    <%= f.number_field :social_record_status_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br>
+    <%= f.number_field :score %>
+  </div>
+  <div class="field">
+    <%= f.label :last_poll %><br>
+    <%= f.date_select :last_poll %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

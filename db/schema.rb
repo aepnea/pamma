@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130025509) do
+ActiveRecord::Schema.define(version: 20161205014557) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -85,16 +85,6 @@ ActiveRecord::Schema.define(version: 20161130025509) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "benefit_requesteds", force: :cascade do |t|
-    t.integer  "benefit_type_id",      limit: 4
-    t.integer  "estimated_investment", limit: 4
-    t.text     "comments",             limit: 65535
-    t.integer  "user_id",              limit: 4
-    t.integer  "asociative_user_id",   limit: 4
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-  end
-
   create_table "benefit_types", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
@@ -109,10 +99,10 @@ ActiveRecord::Schema.define(version: 20161130025509) do
     t.integer  "region_id",                              limit: 4
     t.integer  "province_id",                            limit: 4
     t.integer  "commune_id",                             limit: 4
-    t.integer  "utm_north_coordinate",                   limit: 4
-    t.integer  "utm_east_coordinate",                    limit: 4
+    t.float    "utm_north_coordinate",                   limit: 24
+    t.float    "utm_east_coordinate",                    limit: 24
     t.string   "buyer_power",                            limit: 255
-    t.integer  "distance",                               limit: 4
+    t.string   "distance",                               limit: 255
     t.string   "mining_district",                        limit: 255
     t.integer  "number_workers",                         limit: 4
     t.integer  "owner_type_id",                          limit: 4
@@ -120,11 +110,6 @@ ActiveRecord::Schema.define(version: 20161130025509) do
     t.integer  "operation_type_id",                      limit: 4
     t.integer  "extracted_mineral_type_id",              limit: 4
     t.integer  "mining_information_available_type_id",   limit: 4
-    t.boolean  "drill"
-    t.boolean  "winch"
-    t.boolean  "compressor"
-    t.boolean  "electric_generator"
-    t.boolean  "wagon"
     t.integer  "user_id",                                limit: 4
     t.integer  "asociative_user_id",                     limit: 4
     t.datetime "created_at",                                         null: false
@@ -192,15 +177,15 @@ ActiveRecord::Schema.define(version: 20161130025509) do
   end
 
   create_table "pamma_participations", force: :cascade do |t|
-    t.boolean  "previous_beneficiary"
+    t.string   "previous_beneficiary",  limit: 255
     t.integer  "number_times",          limit: 4
     t.integer  "benefit_type_id",       limit: 4
     t.integer  "project_state_type_id", limit: 4
     t.integer  "support_type_id",       limit: 4
     t.integer  "user_id",               limit: 4
     t.integer  "asociative_user_id",    limit: 4
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "personal_backgrounds", force: :cascade do |t|
@@ -250,7 +235,7 @@ ActiveRecord::Schema.define(version: 20161130025509) do
 
   create_table "postulations", force: :cascade do |t|
     t.integer  "user_id",                  limit: 4
-    t.integer  "asociative_user_id",       limit: 4
+    t.integer  "asociative_users_id",      limit: 4
     t.integer  "personal_backgrounds_id",  limit: 4
     t.integer  "family_group_id",          limit: 4
     t.integer  "pamma_participation_id",   limit: 4
@@ -258,12 +243,12 @@ ActiveRecord::Schema.define(version: 20161130025509) do
     t.integer  "characterization_work_id", limit: 4
     t.integer  "benefit_requested_id",     limit: 4
     t.integer  "representative_id",        limit: 4
-    t.integer  "postulation_date_id",      limit: 4
-    t.integer  "postulation_state_id",     limit: 4
     t.string   "milestone_name",           limit: 255
     t.text     "milestone_description",    limit: 65535
     t.date     "milestone_date_begin"
     t.date     "milestone_date_end"
+    t.integer  "postulation_date_id",      limit: 4
+    t.integer  "postulation_state_id",     limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end

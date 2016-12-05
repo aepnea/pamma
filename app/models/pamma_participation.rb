@@ -3,7 +3,7 @@
 # Table name: pamma_participations
 #
 #  id                    :integer          not null, primary key
-#  previous_beneficiary  :boolean
+#  previous_beneficiary  :string(255)
 #  number_times          :integer
 #  benefit_type_id       :integer
 #  project_state_type_id :integer

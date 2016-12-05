@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pamma Participations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Previous beneficiary</th>
+      <th>Number times</th>
+      <th>Benefit type</th>
+      <th>Project state type</th>
+      <th>Support type</th>
+      <th>User</th>
+      <th>Asociative user</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pamma_participations.each do |pamma_participation| %>
+      <tr>
+        <td><%= pamma_participation.previous_beneficiary %></td>
+        <td><%= pamma_participation.number_times %></td>
+        <td><%= pamma_participation.benefit_type_id %></td>
+        <td><%= pamma_participation.project_state_type_id %></td>
+        <td><%= pamma_participation.support_type_id %></td>
+        <td><%= pamma_participation.user_id %></td>
+        <td><%= pamma_participation.asociative_user_id %></td>
+        <td><%= link_to 'Edit', edit_pamma_participation_path(pamma_participation) %></td>
+        <td><%= link_to 'Destroy', pamma_participation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%if @pamma_participations.blank?%>
+  <%= link_to 'New Pamma participation', new_pamma_participation_path %>
+<%end%>

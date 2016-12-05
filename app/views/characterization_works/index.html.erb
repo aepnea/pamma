@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Characterization Works</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Work name</th>
+      <th>Location</th>
+      <th>Sector</th>
+      <th>Mountain range</th>
+      <th>Region</th>
+      <th>Province</th>
+      <th>Commune</th>
+      <th>Utm north coordinate</th>
+      <th>Utm east coordinate</th>
+      <th>Buyer power</th>
+      <th>Distance</th>
+      <th>Mining district</th>
+      <th>Number workers</th>
+      <th>Owner type</th>
+      <th>Mining properties constitution type</th>
+      <th>Operation type</th>
+      <th>Extracted mineral type</th>
+      <th>Mining information available type</th>
+      <th>User</th>
+      <th>Asociative user</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characterization_works.each do |characterization_work| %>
+      <tr>
+        <td><%= characterization_work.work_name %></td>
+        <td><%= characterization_work.localization %></td>
+        <td><%= characterization_work.sector %></td>
+        <td><%= characterization_work.mountain_range %></td>
+        <td><%= characterization_work.region_id %></td>
+        <td><%= characterization_work.province_id %></td>
+        <td><%= characterization_work.commune_id %></td>
+        <td><%= characterization_work.utm_north_coordinate %></td>
+        <td><%= characterization_work.utm_east_coordinate %></td>
+        <td><%= characterization_work.buyer_power %></td>
+        <td><%= characterization_work.distance %></td>
+        <td><%= characterization_work.mining_district %></td>
+        <td><%= characterization_work.number_workers %></td>
+        <td><%= characterization_work.owner_type_id %></td>
+        <td><%= characterization_work.mining_properties_constitution_type_id %></td>
+        <td><%= characterization_work.operation_type_id %></td>
+        <td><%= characterization_work.extracted_mineral_type_id %></td>
+        <td><%= characterization_work.mining_information_available_type_id %></td>
+        <td><%= characterization_work.user_id %></td>
+        <td><%= characterization_work.asociative_user_id %></td>
+        <td><%= link_to 'Edit', edit_characterization_work_path(characterization_work) %></td>
+        <td><%= link_to 'Destroy', characterization_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%if @characterization_works.blank?%>
+  <%= link_to 'New Characterization work', new_characterization_work_path %>
+<%end%>

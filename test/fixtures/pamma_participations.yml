@@ -3,7 +3,7 @@
 # Table name: pamma_participations
 #
 #  id                    :integer          not null, primary key
-#  previous_beneficiary  :boolean
+#  previous_beneficiary  :string(255)
 #  number_times          :integer
 #  benefit_type_id       :integer
 #  project_state_type_id :integer
@@ -17,15 +17,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  previous_beneficiary: false
+  previous_beneficiary: MyString
   number_times: 1
   benefit_type_id: 1
   project_state_type_id: 1
   support_type_id: 1
+  user_id: 1
+  asociative_user_id: 1
 
 two:
-  previous_beneficiary: false
+  previous_beneficiary: MyString
   number_times: 1
   benefit_type_id: 1
   project_state_type_id: 1
   support_type_id: 1
+  user_id: 1
+  asociative_user_id: 1

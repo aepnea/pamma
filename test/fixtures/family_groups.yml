@@ -21,6 +21,7 @@ one:
   relationship_type_id: 1
   activity: MyString
   scholarship_type_id: 1
+  user_id: 1
 
 two:
   name: MyString
@@ -28,3 +29,4 @@ two:
   relationship_type_id: 1
   activity: MyString
   scholarship_type_id: 1
+  user_id: 1

@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @postulation.user_id %>
+</p>
+
+<p>
+  <strong>Asociative users:</strong>
+  <%= @postulation.asociative_users_id %>
+</p>
+
+<p>
+  <strong>Postulation Date id</strong>
+  <%= @postulation.postulation_date_id %>
+</p>
+
+<p>
+  <strong>Personal backgrounds:</strong>
+  <%= @postulation.personal_backgrounds_id %>
+</p>
+
+<p>
+  <strong>Family group:</strong>
+  <%= @postulation.family_group_id %>
+</p>
+
+<p>
+  <strong>Pamma participation:</strong>
+  <%= @postulation.pamma_participation_id %>
+</p>
+
+<p>
+  <strong>Beneficiary:</strong>
+  <%= @postulation.beneficiary_id %>
+</p>
+
+<p>
+  <strong>Characterization work:</strong>
+  <%= @postulation.characterization_work_id %>
+</p>
+
+<p>
+  <strong>Benefit requested:</strong>
+  <%= @postulation.benefit_requested_id %>
+</p>
+
+<p>
+  <strong>Representative:</strong>
+  <%= @postulation.representative_id %>
+</p>
+
+<p>
+  <strong>Milestone name:</strong>
+  <%= @postulation.milestone_name %>
+</p>
+
+<p>
+  <strong>Milestone description:</strong>
+  <%= @postulation.milestone_description %>
+</p>
+
+<p>
+  <strong>Milestone date begin:</strong>
+  <%= @postulation.milestone_date_begin %>
+</p>
+
+<p>
+  <strong>Milestone date end:</strong>
+  <%= @postulation.milestone_date_end %>
+</p>
+
+<%= link_to 'Edit', edit_postulation_path(@postulation) %> |
+<%= link_to 'Back', postulations_path %>

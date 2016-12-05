@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Personal Backgrounds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scholarship type</th>
+      <th>Retirement system type</th>
+      <th>Activity type</th>
+      <th>Training type</th>
+      <th>Social record status type</th>
+      <th>Score</th>
+      <th>Last poll</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_backgrounds.each do |personal_background| %>
+      <tr>
+        <td><%= personal_background.scholarship_type_id %></td>
+        <td><%= personal_background.retirement_system_type_id %></td>
+        <td><%= personal_background.activity_type_id %></td>
+        <td><%= personal_background.training_type_id %></td>
+        <td><%= personal_background.social_record_status_type_id %></td>
+        <td><%= personal_background.score %></td>
+        <td><%= personal_background.last_poll %></td>
+        <td><%= personal_background.user_id %></td>
+        <td><%= link_to 'Edit', edit_personal_background_path(personal_background) %></td>
+        <td><%= link_to 'Destroy', personal_background, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%if @personal_backgrounds.blank?%>
+  <%= link_to 'New Personal background', new_personal_background_path %>
+<%end%>

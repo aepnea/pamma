@@ -531,6 +531,16 @@ Region.create([{	name: 'Region de ARICA Y PARINACOTA'	}, \
                  {	name: 'Isla de Maipo', province_id: '52'	}, \
                  {	name: 'Padre Hurtado', province_id: '52'	}, \
                  {	name: 'Peñaflor', province_id: '52'	}])
+
+
+
+
+
+
+
+
+
+
 ####### DATOS DE PRUEBA
 
 #### Creando usuarios individuales
@@ -578,6 +588,41 @@ user2.region_id  ='10'
 user2.province_id =''
 user2.commune_id =''
 user2.save!
+
+
+###### Antecedentes
+
+
+
+
+Beneficiary.create ([{name: 'Sara Gonzalez', rut: '10838492-5', address: 'german riesco 430', age: '22', user_id: '1'},\
+                     {name: 'Alvaro Valero', rut: '18647934-9', address: 'toro mazote 1010', age: '55', user_id: '1'},\
+                     {name: 'Gary Medel', rut: '19837567-9', address: 'Renca 1010', age: '27', user_id: '2'},\
+                     {name: 'Felipe Gutierrez', rut: '11111111-1', address: 'banco de sangre 1010', age: '26', user_id: '2'}])
+
+#BenefitRequested.create([{benefit_type_id: '2', user_id: '1', asociative_user_id: '', estimated_investment: '10000000', comments: 'descripcion usuario 1'},\
+#                         {benefit_type_id: '1', user_id: '2', asociative_user_id: '', estimated_investment: '10000000', comments: 'descripcion usuario 2'}])
+
+FamilyGroup.create([{name: 'joselito bacca', age: '22', relationship_type_id: '3', activity: 'futbolista', scholarship_type_id: '3', user_id: '1'},\
+                    {name: 'Alexis Sanchez', age: '26', relationship_type_id: '5', activity: 'Intelectual', scholarship_type_id: '2', user_id: '1'},\
+                    {name: 'Carlos Carmona', age: '30', relationship_type_id: '2', activity: 'ama de casa', scholarship_type_id: '4', user_id: '1'},\
+                    {name: 'Cecilia Bolocco', age: '100', relationship_type_id: '2', activity: 'Empresaria', scholarship_type_id: '3', user_id: '1'},\
+                    {name: 'Alvaro Sanhueza', age: '55', relationship_type_id: '6', activity: 'Periodista', scholarship_type_id: '1', user_id: '2'},\
+                    {name: 'Luis Jara', age: '44', relationship_type_id: '4', activity: 'Cantante', scholarship_type_id: '2', user_id: '2'},\
+                    {name: 'Mauricio Salinas', age: '64', relationship_type_id: '5', activity: 'Artista', scholarship_type_id: '5', user_id: '2'},\
+                    {name: 'Mauricio Parra', age: '66', relationship_type_id: '4', activity: 'Humorista', scholarship_type_id: '2', user_id: '2'}])
+
+
+CharacterizationWork.create([{work_name: 'Mina la caucásica', localization: 'Atacama', sector: ' Antofagasta', mountain_range: '30', region_id: '3', province_id: '1', commune_id: '1', utm_north_coordinate: '2342', utm_east_coordinate: '234', buyer_power: '342342', distance: '234', mining_district: '4', number_workers: '44', owner_type_id: '2', mining_properties_constitution_type_id: '2', operation_type_id: '2', extracted_mineral_type_id: '2', mining_information_available_type_id: '2', user_id: '1', asociative_user_id:''},\
+                             {work_name: 'Mina la jurasica', localization: 'Atacama', sector: ' Antofagasta', mountain_range: '30', region_id: '3', province_id: '1', commune_id: '1', utm_north_coordinate: '2342', utm_east_coordinate: '234', buyer_power: '342342', distance: '234', mining_district: '4', number_workers: '44', owner_type_id: '2', mining_properties_constitution_type_id: '2', operation_type_id: '2', extracted_mineral_type_id: '2', mining_information_available_type_id: '2', user_id: '2', asociative_user_id:''}])
+
+PammaParticipation.create([{previous_beneficiary: '', number_times: '', benefit_type_id: '', project_state_type_id: '', support_type_id: '', user_id: '', asociative_user_id: ''},\
+                           {previous_beneficiary: '', number_times: '', benefit_type_id: '', project_state_type_id: '', support_type_id: '', user_id: '', asociative_user_id: ''}])
+
+PersonalBackground.create([{scholarship_type_id: '3', retirement_system_type_id: '2', activity_type_id: '3', training_type_id: '1', social_record_status_type_id: '2', score: '20', last_poll: '', user_id: '1'},\
+                           {scholarship_type_id: '3', retirement_system_type_id: '2', activity_type_id: '3', training_type_id: '1', social_record_status_type_id: '2', score: '20', last_poll: '', user_id: '2'}])
+
+
 
 ##### Postulaciones
 

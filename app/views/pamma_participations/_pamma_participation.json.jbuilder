@@ -1,0 +1,2 @@
+json.extract! pamma_participation, :id, :previous_beneficiary, :number_times, :benefit_type_id, :project_state_type_id, :support_type_id, :user_id, :asociative_user_id, :created_at, :updated_at
+json.url pamma_participation_url(pamma_participation, format: :json)

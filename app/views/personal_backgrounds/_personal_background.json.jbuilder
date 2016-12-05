@@ -1,0 +1,2 @@
+json.extract! personal_background, :id, :scholarship_type_id, :retirement_system_type_id, :activity_type_id, :training_type_id, :social_record_status_type_id, :score, :last_poll, :user_id, :created_at, :updated_at
+json.url personal_background_url(personal_background, format: :json)
