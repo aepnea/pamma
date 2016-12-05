@@ -4,10 +4,10 @@
       <div class="header-file">
         <div class="col-md-8 center">
           <div class="file-text">
-            <h3>Antecedentes Personales</h3>
-            <p>Tus antecedentes personales van aquí.</p>
+            <h3>Características de Faena</h3>
+            <p>Lorem ipsum dolor sit amet...</p>
           </div>
-          <div class="file-count">03</div>
+          <div class="file-count">05</div>
         </div>
       </div>
       <div class="body-file">
@@ -112,7 +112,10 @@
           <% end %>
 
           <%if @characterization_works.blank?%>
-            <%= link_to 'New Personal background', new_characterization_work_path %>
+            <%= link_to new_characterization_work_path, class: "create" do %>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.plus{fill:#00b9b5;}</style></defs><title>plus</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="plus" points="12 4.5 7.5 4.5 7.5 0 4.5 0 4.5 4.5 0 4.5 0 7.5 4.5 7.5 4.5 12 7.5 12 7.5 7.5 12 7.5 12 4.5"/></g></g></svg>
+              Agregar nuevo
+            <% end %>
           <%end%>
         </div>
       </div>      
