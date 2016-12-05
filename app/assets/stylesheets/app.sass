@@ -28,9 +28,14 @@
   font-style: normal
 
 $azulito: #1B75BB
+$calipso: #00B9B5
 $clarito: #DFE1DF
+$dark-calipso: #00A1B7
+$dark-naranjo: #F46E60
 $gris: #787878
 $grisClaro: #B3B3B3
+$naranjo: #F7925F
+
 $rojo: rgb(235, 60, 70)
 
 *
@@ -80,12 +85,30 @@ header
       .current-row
         text-align: right
         transition: .35s
-      .current
+        h3
+          color: white
+          display: inline-block
+          font-family: 'gobcllight'
+          margin-right: 16px
+          vertical-align: middle
+        .current
+          background: $rojo
+          border-radius: 3px
+          color: white
+          cursor: pointer
+          display: inline-block
+          font-family: 'gobclregular'
+          font-size: 16px
+          margin: 0
+          padding: 5px 20px
+          text-align: center
+          width: 130px
+      .current-text
         color: white
         font-family: 'gobclregular'
         font-size: 16px
         margin-right: 16px
-      .current,
+      .current-text,
       .current-button
         display: inline-block
       .current-button
@@ -104,7 +127,7 @@ header
         position: absolute
         right: -600px
         text-align: right
-        top: 10px
+        top: 0
         transition: .35s
         visibility: hidden
         //width: 100%
@@ -188,6 +211,57 @@ footer
 .blank
   font-size: 0
   margin: 0
+.center
+  margin: 0 auto
+.dashboard-row
+  width: 100%
+  .record-date
+    background: $calipso
+    border-bottom: 2px solid white
+    border-radius: 3px 3px 0 0 
+    width: 100%
+    .title-record
+      background: $dark-calipso
+      border-bottom: 1px solid white
+      border-radius: 3px 3px 0 0 
+      padding: 16px 25px
+      text-align: right
+      h3
+        color: white
+        font-family: 'gobclregular'
+        font-size: 20px
+        margin: 0
+    .record-list-link
+      margin: 0
+      padding: 0
+      li
+        border-bottom: 1px solid white
+        display: block
+        text-align: right
+        a
+          display: block
+          text-decoration: none
+          padding: 16px 25px
+          width: 100%
+        .record-count
+          color: white
+          font-family: 'gobcllight'
+          font-size: 48px
+        .record-count,
+        .record-text
+          display: inline-block
+          vertical-align: middle
+        .record-text
+          h3
+            color: white
+            font-size: 18px
+            margin: 0
+            text-transform: capitalize
+          p
+            color: white
+            font-size: 14px
+            margin: 0
+          
 .filter
   background: linear-gradient(to bottom, rgba(76,76,76,0) 0%,rgba(19,19,19,0.5) 100%)
   height: 100%
@@ -255,6 +329,39 @@ footer
       margin-right: 16px
       //position: absolute
       //left: 10px
+.inner-file
+  background: $calipso
+  width: 100%
+  .header-file
+    background: $dark-calipso
+    padding: 20px
+    text-align: right
+    width: 100%
+    .file-count
+      color: white
+      font-family: 'gobcllight'
+      font-size: 60px
+      margin: 0
+    .file-count,
+    .file-text
+      display: inline-block
+      vertical-align: middle
+    .file-text
+      text-align: right
+      h3
+        color: white
+        font-family: 'gobclregular'
+        font-size: 20px
+        margin: 0
+      p
+        color: white
+        font-size: 16px
+        margin: 0
+  .body-file
+    tr
+      width: 100%
+      th
+        width: 14%
 .input[type="checkbox"]
   border: 1px solid $grisClaro
   height: 14px
@@ -332,6 +439,29 @@ footer
       text-align: center
       a
         color: $azulito
+.postulation-section
+  width: 100%
+  .postulation
+    background: $naranjo
+    border-radius: 3px 3px 0 0
+    a
+      text-decoration: none
+    h3
+      background: $dark-naranjo
+      border-bottom: 1px solid white
+      border-radius: 3px 3px 0 0
+      color: white
+      font-size: 20px
+      margin: 0
+      padding: 16px 25px
+      text-align: right
+    p
+      color: white
+      margin: 0
+      padding: 16px 25px
+      text-align: right
+.row
+  width: 100%
 .shared-links
   margin: 26px auto
   max-width: 350px
@@ -408,8 +538,8 @@ footer
             padding: 5px 10px
         label
           font-size: 14px
-          font-style: italic
-          margin-left: 5px
+          //font-style: italic
+          //margin-left: 5px
       .maps
         border-bottom: 1px solid $azulito
         padding: 5px
@@ -469,6 +599,7 @@ footer
       font-family: 'gobcllight'
       font-size: 54px
       font-weight: 100
+      line-height: 53px
       margin-right: 16px
       //position: absolute
       //left: 10px

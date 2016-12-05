@@ -1,7 +1,7 @@
-$(document).on "turbolinks:load turbolinks:fetch ready", (ev)->
+$(document).on "turbolinks:load turbolinks:fetch turbolinks:change ready", (ev)->
   #componentHandler.upgradeDom()
   #console.log ev
-
+  $(".best_in_place").best_in_place()
 
   $('#login-button').on "click", ()->
     $('#login-row-header').addClass "login-activo"
