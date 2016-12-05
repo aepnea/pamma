@@ -1,25 +1,17 @@
-# == Schema Information
-#
-# Table name: benefit_requesteds
-#
-#  id                   :integer          not null, primary key
-#  benefit_type_id      :integer
-#  estimated_investment :integer
-#  comments             :text(65535)
-#  user_id              :integer
-#  asociative_user_id   :integer
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#
-
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   benefit_type_id: 1
   estimated_investment: 1
   comments: MyText
+  user_id: 1
+  asociative_user_id: 1
+  postulation_id: MyString
 
 two:
   benefit_type_id: 1
   estimated_investment: 1
   comments: MyText
+  user_id: 1
+  asociative_user_id: 1
+  postulation_id: MyString

@@ -12,10 +12,6 @@
 #  characterization_work_id :integer
 #  benefit_requested_id     :integer
 #  representative_id        :integer
-#  milestone_name           :string(255)
-#  milestone_description    :text(65535)
-#  milestone_date_begin     :date
-#  milestone_date_end       :date
 #  postulation_date_id      :integer
 #  postulation_state_id     :integer
 #  created_at               :datetime         not null
@@ -30,9 +26,10 @@ class Postulation < ActiveRecord::Base
   belongs_to :pamma_participation
   belongs_to :beneficiary
   belongs_to :characterization_work
-  belongs_to :benefit_requested
+  has_one :benefit_requested
   belongs_to :representative
   belongs_to :postulation_date
   belongs_to :postulation_state
+  has_many :milestones
 
 end

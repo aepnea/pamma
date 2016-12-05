@@ -1,0 +1,81 @@
+<%= form_for(@milestone) do |f| %>
+  <% if @milestone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@milestone.errors.count, "error") %> prohibited this milestone from being saved:</h2>
+      <ul>
+      <% @milestone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :date_begin %><br>
+    <%= f.date_select :date_begin %>
+  </div>
+  <div class="field">
+    <%= f.label :date_end %><br>
+    <%= f.date_select :date_end %>
+  </div>
+
+
+    <%= f.hidden_field :user_id, value: @user %>
+    <%= f.hidden_field :asociative_user_id, value: @asociative_user %>
+
+    <!-- reemplazar submit por un solo botón-->
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<!-- FORMULARIO DE BENEFICIO REQUERIDO-->
+
+<%= form_for(@benefit_requested) do |b| %>
+  <% if @benefit_requested.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@benefit_requested.errors.count, "error") %> prohibited this benefit_requested from being saved:</h2>
+
+      <ul>
+      <% @benefit_requested.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= b.label :benefit_type_id %><br>
+    <%= b.number_field :benefit_type_id %>
+  </div>
+  <div class="field">
+    <%= b.label :estimated_investment %><br>
+    <%= b.number_field :estimated_investment %>
+  </div>
+  <div class="field">
+    <%= b.label :comments %><br>
+    <%= b.text_area :comments %>
+  </div>
+
+      <%= b.hidden_field :user_id, value: @user %>
+      <%= b.hidden_field :asociative_user_id, value: @asociative_user %>
+      <%= b.hidden_field :postulation_id, value: @postulation %>
+
+
+<!-- reemplazar submit por un solo botón-->
+
+  <div class="actions">
+    <%= b.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Save", "#", :class => 'button_submit' %>

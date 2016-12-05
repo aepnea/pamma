@@ -1,0 +1,1 @@
+json.array! @benefit_requesteds, partial: 'benefit_requesteds/benefit_requested', as: :benefit_requested

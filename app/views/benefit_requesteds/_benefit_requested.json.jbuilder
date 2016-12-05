@@ -1,0 +1,2 @@
+json.extract! benefit_requested, :id, :benefit_type_id, :estimated_investment, :comments, :user_id, :asociative_user_id, :postulation_id, :created_at, :updated_at
+json.url benefit_requested_url(benefit_requested, format: :json)

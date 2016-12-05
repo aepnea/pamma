@@ -629,8 +629,8 @@ PersonalBackground.create([{scholarship_type_id: '3', retirement_system_type_id:
 PostulationDate.create ([{name: 'Super Postulacion', date_begin: '2016-11-29',  date_end: '2017-11-29', user_type: '',postulation_standard_id:'', state: 'true', region_id: '6' },\
                          {name: 'Super Postulacion2', date_begin: '2016-11-29',  date_end: '2017-11-29', user_type: '',postulation_standard_id:'', state: 'true', region_id:'10'}])
 
-Postulation.create([{postulation_date_id:'1', user_id: '1', personal_backgrounds_id: '', family_group_id: '', pamma_participation_id: '', beneficiary_id: '', characterization_work_id: '', benefit_requested_id: '', representative_id: '',  milestone_name:'nombre del hito', milestone_description: 'descripción del hito', milestone_date_begin: '2016-11-29', milestone_date_end: '2017-11-29', postulation_state_id: '1'}, \
-                    {postulation_date_id:'2',user_id: '2', personal_backgrounds_id: '', family_group_id: '', pamma_participation_id: '', beneficiary_id: '', characterization_work_id: '', benefit_requested_id: '', representative_id: '',  milestone_name:'nombre del hito', milestone_description: 'descripción del hito', milestone_date_begin: '2016-11-29', milestone_date_end: '2017-11-29', postulation_state_id: '1'}])
+Postulation.create([{postulation_date_id:'1', user_id: '1', personal_backgrounds_id: '', family_group_id: '', pamma_participation_id: '', beneficiary_id: '', characterization_work_id: '', benefit_requested_id: '', representative_id: '', postulation_state_id: '1'}, \
+                    {postulation_date_id:'2',user_id: '2', personal_backgrounds_id: '', family_group_id: '', pamma_participation_id: '', beneficiary_id: '', characterization_work_id: '', benefit_requested_id: '', representative_id: '',  postulation_state_id: '1'}])
 
 #### Usuario Asociativo
 user3                       = AsociativeUser.new

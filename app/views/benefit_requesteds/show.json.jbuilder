@@ -1,0 +1,1 @@
+json.partial! "benefit_requesteds/benefit_requested", benefit_requested: @benefit_requested

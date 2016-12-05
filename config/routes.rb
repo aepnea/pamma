@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :benefit_requesteds
+  resources :milestones
   resources :personal_backgrounds
   resources :pamma_participations
   resources :family_groups

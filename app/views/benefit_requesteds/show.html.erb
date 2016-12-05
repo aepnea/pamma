@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Benefit type:</strong>
+  <%= @benefit_requested.benefit_type_id %>
+</p>
+
+<p>
+  <strong>Estimated investment:</strong>
+  <%= @benefit_requested.estimated_investment %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @benefit_requested.comments %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @benefit_requested.user_id %>
+</p>
+
+<p>
+  <strong>Asociative user:</strong>
+  <%= @benefit_requested.asociative_user_id %>
+</p>
+
+<p>
+  <strong>Postulation:</strong>
+  <%= @benefit_requested.postulation_id %>
+</p>
+
+<%= link_to 'Edit', edit_benefit_requested_path(@benefit_requested) %> |
+<%= link_to 'Back', benefit_requesteds_path %>

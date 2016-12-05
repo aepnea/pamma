@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: milestones
+#
+#  id                 :integer          not null, primary key
+#  name               :string(255)
+#  description        :text(65535)
+#  date_begin         :date
+#  date_end           :date
+#  user_id            :integer
+#  asociative_user_id :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  date_begin: 2016-12-05
+  date_end: 2016-12-05
+  user_id: 1
+  asociative_user_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  date_begin: 2016-12-05
+  date_end: 2016-12-05
+  user_id: 1
+  asociative_user_id: 1
