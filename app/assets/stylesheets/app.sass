@@ -358,10 +358,26 @@ footer
         font-size: 16px
         margin: 0
   .body-file
-    tr
+    padding: 36px 0
+    table
       width: 100%
-      th
-        width: 14%
+      thead
+        tr
+          th
+            color: white
+            text-align: left
+      tbody
+        tr
+          td
+            background: white
+            border-radius: 3px
+            margin: 0 5px
+            padding: 5px
+          .destroy-table
+            background: transparent
+            font-size: 0
+            svg
+              width: 15px
 .input[type="checkbox"]
   border: 1px solid $grisClaro
   height: 14px
