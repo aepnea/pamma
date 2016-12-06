@@ -91,17 +91,17 @@
 
             <div class="field">
               <%= f.label "Región:" %>
-              <%= f.collection_select :region_id, Region.all, :id, :name %>
+              <%= f.collection_select :region_id, Region.order(:id), :id, :name, include_blank: true %>
             </div>
 
             <div class="field">
               <%= f.label "Provincia:" %>
-              <%= f.collection_select :province_id, Province.all, :id, :name %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, include_blank: 'Select a State/Province' %>
             </div>
 
             <div class="field">
               <%= f.label "Comuna:" %>
-              <%= f.collection_select :commune_id, Commune.all, :id, :name %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, include_blank: 'Select a State/Province' %>
             </div>
           </div>
         </div>

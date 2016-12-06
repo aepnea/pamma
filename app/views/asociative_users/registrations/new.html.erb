@@ -1,7 +1,7 @@
 <div class="formulario">
   <div class="title-row">
     <h2 class="title-form">Para ingresar necesitas llenar el siguiente formulario <span>(son solo 3 pasos..)</span></h2>
-    <p>¿Tienes cuenta? puedes <%= render "users/shared/links" %></p>
+    <p>¿Tienes cuenta? puedes <%= render "asociative_users/shared/links" %>
   </div>
   <div class="steps">
     <%= form_for(resource, as: resource_name,html: {id: "login-form", class: "login-form"}, url: registration_path(resource_name),validate: true) do |f| %>
@@ -68,17 +68,17 @@
 
             <div class="field">
               <%= f.label "Región:" %>
-              <%= f.collection_select :region_id, Region.order(:id), :id, :name %>
+              <%= f.collection_select :region_id, Region.order(:id), :id, :name, include_blank: 'Selecciona una región' %>
             </div>
 
             <div class="field">
               <%= f.label "Provincia:" %>
-              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, include_blank: 'Selecciona una Provincia' %>
             </div>
 
             <div class="field">
               <%= f.label "Comuna:" %>
-              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, include_blank: 'Selecciona una comuna' %>
             </div>
             
             <div class="field">
@@ -107,5 +107,4 @@
       </div>
     <% end %>
   </div>
-  <%= render "asociative_users/shared/links" %>
 </div>
