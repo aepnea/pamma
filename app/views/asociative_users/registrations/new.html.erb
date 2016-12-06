@@ -1,98 +1,111 @@
-<div class="mdl-cell mdl-cell--6-col">
-  <h2 class="title">Sign up</h2>
+<div class="formulario">
+  <div class="title-row">
+    <h2 class="title-form">Para ingresar necesitas llenar el siguiente formulario <span>(son solo 3 pasos..)</span></h2>
+    <p>¿Tienes cuenta? puedes <%= render "users/shared/links" %></p>
+  </div>
+  <div class="steps">
+    <%= form_for(resource, as: resource_name,html: {id: "login-form", class: "login-form"}, url: registration_path(resource_name),validate: true) do |f| %>
+      <div class="step-container">
+        <div class="step1 step">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map map-activo"></div>
+              <div class="map"></div>
+            </div>
+            <h3 class="title-h3">
+              <span>01</span><p> Datos generales</p>
+            </h3>
+            <div class="field">
+              <%= f.label "Nombre:" %><br />
+              <%= f.text_field :name %>
+            </div>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+            <div class="field">
+              <%= f.label "Rut:" %><br />
+              <%= f.text_field :rut %>
+              <div id='error_rut'></div>
+            </div>
 
-    <div class="field">
-      <%= f.label "Nombre:" %><br />
-      <%= f.text_field :name, autofocus: true %>
-      <div id='error_nombre'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Celular:" %><br />
+              <%= f.text_field :mobile %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Rut:" %><br />
-      <%= f.text_field :rut, autofocus: true %>
-      <div id='error_rut'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Teléfono fijo:" %><br />
+              <%= f.text_field :landline %>
+            </div>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+            <div class="field">
+              <%= f.label "Número de Asociados:" %><br />
+              <%= f.number_field :partners_number %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Celular:" %><br />
-      <%= f.text_field :mobile, autofocus: true %>
-      <div id='error_rut'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Fecha Fundación:" %><br />
+              <%= f.date_field :date_foundation %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Teléfono fijo:" %><br />
-      <%= f.text_field :landline, autofocus: true %>
-      <div id='error_rut'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Dirección:" %><br />
+              <%= f.text_field :address %>
+            </div>
+          </div>
+        </div>
+        <div class="step1 step">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map"></div>
+              <div class="map map-activo"></div>
+            </div>
+            <h3 class="title-h3">
+              <span>02</span><p>Ubicación</p>
+            </h3>
+            <div class="field">
+              <%= f.label "Villa o Población:" %><br />
+              <%= f.text_field :village %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Número de Asociados:" %><br />
-      <%= f.number_field :partners_number, autofocus: true %>
-      <div id='error_apellido-m'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Región:" %>
+              <%= f.collection_select :region_id, Region.order(:id), :id, :name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Fecha Fundación:" %><br />
-      <%= f.date_field :date_foundation, autofocus: true %>
-      <div id='error_fecha-nacimiento'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Provincia:" %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Dirección:" %><br />
-      <%= f.text_field :address, autofocus: true %>
-      <div id='error_apellido-p'></div>
-    </div>
+            <div class="field">
+              <%= f.label "Comuna:" %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name %>
+            </div>
+            
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Villa o Población:" %><br />
-      <%= f.text_field :village, autofocus: true %>
-      <div id='error_apellido-m'></div>
-    </div>
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Región:" %>
-      <%= f.collection_select :region_id, Region.all, :id, :name %>
-      <div id='error_genero'></div>
-    </div>
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
 
-    <div class="field">
-      <%= f.label "Provincia:" %>
-      <%= f.collection_select :province_id, Province.all, :id, :name %>
-      <div id='error_genero'></div>
-    </div>
-
-    <div class="field">
-      <%= f.label "Comuna:" %>
-      <%= f.collection_select :commune_id, Commune.all, :id, :name %>
-      <div id='error_genero'></div>
-    </div>
-
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
-
+            <div class="actions">
+              <%= f.submit "Sign up",  class: "submit" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <%= render "asociative_users/shared/links" %>
 </div>

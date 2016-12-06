@@ -31,7 +31,21 @@ $(document).on "turbolinks:load turbolinks:fetch turbolinks:change ready", (ev)-
     dateFormat: 'yy-mm-dd',
     changeYear: true,
     yearRange: "-50:+0"
-    
+
+  provincia = $('#asociative_user_province_id').html()
+  comuna = $('#asociative_user_commune_id').html()
+  console.log comuna
+  $('#asociative_user_region_id').change ->
+    region = $('#asociative_user_region_id :selected').text()
+    options = $(provincia).filter("optgroup[label='#{region}']").html()
+    #options_com = $(comuna).filter("optgroup[label='#{provincia_int}']").html()
+
+    if options
+      $('#asociative_user_province_id').html(options)
+    else
+      $('#asociative_user_province_id').empty()
+
+
 
   $(document).on "ajax:beforeSend", "#login-form", (e, data, status, xhr) ->
     #console.log data

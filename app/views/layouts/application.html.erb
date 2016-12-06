@@ -31,7 +31,7 @@
           </div>
         <% elsif asociative_user_signed_in? %>
           <div class="current-row">
-            <%= current_asociative_user.email %>
+            <h3>Hola <%= current_asociative_user.name %></h3>
             <%= link_to destroy_asociative_user_session_path, :class => "current", method: :delete do%>
               Salir
             <% end %>
