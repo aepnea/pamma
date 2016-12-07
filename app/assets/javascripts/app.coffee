@@ -38,17 +38,18 @@ $(document).on "turbolinks:load turbolinks:fetch turbolinks:change ready", (ev)-
   $('#asociative_user_region_id').change ->
     region = $('#asociative_user_region_id :selected').text()
     options = $(provincia).filter("optgroup[label='#{region}']").html()
-    #options_com = $(comuna).filter("optgroup[label='#{provincia_int}']").html()
-
+    provincia_2 = $('#asociative_user_province_id :selected').text()
+    other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
     if options
       $('#asociative_user_province_id').html(options)
+      $('#asociative_user_commune_id').html(other_options)
+      console.log provincia_2
     else
       $('#asociative_user_province_id').empty()
 
   $('#asociative_user_province_id').change ->
     provincia_2 = $('#asociative_user_province_id :selected').text()
     other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
-
     if other_options
       $('#asociative_user_commune_id').html(other_options)
       console.log "cof"
