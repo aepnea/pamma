@@ -91,17 +91,17 @@
 
             <div class="field">
               <%= f.label "Región:" %>
-              <%= f.collection_select :region_id, Region.order(:id), :id, :name, include_blank: true %>
+              <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
             </div>
 
             <div class="field">
               <%= f.label "Provincia:" %>
-              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, include_blank: 'Select a State/Province' %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id"} %>
             </div>
 
             <div class="field">
               <%= f.label "Comuna:" %>
-              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, include_blank: 'Select a State/Province' %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id"} %>
             </div>
           </div>
         </div>

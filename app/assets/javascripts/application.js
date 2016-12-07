@@ -15,6 +15,6 @@
 //= require jquery-ui/widgets/datepicker
 //= require best_in_place
 //= require best_in_place.jquery-ui
-//= require turbolinks
 //= require rails.validations
+//= require turbolinks
 //= require_tree .
