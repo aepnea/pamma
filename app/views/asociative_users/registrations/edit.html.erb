@@ -1,102 +1,112 @@
-<div class="mdl-cell mdl-cell--6-col">
-  <h2 class="title">Edit <%= resource_name.to_s.humanize %></h2>
+<div class="formulario">
+  <div class="title-row">
+    <h2 class="title">Edit <%= resource_name.to_s.humanize %></h2>
+  </div>
+  <div class="steps">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
+      <div class="step-container center">
+        <div class="step1 step col-md-6">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map map-activo"></div>
+              <div class="map"></div>
+              <div class="map"></div>
+            </div>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email %>
+            </div>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <div class="field">
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+              <% if @minimum_password_length %>
+                <br />
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.password_field :current_password, autocomplete: "off" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Update" %>
+            </div>
+          </div>
+        </div>
+        <!--fin step1  -->
+        <div class="step2 step col-md-6">
+          <div class="step-inner">
+            <div class="maps">
+              <div class="map"></div>
+              <div class="map map-activo"></div>
+              <div class="map"></div>
+            </div>
+            <div class="field">
+              <%= f.label "Nombre:" %><br />
+              <%= f.text_field :name %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Rut:" %><br />
+              <%= f.text_field :rut %>
+            </div>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Número de Asociados:" %><br />
+              <%= f.number_field :partners_number %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Fecha Fundación:" %><br />
+              <%= f.date_field :date_foundation %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Dirección:" %><br />
+              <%= f.text_field :address %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Villa o Población:" %><br />
+              <%= f.text_field :village %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Región:" %>
+              <%= f.collection_select :region_id, Region.order(:id), :id, :name, include_blank: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Provincia:" %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, include_blank: 'Select a State/Province' %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Comuna:" %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, include_blank: 'Select a State/Province' %>
+            </div>
+          </div>
+        </div>
+
     <% end %>
-
-    <div class="field">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-      <% if @minimum_password_length %>
-        <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Update" %>
-    </div>
-
-
-        <div class="field">
-          <%= f.label "Nombre:" %><br />
-          <%= f.text_field :name, autofocus: true %>
-          <div id='error_nombre'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Rut:" %><br />
-          <%= f.text_field :rut, autofocus: true %>
-          <div id='error_rut'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label "Número de Asociados:" %><br />
-          <%= f.number_field :partners_number, autofocus: true %>
-          <div id='error_apellido-m'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Fecha Fundación:" %><br />
-          <%= f.date_field :date_foundation, autofocus: true %>
-          <div id='error_fecha-nacimiento'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Dirección:" %><br />
-          <%= f.text_field :address, autofocus: true %>
-          <div id='error_apellido-p'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Villa o Población:" %><br />
-          <%= f.text_field :village, autofocus: true %>
-          <div id='error_apellido-m'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Región:" %>
-          <%= f.collection_select :region_id, Region.all, :id, :name %>
-          <div id='error_genero'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Provincia:" %>
-          <%= f.collection_select :province_id, Province.all, :id, :name %>
-          <div id='error_genero'></div>
-        </div>
-
-        <div class="field">
-          <%= f.label "Comuna:" %>
-          <%= f.collection_select :commune_id, Commune.all, :id, :name %>
-          <div id='error_genero'></div>
-        </div>
-
-  <% end %>
 
   <h3>Cancel my account</h3>
 

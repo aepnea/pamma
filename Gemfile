@@ -61,3 +61,5 @@ gem 'material_design_lite-rails', '~> 1.2'
 gem "autoprefixer-rails"
 
 gem 'client_side_validations'
+
+gem 'best_in_place', '~> 3.0.1'

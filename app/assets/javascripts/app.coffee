@@ -1,7 +1,7 @@
-$(document).on "turbolinks:load turbolinks:fetch ready", (ev)->
+$(document).on "turbolinks:load turbolinks:fetch turbolinks:change ready", (ev)->
   #componentHandler.upgradeDom()
   #console.log ev
-
+  $(".best_in_place").best_in_place()
 
   $('#login-button').on "click", ()->
     $('#login-row-header').addClass "login-activo"
@@ -31,7 +31,31 @@ $(document).on "turbolinks:load turbolinks:fetch ready", (ev)->
     dateFormat: 'yy-mm-dd',
     changeYear: true,
     yearRange: "-50:+0"
-    
+
+  provincia = $('#asociative_user_province_id').html()
+  comuna = $('#asociative_user_commune_id').html()
+  #console.log comuna
+  $('#asociative_user_region_id').change ->
+    region = $('#asociative_user_region_id :selected').text()
+    options = $(provincia).filter("optgroup[label='#{region}']").html()
+    #options_com = $(comuna).filter("optgroup[label='#{provincia_int}']").html()
+
+    if options
+      $('#asociative_user_province_id').html(options)
+    else
+      $('#asociative_user_province_id').empty()
+
+  $('#asociative_user_province_id').change ->
+    provincia_2 = $('#asociative_user_province_id :selected').text()
+    other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
+
+    if other_options
+      $('#asociative_user_commune_id').html(other_options)
+      console.log "cof"
+    else
+      $('#asociative_user_commune_id').empty()
+      console.log "wof"
+
 
   $(document).on "ajax:beforeSend", "#login-form", (e, data, status, xhr) ->
     #console.log data

@@ -12,6 +12,10 @@
 #  characterization_work_id :integer
 #  benefit_requested_id     :integer
 #  representative_id        :integer
+#  milestone_name           :string(255)
+#  milestone_description    :text(65535)
+#  milestone_date_begin     :date
+#  milestone_date_end       :date
 #  postulation_date_id      :integer
 #  postulation_state_id     :integer
 #  created_at               :datetime         not null

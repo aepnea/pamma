@@ -28,9 +28,14 @@
   font-style: normal
 
 $azulito: #1B75BB
+$calipso: #00B9B5
 $clarito: #DFE1DF
+$dark-calipso: #00A1B7
+$dark-naranjo: #F46E60
 $gris: #787878
 $grisClaro: #B3B3B3
+$naranjo: #F7925F
+
 $rojo: rgb(235, 60, 70)
 
 *
@@ -80,12 +85,30 @@ header
       .current-row
         text-align: right
         transition: .35s
-      .current
+        h3
+          color: white
+          display: inline-block
+          font-family: 'gobcllight'
+          margin-right: 16px
+          vertical-align: middle
+        .current
+          background: $rojo
+          border-radius: 3px
+          color: white
+          cursor: pointer
+          display: inline-block
+          font-family: 'gobclregular'
+          font-size: 16px
+          margin: 0
+          padding: 5px 20px
+          text-align: center
+          width: 130px
+      .current-text
         color: white
         font-family: 'gobclregular'
         font-size: 16px
         margin-right: 16px
-      .current,
+      .current-text,
       .current-button
         display: inline-block
       .current-button
@@ -104,7 +127,7 @@ header
         position: absolute
         right: -600px
         text-align: right
-        top: 10px
+        top: 0
         transition: .35s
         visibility: hidden
         //width: 100%
@@ -185,14 +208,98 @@ footer
       box-shadow: 0px 15px 25px -10px rgba(0, 0, 0, 0.8)
 .align-center
   text-align: center
+.best_in_place
+  display: block
+  width: 100%
+  form
+    max-width: 100%
 .blank
   font-size: 0
   margin: 0
+.center
+  margin: 0 auto
+.create
+  background: $clarito
+  border-radius: 3px
+  color: $calipso
+  display: inline-block
+  font-family: 'gobclbold'
+  margin-left: 5px
+  margin-top: 16px
+  padding: 5px 30px
+  text-decoration: none
+  svg
+    vertical-align: middle
+    width: 16px
+.create-orange
+  background: white
+  border-radius: 3px
+  color: $naranjo
+  display: inline-block
+  font-family: 'gobclbold'
+  margin-left: 5px
+  margin-top: 16px
+  padding: 5px 30px
+  text-decoration: none
+  svg
+    vertical-align: middle
+    width: 16px
+.dashboard-row
+  width: 100%
+  .record-date
+    background: $calipso
+    border-bottom: 2px solid white
+    border-radius: 3px 3px 0 0 
+    width: 100%
+    .title-record
+      background: $dark-calipso
+      border-bottom: 1px solid white
+      border-radius: 3px 3px 0 0 
+      padding: 16px 25px
+      text-align: right
+      h3
+        color: white
+        font-family: 'gobclregular'
+        font-size: 20px
+        margin: 0
+    .record-list-link
+      margin: 0
+      padding: 0
+      li
+        border-bottom: 1px solid white
+        display: block
+        text-align: right
+        a
+          display: block
+          text-decoration: none
+          padding: 16px 25px
+          width: 100%
+        .record-count
+          color: white
+          font-family: 'gobcllight'
+          font-size: 48px
+        .record-count,
+        .record-text
+          display: inline-block
+          vertical-align: middle
+        .record-text
+          h3
+            color: white
+            font-size: 18px
+            margin: 0
+            text-transform: capitalize
+          p
+            color: white
+            font-size: 14px
+            margin: 0
+          
 .filter
   background: linear-gradient(to bottom, rgba(76,76,76,0) 0%,rgba(19,19,19,0.5) 100%)
   height: 100%
   position: absolute
   width: 100%
+.flex
+  display: flex
 .form-session
   width: 100%
 .form-session-inner
@@ -255,10 +362,82 @@ footer
       margin-right: 16px
       //position: absolute
       //left: 10px
+.inner-file
+  background: $calipso
+  width: 100%
+  .header-file
+    background: $dark-calipso
+    padding: 20px
+    text-align: right
+    width: 100%
+    .file-count
+      color: white
+      font-family: 'gobcllight'
+      font-size: 60px
+      margin: 0
+    .file-count,
+    .file-text
+      display: inline-block
+      vertical-align: middle
+    .file-text
+      text-align: right
+      h3
+        color: white
+        font-family: 'gobclregular'
+        font-size: 20px
+        margin: 0
+      p
+        color: white
+        font-size: 16px
+        margin: 0
+  .body-file
+    padding: 36px 0
+    table
+      width: 100%
+      thead
+        tr
+          th
+            color: white
+            text-align: left
+      tbody
+        tr
+          td
+            padding: 3px
+            .best_in_place
+              background: white
+              border-radius: 3px
+              color: $gris
+              padding: 5px 8px
+              width: 100%
+          .destroy-table
+            background: transparent
+            font-size: 0
+            svg
+              width: 15px
+.inner-title
+  border-bottom: 1px solid white
+  color: white
+  display: block
+  font-family: 'gobclbold'
+  font-size: 16px
+  line-height: 45px
+  margin: 0 auto 16px auto
 .input[type="checkbox"]
   border: 1px solid $grisClaro
   height: 14px
   width: 14px
+.input-inner
+  .best_in_place
+    background: white
+    border-radius: 3px
+    color: $gris
+    margin-bottom: 16px
+    padding: 5px
+    width: 100%
+  .span-label
+    color: white
+    font-family: 'gobclregular'
+    font-weight: 600
 .login
   .login-row
     background-color: $clarito
@@ -309,6 +488,10 @@ footer
     color: $rojo
     font-size: 20px
     padding-bottom: 16px
+.linea
+  border-bottom: 1px solid white
+  margin-bottom: 26px
+  margin-top: 16px
 .margin-text
   margin-bottom: 1em !important
 .modal-login.modal-activo
@@ -317,6 +500,8 @@ footer
   z-index: 100
 .none
   display: none
+.no-padding
+  padding: 0
 .relative
   position: relative
 .formulario
@@ -332,6 +517,61 @@ footer
       text-align: center
       a
         color: $azulito
+.postulation-section
+  background: $naranjo
+  .postulation
+    background: $dark-naranjo
+    border-bottom: 1px solid white
+    h3,
+    p
+      color: white
+  .postulation-body
+    h3,
+    p
+      color: white
+    .postulation-info
+      background: white
+      color: $gris
+.postulation-section,
+.postulation-section-nocolor
+  width: 100%
+  .postulation
+    border-radius: 3px 3px 0 0
+    a
+      text-decoration: none
+    h3
+      font-size: 20px
+      margin: 0
+      padding: 16px 25px
+      text-align: right
+    p
+      margin: 0
+      padding: 16px 25px
+      text-align: right
+  .postulation-body
+    padding: 16px 0
+    h3
+      font-size: 20px
+      margin: 0
+      padding: 16px 0
+      text-align: left
+    p
+      margin: 0
+      padding: 16px 0
+      text-align: right
+    .postulation-info,
+    .postulation-info-orange
+      border-radius: 3px
+      margin-bottom: 10px
+      padding: 5px
+      text-align: left
+.postulation-section-nocolor
+  .postulation-body
+    .postulation-info-orange
+      background: $naranjo
+      color: white
+.row
+  width: 100%
 .shared-links
   margin: 26px auto
   max-width: 350px
@@ -372,6 +612,7 @@ footer
         input[type="text"],
         input[type="date"],
         input[type="email"],
+        input[type="number"],
         input[type="password"],
         select
           background-color: white !important
@@ -408,8 +649,8 @@ footer
             padding: 5px 10px
         label
           font-size: 14px
-          font-style: italic
-          margin-left: 5px
+          //font-style: italic
+          //margin-left: 5px
       .maps
         border-bottom: 1px solid $azulito
         padding: 5px
@@ -469,6 +710,7 @@ footer
       font-family: 'gobcllight'
       font-size: 54px
       font-weight: 100
+      line-height: 53px
       margin-right: 16px
       //position: absolute
       //left: 10px
@@ -488,7 +730,14 @@ footer
     font-size: 15px
 .title-row
   width: 100%
-
+.triple
+  width: 30%
+.triple-row
+  display: flex
+  justify-content: space-between
 .login-form:nth-child(2)
   background: red !important
 
+.width-total
+  display: block
+  width: 100%

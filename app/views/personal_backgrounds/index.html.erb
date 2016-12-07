@@ -1,41 +1,61 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="inner-file">
+      <div class="header-file">
+        <div class="col-md-8 center">
+          <div class="file-text">
+            <h3>Antecedentes Personales</h3>
+            <p>Tus antecedentes personales van aquí.</p>
+          </div>
+          <div class="file-count">02</div>
+        </div>
+      </div>
+      <div class="body-file">
+        <div class="col-md-8 center flex">
+          <% @personal_backgrounds.each do |personal_background| %>
+            <div class="col-md-6">
+              <div class="input-inner">
+                <span class="span-label">Escolaridad</span>
+                <%= best_in_place personal_background, :scholarship_type_id, as: :input %>
+              </div>
+              <div class="input-inner">
+                <span class="span-label">Previsión</span>
+                <%= best_in_place personal_background, :retirement_system_type_id, as: :input %>
+              </div>
+              <div class="input-inner">
+                <span class="span-label">Actividad</span>
+                <%= best_in_place personal_background, :activity_type_id, as: :input %>
+              </div>
+              <div class="input-inner">
+                <span class="span-label">Otra Capacitación Recibida</span>
+                <%= best_in_place personal_background, :training_type_id, as: :input %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3 class="inner-title">¿Posee Ficha Social?</h3>
+              <div class="input-inner">
+                <span class="span-label">Estado</span>
+                <%= best_in_place personal_background, :social_record_status_type_id, as: :input %>
+              </div>
+              <div class="input-inner">
+                <span class="span-label">Puntaje</span>
+                <%= best_in_place personal_background, :score, as: :input %>
+              </div>
+              <div class="input-inner">
+                <span class="span-label">Última Encuesta</span>
+                <%= best_in_place personal_background, :last_poll, as: :input %>
+              </div>
+            </div>
+          <% end %>
 
-<h1>Listing Personal Backgrounds</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Scholarship type</th>
-      <th>Retirement system type</th>
-      <th>Activity type</th>
-      <th>Training type</th>
-      <th>Social record status type</th>
-      <th>Score</th>
-      <th>Last poll</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @personal_backgrounds.each do |personal_background| %>
-      <tr>
-        <td><%= personal_background.scholarship_type_id %></td>
-        <td><%= personal_background.retirement_system_type_id %></td>
-        <td><%= personal_background.activity_type_id %></td>
-        <td><%= personal_background.training_type_id %></td>
-        <td><%= personal_background.social_record_status_type_id %></td>
-        <td><%= personal_background.score %></td>
-        <td><%= personal_background.last_poll %></td>
-        <td><%= personal_background.user_id %></td>
-        <td><%= link_to 'Edit', edit_personal_background_path(personal_background) %></td>
-        <td><%= link_to 'Destroy', personal_background, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<%if @personal_backgrounds.blank?%>
-  <%= link_to 'New Personal background', new_personal_background_path %>
-<%end%>
+          <%if @personal_backgrounds.blank?%>
+            <%= link_to new_personal_background_path, class: "create" do %>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.plus{fill:#00b9b5;}</style></defs><title>plus</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="plus" points="12 4.5 7.5 4.5 7.5 0 4.5 0 4.5 4.5 0 4.5 0 7.5 4.5 7.5 4.5 12 7.5 12 7.5 7.5 12 7.5 12 4.5"/></g></g></svg>
+              Agregar nuevo
+            <% end %>
+          <%end%>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>

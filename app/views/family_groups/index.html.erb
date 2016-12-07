@@ -1,37 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="inner-file">
+      <div class="header-file">
+        <div class="col-md-8 center">
+          <div class="file-text">
+            <h3>Grupo Familiar</h3>
+            <p>Los integrantes de tu familia van aquí.</p>
+          </div>
+          <div class="file-count">03</div>
+        </div>
+      </div>
+      <div class="body-file">
+        <div class="col-md-8 center">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Relationship type</th>
+                <th>Activity</th>
+                <th>Scholarship type</th>
+                <th>User</th>
+              </tr>
+            </thead>
 
-<h1>Listing Family Groups</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Relationship type</th>
-      <th>Activity</th>
-      <th>Scholarship type</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @family_groups.each do |family_group| %>
-      <tr>
-        <td><%= family_group.name %></td>
-        <td><%= family_group.age %></td>
-        <td><%= family_group.relationship_type_id %></td>
-        <td><%= family_group.activity %></td>
-        <td><%= family_group.scholarship_type_id %></td>
-        <td><%= family_group.user_id %></td>
-        <td><%= link_to 'Show', family_group %></td>
-        <td><%= link_to 'Edit', edit_family_group_path(family_group) %></td>
-        <td><%= link_to 'Destroy', family_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Family group', new_family_group_path %>
+            <tbody>
+              <% @family_groups.each do |family_group| %>
+                <tr>
+                  <td><%= best_in_place family_group, :name, as: :input %></td>
+                  <td><%= best_in_place family_group, :age, as: :input %></td>
+                  <td><%= best_in_place family_group, :relationship_type_id, as: :input %></td>
+                  <td><%= best_in_place family_group, :activity, as: :input %></td>
+                  <td><%= best_in_place family_group, :scholarship_type_id, as: :input %></td>
+                  <td><%= best_in_place family_group, :user_id %></td>
+                  <td class="destroy-table">
+                    <%= link_to family_group, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <%= link_to new_family_group_path, class: "create" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.plus{fill:#00b9b5;}</style></defs><title>plus</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="plus" points="12 4.5 7.5 4.5 7.5 0 4.5 0 4.5 4.5 0 4.5 0 7.5 4.5 7.5 4.5 12 7.5 12 7.5 7.5 12 7.5 12 4.5"/></g></g></svg>
+            Agregar nuevo
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
