@@ -32,29 +32,29 @@ $(document).on "turbolinks:load turbolinks:fetch turbolinks:change ready", (ev)-
     changeYear: true,
     yearRange: "-50:+0"
 
-  provincia = $('#asociative_user_province_id').html()
-  comuna = $('#asociative_user_commune_id').html()
+  provincia = $('#province_id').html()
+  comuna = $('#commune_id').html()
   #console.log comuna
-  $('#asociative_user_region_id').change ->
-    region = $('#asociative_user_region_id :selected').text()
+  $('#region_id').change ->
+    region = $('#region_id :selected').text()
     options = $(provincia).filter("optgroup[label='#{region}']").html()
-    provincia_2 = $('#asociative_user_province_id :selected').text()
+    provincia_2 = $('#province_id :selected').text()
     other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
     if options
-      $('#asociative_user_province_id').html(options)
-      $('#asociative_user_commune_id').html(other_options)
+      $('#province_id').html(options)
+      $('#commune_id').html(other_options)
       console.log provincia_2
     else
-      $('#asociative_user_province_id').empty()
+      $('#province_id').empty()
 
-  $('#asociative_user_province_id').change ->
-    provincia_2 = $('#asociative_user_province_id :selected').text()
+  $('#province_id').change ->
+    provincia_2 = $('#province_id :selected').text()
     other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
     if other_options
-      $('#asociative_user_commune_id').html(other_options)
+      $('#commune_id').html(other_options)
       console.log "cof"
     else
-      $('#asociative_user_commune_id').empty()
+      $('#commune_id').empty()
       console.log "wof"
 
 
