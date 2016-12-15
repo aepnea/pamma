@@ -32,6 +32,9 @@ Rails.application.routes.draw do
   authenticated :admin do
     root "home#admin_dashboard", as: "admin_root"
   end
+  devise_scope :admin do
+    get '/control' => 'devise/sessions#new'
+  end
 
   # si es user
   authenticated :user do
