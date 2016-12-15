@@ -22,8 +22,8 @@ $(document).on "turbolinks:load turbolinks:render ready", ()->
     provincia_2 = $('#province_id :selected').text()
     other_options = $(comuna).filter("optgroup[label='#{provincia_2}']").html()
     if options
-      $('#province_id').html(options)
-      $('#commune_id').html(other_options)
+      $('#province_id').html(options).prop("disabled", false)
+      $('#commune_id').html(other_options).prop("disabled", false)
       console.log provincia_2
     else
       $('#province_id').empty()

@@ -91,12 +91,12 @@
 
             <div class="field">
               <%= f.label "Provincia:" %>
-              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id"} %>
+              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
             </div>
 
             <div class="field">
               <%= f.label "Comuna:" %>
-              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id"} %>
+              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
             </div>
           </div>
         </div>
