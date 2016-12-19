@@ -1,6 +1,5 @@
-<div class="row form-session">
-  <div class="col-md-3"></div>
-  <div class="col-md-6 form-session-inner">
+<div class="form-session">
+  <div class="form-session-inner">
     <h3 class="title-h3 margin-text"><p>Ingresa a tu cuenta Individual</p></h3>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -30,5 +29,4 @@
       <%= render "users/shared/links" %>
     </div>
   </div>
-  <div class="col-md-3"></div>
 </div>

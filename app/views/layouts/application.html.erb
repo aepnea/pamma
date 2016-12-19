@@ -11,15 +11,12 @@
 </head>
 <body>
   <header data-turbolinks-permanent="true">
-    <div class="filter"></div>
+    <!-- <div class="filter"></div> -->
     <div class="header-inner-container">
-      <div class="index">
-        <div class="logo-container">
-          <%= link_to root_path do %>
-            <%= image_tag("logo-ministerio.png", :class => "logo") %>
-          <% end %>
-        </div>
-        <h2 class="txt-logo">Programa de asistencia y modernización de la mineria artesanal</h2>
+      <div class="logo-container">
+        <%= link_to root_path do %>
+          <%= image_tag("logo-ministerio.png", :class => "logo") %>
+        <% end %>
       </div>
       <div class="status-user">
         <% if user_signed_in?%>
@@ -51,7 +48,7 @@
 
           <div class="login-row-header" id="login-row-header">
             <div class="close-login" id="close-login">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.62 51.62"><defs><style>.svg-close{fill:#ffffff;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="svg-close" points="41.72 0 25.81 15.91 9.9 0 0 9.9 15.91 25.81 0 41.72 9.9 51.62 25.81 35.71 41.72 51.62 51.62 41.72 35.71 25.81 51.62 9.9 41.72 0"/></g></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.62 51.62"><defs><style>.svg-close{fill:#0c69b2;}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="svg-close" points="41.72 0 25.81 15.91 9.9 0 0 9.9 15.91 25.81 0 41.72 9.9 51.62 25.81 35.71 41.72 51.62 51.62 41.72 35.71 25.81 51.62 9.9 41.72 0"/></g></g></svg>
             </div>
             <div class="login-user">
               <%= link_to "Entrar como ficha individual", new_user_session_path, :class => "button-individual" %>

@@ -2,6 +2,10 @@ class UserPostulationsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_postulation_cookie
 
+  # def show
+  #   current_user 
+  # end
+
   def list
     @postulations_list = Postulation.where(:user_id => current_user.id)
     @user = current_user.id

@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def index_user_dashboard
+    @user = current_user
   end
 
   def index_user_asociative_dashboard

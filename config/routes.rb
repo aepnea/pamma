@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     get '/control' => 'devise/sessions#new'
   end
 
+  #resources :user, only: [:show]
   # si es user
   authenticated :user do
     root "home#index_user_dashboard", as: "user_root"
