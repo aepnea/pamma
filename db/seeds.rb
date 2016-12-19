@@ -535,6 +535,13 @@ Region.create([{	name: 'Region de ARICA Y PARINACOTA'	}, \
 
 
 
+######## Super Admin
+admin = Admin.new
+admin.email = 'admin1@minmineria.cl'
+admin.password = '123123'
+admin.password_confirmation = '123123'
+admin.admin_type_id = '1'
+admin.save!
 
 
 
