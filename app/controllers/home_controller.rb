@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  
   def admin_dashboard
   end
 

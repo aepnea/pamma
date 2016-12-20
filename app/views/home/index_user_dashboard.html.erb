@@ -1,8 +1,8 @@
 <div class="row dashboard-row">
   <div class="col-md-3">
-
-    <div><%= best_in_place @user, :first_name, as: :input, :path => "/user/registrations#update" %></div>
+    <div><%= best_in_place current_user, :first_name, :as => :input, :path => user_registration_path %></div>
     <div><%= current_user.last_name %></div>
+    <div><%= link_to "editar", edit_user_registration_path %></div>
 
   </div>
   <div class="col-md-4">

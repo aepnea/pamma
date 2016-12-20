@@ -1,7 +1,6 @@
 class User::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  
   def create
     build_resource(sign_up_params)
     resource.save
@@ -33,6 +32,20 @@ class User::RegistrationsController < Devise::RegistrationsController
        return render :json => {:success => false, :data =>  {:message => messages}}
       else
         respond_with resource
+      end
+    end
+  end
+
+  def update
+    @user = User.find(current_user.id)
+
+    respond_to do |format|
+      if @user.update_attributes(sign_up_params)
+        format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@user) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@user) }
       end
     end
   end
