@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205043718) do
+ActiveRecord::Schema.define(version: 20161221113734) do
 
   create_table "activity_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20161205043718) do
     t.integer  "region_id",              limit: 4
     t.integer  "admin_type_id",          limit: 4
     t.integer  "seremi_zone_id",         limit: 4
+    t.integer  "province_id",            limit: 4
+    t.integer  "commune_id",             limit: 4
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end

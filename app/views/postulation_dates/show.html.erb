@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @postulation_date.name %>
+</p>
+
+<p>
+  <strong>Date begin:</strong>
+  <%= @postulation_date.date_begin %>
+</p>
+
+<p>
+  <strong>Date end:</strong>
+  <%= @postulation_date.date_end %>
+</p>
+
+<p>
+  <strong>User type:</strong>
+  <%= @postulation_date.user_type %>
+</p>
+
+<p>
+  <strong>Postulation standard:</strong>
+  <%= @postulation_date.postulation_standard_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @postulation_date.state %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @postulation_date.region_id %>
+</p>
+
+<%= link_to 'Edit', edit_postulation_date_path(@postulation_date) %> |
+<%= link_to 'Back', postulation_dates_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Postulation Dates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date begin</th>
+      <th>Date end</th>
+      <th>User type</th>
+      <th>Postulation standard</th>
+      <th>State</th>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postulation_dates.each do |postulation_date| %>
+      <tr>
+        <td><%= postulation_date.name %></td>
+        <td><%= postulation_date.date_begin %></td>
+        <td><%= postulation_date.date_end %></td>
+        <td><%= postulation_date.user_type %></td>
+        <td><%= postulation_date.postulation_standard_id %></td>
+        <td><%= postulation_date.state %></td>
+        <td><%= postulation_date.region_id %></td>
+        <td><%= link_to 'Show', postulation_date %></td>
+        <td><%= link_to 'Edit', edit_postulation_date_path(postulation_date) %></td>
+        <td><%= link_to 'Destroy', postulation_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Postulation date', new_postulation_date_path %>

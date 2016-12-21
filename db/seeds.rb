@@ -541,6 +541,9 @@ admin.email = 'admin1@minmineria.cl'
 admin.password = '123123'
 admin.password_confirmation = '123123'
 admin.admin_type_id = '1'
+admin.region_id = '1'
+admin.province_id = '1'
+admin.commune_id = '1'
 admin.save!
 
 

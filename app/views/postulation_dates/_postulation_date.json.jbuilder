@@ -1,0 +1,2 @@
+json.extract! postulation_date, :id, :name, :date_begin, :date_end, :user_type, :postulation_standard_id, :state, :region_id, :created_at, :updated_at
+json.url postulation_date_url(postulation_date, format: :json)

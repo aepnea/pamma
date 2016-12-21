@@ -1,0 +1,15 @@
+<div class="formulario">
+  <div class="title-row">
+    <h2 class="title-form">Postulaciones</h2>
+  </div>
+  <div class="col-md-12">
+    <div class="postulation-section-nocolor">
+      <div class="postulation-body col-md-8 center">
+        <%@period.each do |p|%>
+          <%= link_to p.name, milestones_path, class: "postulation-info-orange width-total" %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Nuevo periodo de Postulación', new_postulation_date_path %>
