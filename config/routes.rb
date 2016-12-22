@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :beneficiaries
   resources :postulations
 
+
   
   get 'user_postulations/list'
 
@@ -40,6 +41,7 @@ Rails.application.routes.draw do
   # si es user
   authenticated :user do
     root "home#index_user_dashboard", as: "user_root"
+    resources :usuarios, as: :user, only: [:show,:update]
   end
 
   # si es asociado

@@ -49,8 +49,8 @@ body
   font-size: 16px
   //height: 100%
 body
-  background-image: repeating-radial-gradient(center center, rgba($azulito,.2), rgba($azulito,.2) 1px, transparent 1px, transparent 100%)
-  background-size: 3px 3px
+  background-image: repeating-radial-gradient(center center, rgba($azulito,.2), rgba($azulito,.2) 1px, transparent 2px, transparent 100%)
+  background-size: 15px 15px
 h1,h2
   font-family: 'gobclbold'
 
@@ -218,6 +218,8 @@ footer
     right: 0
     top: 0
     position: relative
+.backgound-calipso
+  background-color: $calipso
 .blank
   font-size: 0
   margin: 0
@@ -254,15 +256,16 @@ footer
     width: 16px
 .dashboard-row
   width: 100%
-  .record-date
-    background: $calipso
+  .record-list
+    //background: $calipso
     border-bottom: 2px solid white
     border-radius: 3px 3px 0 0 
     width: 100%
     .title-record
       background: $dark-calipso
       border-bottom: 1px solid white
-      border-radius: 3px 3px 0 0 
+      border-radius: 3px 3px 0 0
+      min-height: 75px
       padding: 16px 25px
       text-align: right
       h3
@@ -270,20 +273,42 @@ footer
         font-family: 'gobclregular'
         font-size: 20px
         margin: 0
+      p
+        color: white
+        font-size: 13px
+        margin: 0
+    .record-camp
+      margin: 8px 0
+      padding: 16px
+      text-align: right
+      width: 100%
+      .best_in_place
+        color: white
+        display: initial
+        width: initial
+        .form_in_place
+          input
+            text-align: right
     .record-list-link
       margin: 0
       padding: 0
       li
+        background-color: white
         border-bottom: 1px solid white
         display: block
+        margin: 8px 0
         text-align: right
+        &:hover
+          background-color: $calipso
+          .record-text
         a
+          border: 1px solid rgba($gris, .3)
           display: block
           text-decoration: none
           padding: 16px 25px
           width: 100%
         .record-count
-          color: white
+          color: $gris
           font-family: 'gobcllight'
           font-size: 48px
         .record-count,
@@ -292,12 +317,12 @@ footer
           vertical-align: middle
         .record-text
           h3
-            color: white
+            color: $gris
             font-size: 18px
             margin: 0
             text-transform: capitalize
           p
-            color: white
+            color: $gris
             font-size: 14px
             margin: 0
 .disable
@@ -475,6 +500,10 @@ footer
     color: white
     font-family: 'gobclregular'
     font-weight: 600
+.line-bottom
+  border-bottom: 1px solid rgba($gris, .3)
+.little-margin
+  margin-bottom: 5px
 .login
   .login-row
     background-color: white
@@ -571,17 +600,20 @@ footer
         font-style: italic
         font-size: 15px
 .postulation-section
-  background: $naranjo
   .postulation
     background: $dark-naranjo
     border-bottom: 1px solid white
+    min-height: 75px
     h3,
     p
       color: white
   .postulation-body
+    background-color: white
+    margin-top: 8px
+    padding: 8px
     h3,
     p
-      color: white
+      color: $azulito
     .postulation-info
       background: white
       color: $gris
@@ -602,7 +634,6 @@ footer
       padding: 16px 25px
       text-align: right
   .postulation-body
-    padding: 16px 0
     h3
       font-size: 20px
       margin: 0
