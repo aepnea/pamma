@@ -87,7 +87,18 @@
       </div>
       <div class="postulation-body">
         <p>Desde aca haz tus postulaciones y revisar anteriores procesos.</p>
-        <p>lista aun no cargada</p>
+
+        <% @postulations_list.each do |p|%>
+          <div class="row no-padding">
+            <div class="col-md-12">
+              <% if p.postulation_date_id == nil %>
+                <p>Aun no postulas</p>
+              <% else %>
+                <p class="postulation-info">Nombre Periodo de Postulación <%= p.postulation_date_id %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

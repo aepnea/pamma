@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   # si es asociado
   authenticated :asociative_user do
     root "home#index_user_asociative_dashboard", as: "asociative_user_root"
+    resources :usuarios_asociados, as: :asociative_user, only: [:show,:update]
   end
 
   # si no esta logeado
