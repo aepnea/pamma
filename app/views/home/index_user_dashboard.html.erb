@@ -19,6 +19,9 @@
         <div class="line-bottom little-margin"><%= best_in_place @user, :village, :as => :input %></div> 
         <div class="line-bottom little-margin"><%= best_in_place @user, :mobile, :as => :input %></div> 
         <div class="line-bottom little-margin"><%= best_in_place @user, :landline, :as => :input %></div>
+        <div class="line-bottom little-margin"><%= best_in_place @user, :region_id, :as => :select, :collection => Region.all.map {|i|[i.id, i.name]} %> </div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :province_id, :as => :select, :collection => Province.all.map {|i|[i.id, i.name]} %> </div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :commune_id, :as => :select, :collection => Commune.all.map {|i|[i.id, i.name]} %> </div>  
       </div> 
     </div>
 
