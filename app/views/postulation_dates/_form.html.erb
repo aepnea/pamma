@@ -32,12 +32,12 @@
     <%= f.number_field :postulation_standard_id %>
   </div>
   <div class="field">
-    <%= f.label "Estado" %><br>
+    <%= f.label "Activar/Desactivar" %><br>
     <%= f.check_box :state %>
   </div>
   <div class="field">
     <%= f.label "Región de Postulación" %><br>
-    <%= f.text_field :region_id %>
+    <%= f.number_field :region_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

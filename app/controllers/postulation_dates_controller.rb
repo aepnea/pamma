@@ -28,7 +28,7 @@ class PostulationDatesController < ApplicationController
 
     respond_to do |format|
       if @postulation_date.save
-        format.html { redirect_to @postulation_date, notice: 'Postulation date was successfully created.' }
+        format.html { redirect_to admin_postulations_path, notice: 'Postulation date was successfully created.' }
         format.json { render :show, status: :created, location: @postulation_date }
       else
         format.html { render :new }

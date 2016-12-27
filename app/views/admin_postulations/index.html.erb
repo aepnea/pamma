@@ -6,7 +6,9 @@
     <div class="postulation-section-nocolor">
       <div class="postulation-body col-md-8 center">
         <%@period.each do |p|%>
-          <%= link_to p.name, milestones_path, class: "postulation-info-orange width-total" %>
+            <div class="postulation-info-orange">
+              Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%>
+            </div>
         <%end%>
       </div>
     </div>
