@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   resources :admin_postulations
   resources :postulation_dates
 
+
+
   get 'user_postulations/list'
 
   get 'user_postulations/postulation_period'

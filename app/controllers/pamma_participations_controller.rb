@@ -4,7 +4,12 @@ class PammaParticipationsController < ApplicationController
   # GET /pamma_participations
   # GET /pamma_participations.json
   def index
-    @pamma_participations = PammaParticipation.where(user_id: current_user.id)
+      if admin_signed_in?
+        @pamma_participations = PammaParticipation.where(user_id: session[:id])
+
+      else
+        @pamma_participations = PammaParticipation.where(user_id: current_user.id)
+      end
   end
 
   # GET /pamma_participations/1

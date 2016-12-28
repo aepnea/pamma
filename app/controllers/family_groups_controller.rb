@@ -4,7 +4,12 @@ class FamilyGroupsController < ApplicationController
   # GET /family_groups
   # GET /family_groups.json
   def index
-    @family_groups = FamilyGroup.where(user_id: current_user.id)
+      if admin_signed_in?
+        @family_groups = FamilyGroup.where(user_id: session[:id])
+
+      else
+        @family_groups = FamilyGroup.where(user_id: current_user.id)
+      end
   end
 
   # GET /family_groups/1

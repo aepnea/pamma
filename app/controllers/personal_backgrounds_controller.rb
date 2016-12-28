@@ -4,7 +4,13 @@ class PersonalBackgroundsController < ApplicationController
   # GET /personal_backgrounds
   # GET /personal_backgrounds.json
   def index
+
+    if admin_signed_in?
+      @personal_backgrounds = PersonalBackground.where(user_id: session[:id])
+    else
+
     @personal_backgrounds = PersonalBackground.where(user_id: current_user.id)
+  end
   end
 
   # GET /personal_backgrounds/1
