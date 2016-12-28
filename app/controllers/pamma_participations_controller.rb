@@ -6,6 +6,8 @@ class PammaParticipationsController < ApplicationController
   def index
       if admin_signed_in?
         @pamma_participations = PammaParticipation.where(user_id: session[:id])
+      elsif asociative_user_signed_in?
+        @pamma_participations = PammaParticipation.where(asociative_user_id: current_asociative_user.id)
 
       else
         @pamma_participations = PammaParticipation.where(user_id: current_user.id)

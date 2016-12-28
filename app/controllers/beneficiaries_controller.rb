@@ -6,6 +6,7 @@ class BeneficiariesController < ApplicationController
   def index
       if admin_signed_in?
         @beneficiaries = Beneficiary.where(user_id: session[:id])
+    
       else
         @beneficiaries = Beneficiary.where(user_id: current_user.id)
       end

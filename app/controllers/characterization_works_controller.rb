@@ -6,6 +6,8 @@ class CharacterizationWorksController < ApplicationController
   def index
       if admin_signed_in?
         @characterization_works = CharacterizationWork.where(user_id: session[:id])
+      elsif asociative_user_signed_in?
+        @characterization_works = CharacterizationWork.where(asociative_user_id: current_asociative_user.id)
 
       else
         @characterization_works = CharacterizationWork.where(user_id: current_user.id)
