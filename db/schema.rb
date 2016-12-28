@@ -380,7 +380,7 @@ ActiveRecord::Schema.define(version: 20161221113734) do
     t.string   "rut",                    limit: 255
     t.date     "birthdate"
     t.integer  "gender_id",              limit: 4
-    t.integer  "civil_status_id",        limit: 4
+    t.integer  "civil_status_type_id",   limit: 4
     t.string   "address",                limit: 255
     t.string   "village",                limit: 255
     t.string   "mobile",                 limit: 255

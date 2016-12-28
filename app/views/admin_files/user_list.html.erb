@@ -1,7 +1,12 @@
 <h1>AdminFiles#user_list</h1>
+
 <%@user_list.each do |u|%>
+<%=link_to admin_files_user_create_background_path(id: u.id) do%>
     <%=u.first_name%>
     <%=u.last_name%>
-    
+    <%=u.rut%>
+    <%=u.civil_status_type_id%>
+    <%=u.province_id%>
+    <%=u.commune_id%>
 <%end%>
-<p>Find me in app/views/admin_files/user_list.html.erb</p>
+<%end%>

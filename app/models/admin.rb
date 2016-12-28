@@ -16,6 +16,8 @@
 #  region_id              :integer
 #  admin_type_id          :integer
 #  seremi_zone_id         :integer
+#  province_id            :integer
+#  commune_id             :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #

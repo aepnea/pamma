@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get 'admin_files/asociative_user_list'
 
-  get 'admin_files/user_create'
+  get 'admin_files/user_create_background'
 
-  get 'admin_files/asociative_user_create'
+  get 'admin_files/asociative_user_create_background'
 
   resources :benefit_requesteds
   resources :milestones
