@@ -4,7 +4,12 @@ class BeneficiariesController < ApplicationController
   # GET /beneficiaries
   # GET /beneficiaries.json
   def index
-    @beneficiaries = Beneficiary.where(user_id: current_user.id)
+      if admin_signed_in?
+        @beneficiaries = Beneficiary.where(user_id: session[:id])
+    
+      else
+        @beneficiaries = Beneficiary.where(user_id: current_user.id)
+      end
   end
 
   # GET /beneficiaries/1

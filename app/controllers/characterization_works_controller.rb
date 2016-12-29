@@ -4,7 +4,14 @@ class CharacterizationWorksController < ApplicationController
   # GET /characterization_works
   # GET /characterization_works.json
   def index
-    @characterization_works = CharacterizationWork.where(user_id: current_user.id)
+      if admin_signed_in?
+        @characterization_works = CharacterizationWork.where(user_id: session[:id])
+      elsif asociative_user_signed_in?
+        @characterization_works = CharacterizationWork.where(asociative_user_id: current_asociative_user.id)
+
+      else
+        @characterization_works = CharacterizationWork.where(user_id: current_user.id)
+      end
   end
 
   # GET /characterization_works/1
@@ -14,7 +21,7 @@ class CharacterizationWorksController < ApplicationController
 
   # GET /characterization_works/new
   def new
-      @characterization_work = CharacterizationWork.new    
+      @characterization_work = CharacterizationWork.new
   end
 
   # GET /characterization_works/1/edit

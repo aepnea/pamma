@@ -22,6 +22,10 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.integer :admin_type_id
       t.integer :seremi_zone_id
 
+      t.integer :region_id
+      t.integer :province_id
+      t.integer :commune_id
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
@@ -41,5 +45,9 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     add_index :admins, :reset_password_token, unique: true
     # add_index :admins, :confirmation_token,   unique: true
     # add_index :admins, :unlock_token,         unique: true
+
+    # agregando region comuna y Provincia
+
+
   end
 end

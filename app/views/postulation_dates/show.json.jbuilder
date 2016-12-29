@@ -1,0 +1,1 @@
+json.partial! "postulation_dates/postulation_date", postulation_date: @postulation_date

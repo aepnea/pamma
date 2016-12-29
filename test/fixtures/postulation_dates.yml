@@ -18,10 +18,18 @@
 
 one:
   name: MyString
-  date_begin: 2016-11-22
-  date_end: 2016-11-22
+  date_begin: 2016-12-21
+  date_end: 2016-12-21
+  user_type: MyString
+  postulation_standard_id: 1
+  state: false
+  region_id: 
 
 two:
   name: MyString
-  date_begin: 2016-11-22
-  date_end: 2016-11-22
+  date_begin: 2016-12-21
+  date_end: 2016-12-21
+  user_type: MyString
+  postulation_standard_id: 1
+  state: false
+  region_id: 

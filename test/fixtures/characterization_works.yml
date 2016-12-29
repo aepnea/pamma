@@ -4,7 +4,7 @@
 #
 #  id                                     :integer          not null, primary key
 #  work_name                              :string(255)
-#  location                               :string(255)
+#  localization                           :string(255)
 #  sector                                 :string(255)
 #  mountain_range                         :string(255)
 #  region_id                              :integer
