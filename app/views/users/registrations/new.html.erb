@@ -49,17 +49,19 @@
 
                 <div class="field">
                   <%= f.label "Estado Civil:" %>
-                  <%= f.collection_select :civil_status_id, CivilStatusType.all, :id, :name %>
+                  <%= f.collection_select :civil_status_type_id, CivilStatusType.all, :id, :name %>
                 </div>         
                 
               </div>
               
             </div>
 
+
+
           </div>
         </div>
         <!--fin step1  -->
-
+        
         <div class="step2 step">
           <div class="step-inner">
             <h3 class="title-h3">
@@ -117,8 +119,8 @@
           </div>
         </div>
         <!-- fin step2-->
-
-
+      
+        
         <div class="step3 step">
           <div class="step-inner">
             <h3 class="title-h3">
