@@ -11,19 +11,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Nombre" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Descripcion" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :date_begin %><br>
+    <%= f.label "Fecha Inicio" %><br>
     <%= f.date_select :date_begin %>
   </div>
   <div class="field">
-    <%= f.label :date_end %><br>
+    <%= f.label "Fecha Final" %><br>
     <%= f.date_select :date_end %>
   </div>
 
@@ -54,11 +54,11 @@
   <% end %>
 
   <div class="field">
-    <%= b.label :benefit_type_id %><br>
-    <%= b.number_field :benefit_type_id %>
+    <%= b.label "Beneficio Solicitado" %><br>
+    <%= b.collection_select :benefit_type_id, BenefitType.all, :id, :name %>
   </div>
   <div class="field">
-    <%= b.label :estimated_investment %><br>
+    <%= b.label "Inversión Estimada" %><br>
     <%= b.number_field :estimated_investment %>
   </div>
   <div class="field">
@@ -77,4 +77,3 @@
     <%= link_to "Save", "#", class: 'submit' %>
   </div>
 <% end %>
-

@@ -44,6 +44,6 @@ $(document).on "turbolinks:load turbolinks:render ready", ()->
     #console.log data
   $(document).on "ajax:success", "#login-form", (e, data, status, xhr) ->
     console.log data
-  $(document).on "ajax:error", "#login-form", (e, data, status, xhr) ->
+  $(".best_in_place").on "ajax:error", (e, data, status, xhr) ->
     console.log data
 

@@ -15,7 +15,7 @@
                 <h3>Características de Faena</h3>
                 <p>Lorem ipsum dolor sit amet...</p>
               </div>
-              <div class="file-count"><p>05</p></div>
+              <div class="file-count"><p>04</p></div>
             </div>
           </div>
         </div>
@@ -48,15 +48,15 @@
               <div class="col-md-12 triple-row">
                 <div class="input-inner triple">
                   <span class="span-label">Región</span>
-                  <%= best_in_place characterization_work, :region_id, as: :input %>
+                  <%= best_in_place characterization_work, :region_id, :type => :select, :collection => Region.all.map {|i|[i.id, i.name]}%>
                 </div>
                 <div class="input-inner triple">
                   <span class="span-label">Provincia</span>
-                  <%= best_in_place characterization_work, :province_id, as: :input %>
+                  <%= best_in_place characterization_work, :province_id, :type => :select, :collection => Province.all.map {|i|[i.id, i.name]}%>
                 </div>
                 <div class="input-inner triple">
                   <span class="span-label">Comuna</span>
-                  <%= best_in_place characterization_work, :commune_id, as: :input %>
+                  <%= best_in_place characterization_work, :commune_id, :type => :select, :collection => Commune.all.map {|i|[i.id, i.name]} %>
                 </div>
               </div>
               <div class="col-md-12 linea"></div>
@@ -74,7 +74,7 @@
                   <%= best_in_place characterization_work, :buyer_power, as: :input %>
                 </div>
               </div>
-              
+
               <div class="col-md-6">
                 <div class="input-inner">
                   <span class="span-label">Distancia en Kms</span>
@@ -93,30 +93,30 @@
                <div class="col-md-6">
                 <div class="input-inner">
                   <span class="span-label">Actividad</span>
-                  <%= best_in_place characterization_work, :owner_type_id , as: :input %>
+                  <%= best_in_place characterization_work, :owner_type_id , :type => :select, :collection => OwnerType.all.map {|i|[i.id, i.name]} %>
                 </div>
                 <div class="input-inner">
                   <span class="span-label">Constitución Propiedad Minera</span>
-                  <%= best_in_place characterization_work, :mining_properties_constitution_type_id, as: :input %>
+                  <%= best_in_place characterization_work, :mining_properties_constitution_type_id, :type => :select, :collection => MiningPropertiesConstitutionType.all.map {|i|[i.id, i.name]} %>
                 </div>
                 <div class="input-inner">
                   <span class="span-label">Tipo de Explotación</span>
-                  <%= best_in_place characterization_work, :operation_type_id, as: :input %>
+                  <%= best_in_place characterization_work, :operation_type_id, :type => :select, :collection => OperationType.all.map {|i|[i.id, i.name]} %>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="input-inner">
                   <span class="span-label">Principal Mineral Extraído</span>
-                  <%= best_in_place characterization_work, :extracted_mineral_type_id , as: :input %>
+                  <%= best_in_place characterization_work, :extracted_mineral_type_id , :type => :select, :collection => ExtractedMineralType.all.map {|i|[i.id, i.name]} %>
                 </div>
                 <div class="input-inner">
                   <span class="span-label">Planes o Información Disponible</span>
-                  <%= best_in_place characterization_work, :mining_information_available_type_id, as: :input %>
+                  <%= best_in_place characterization_work, :mining_information_available_type_id, :type => :select, :collection => MiningInformationAvailableType.all.map {|i|[i.id, i.name]} %>
                 </div>
               </div>
             </div>
-            
+
 
 
           <% end %>
@@ -128,7 +128,7 @@
             <% end %>
           <%end%>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>

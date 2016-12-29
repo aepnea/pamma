@@ -76,7 +76,6 @@ class User < ActiveRecord::Base
   # validates_presence_of :region_id, presence: true, message: "Este campo es requerido para la inscripción"
   # validates_presence_of :province_id, presence: true, message: "Este campo es requerido para la inscripción"
   # validates_presence_of :commune_id, presence: true, message: "Este campo es requerido para la inscripción"
-  validates_presence_of :password_confirmation, presence: true, message: "Necesitas confirmar una password"
 
 
 

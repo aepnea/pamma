@@ -15,7 +15,7 @@
                 <h3>Beneficios Anteriores</h3>
                 <p>Lorem ipsum dolor sit amet...</p>
               </div>
-              <div class="file-count"><p>06</p></div>
+              <div class="file-count"><p>05</p></div>
             </div>
           </div>
         </div>
@@ -38,9 +38,9 @@
                 <tr>
                   <td><%= best_in_place pamma_participation, :previous_beneficiary, as: :input %></td>
                   <td><%= best_in_place pamma_participation, :number_times, as: :input %></td>
-                  <td><%= best_in_place pamma_participation, :benefit_type_id, as: :input %></td>
-                  <td><%= best_in_place pamma_participation, :project_state_type_id, as: :input %></td>
-                  <td><%= best_in_place pamma_participation, :support_type_id, as: :input %></td>
+                  <td><%= best_in_place pamma_participation, :benefit_type_id, :type => :select, :collection => BenefitType.all.map {|i|[i.id, i.name]}%></td>
+                  <td><%= best_in_place pamma_participation, :project_state_type_id, :type => :select, :collection => ProjectStateType.all.map {|i|[i.id, i.name]}%></td>
+                  <td><%= best_in_place pamma_participation, :support_type_id, :type => :select, :collection => SupportType.all.map {|i|[i.id, i.name]}%></td>
                   <td><%= best_in_place pamma_participation, :user_id %></td>
                   <td class="destroy-table">
                     <%= link_to pamma_participation, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -62,4 +62,3 @@
     </div>
   </div>
 </div>
-

@@ -10,4 +10,5 @@
 
 class ScholarshipType < ActiveRecord::Base
   has_many :personal_backgrounds
+  has_many :family_groups
 end
