@@ -5,7 +5,7 @@ class AdminFilesController < ApplicationController
 
   def asociative_user_list
     ### utilizar esta variable en la vista
-    @asociative_user = AsociativeUser.where(region_id: current_admin.region_id)
+    @asociative_user_list = AsociativeUser.where(region_id: current_admin.region_id)
   end
 
   def user_create_background
@@ -16,5 +16,7 @@ class AdminFilesController < ApplicationController
 
   def asociative_user_create_background
     ### Con este método muestro la ventana para crear antecedentes para un usuario_asociativo determinado
+    id = params[:asociative_user_id]
+    session[:asociative_user_id] = id
   end
 end

@@ -19,7 +19,7 @@
           <% end %>
         </li>
         <li class="inline">
-          <%= link_to personal_backgrounds_path(id: session[:id]) do%>
+          <%= link_to personal_backgrounds_path(id: session[:asociative_user_id]) do%>
             <div class="record-text">
               <h3>Antecedentes Personales</h3>
               <p></p>
@@ -27,40 +27,23 @@
             <div class="record-count">02</div>
           <% end %>
         </li>
+
         <li class="inline">
-          <%= link_to family_groups_path(id: session[:id]) do%>
+          <%= link_to characterization_works_path(id: session[:asociative_user_id]) do%>
             <div class="record-text">
-              <h3>Grupo Familiar</h3>
+              <h3>Características de Faena</h3>
               <p></p>
             </div>
             <div class="record-count">03</div>
           <% end %>
         </li>
-        <li class="inline">
-          <%= link_to beneficiaries_path do%>
-            <div class="record-text">
-              <h3>Beneficiario</h3>
-              <p></p>
-            </div>
-            <div class="record-count">04</div>
-          <% end %>
-        </li>
-        <li class="inline">
-          <%= link_to characterization_works_path do%>
-            <div class="record-text">
-              <h3>Características de Faena</h3>
-              <p></p>
-            </div>
-            <div class="record-count">05</div>
-          <% end %>
-        </li>
          <li class="inline">
-          <%= link_to pamma_participations_path do%>
+          <%= link_to pamma_participations_path(id: session[:asociative_user_id]) do%>
             <div class="record-text">
               <h3>Beneficios Anteriores</h3>
               <p></p>
             </div>
-            <div class="record-count">06</div>
+            <div class="record-count">04</div>
           <% end %>
         </li>
       </ul>

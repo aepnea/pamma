@@ -5,7 +5,11 @@ class CharacterizationWorksController < ApplicationController
   # GET /characterization_works.json
   def index
       if admin_signed_in?
-        @characterization_works = CharacterizationWork.where(user_id: session[:id])
+        if session[:asociative_user_id].nil?
+          @characterization_works = CharacterizationWork.where(user_id: session[:id])
+        else
+          @characterization_works = CharacterizationWork.where(asociative_user_id: session[:asociative_user_id])
+        end
       elsif asociative_user_signed_in?
         @characterization_works = CharacterizationWork.where(asociative_user_id: current_asociative_user.id)
 
