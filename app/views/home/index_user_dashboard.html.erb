@@ -11,7 +11,7 @@
         <div class="line-bottom little-margin"><%= best_in_place @user, :gender_id, :as => :select, :collection => {"1" => "Masculino", "2" => "Femenino"} %></div> 
         <div class="line-bottom little-margin"><%= best_in_place @user, :birthdate, :as => :date %></div> 
         <div class="line-bottom little-margin"><%= best_in_place @user, :rut, :as => :input %></div> 
-        <div class="line-bottom little-margin"><%= best_in_place @user, :civil_status_id, :as => :select, :collection => {"1" => "Soltero/a", "2" => "Casado/a", "3" => "Divorciado/a", "4" => "Viudo/a"} %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :civil_status_type_id, :as => :select, :collection => {"1" => "Soltero/a", "2" => "Casado/a", "3" => "Divorciado/a", "4" => "Viudo/a"} %></div> 
       </div>
 
       <div class="record-camp backgound-calipso">
