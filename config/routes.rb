@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :beneficiaries
   resources :postulations
 
+
   
   get 'user_postulations/list'
 
@@ -36,14 +37,17 @@ Rails.application.routes.draw do
     get '/control' => 'devise/sessions#new'
   end
 
+  #resources :user, only: [:show]
   # si es user
   authenticated :user do
     root "home#index_user_dashboard", as: "user_root"
+    resources :usuarios, as: :user, only: [:update]
   end
 
   # si es asociado
   authenticated :asociative_user do
     root "home#index_user_asociative_dashboard", as: "asociative_user_root"
+    resources :usuarios_asociados, as: :asociative_user, only: [:show,:update]
   end
 
   # si no esta logeado

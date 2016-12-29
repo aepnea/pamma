@@ -1,26 +1,44 @@
 <div class="row dashboard-row">
-  <div class="col-md-5">
-    <div class="record-date">
+  <div class="col-md-3">
+    <div class="record-list">
+      <div class="title-record">
+        <h3>Antecedentes</h3>
+        <p>Para editar haz click sobre el texto</p>
+      </div>
+
+      <div class="record-camp backgound-calipso">
+        <div class="line-bottom little-margin"><%= best_in_place @user, :first_name, :as => :input %> <%= best_in_place @user, :last_name, :as => :input %> <%= best_in_place @user, :surname, :as => :input %></div>
+        <div class="line-bottom little-margin"><%= best_in_place @user, :gender_id, :as => :select, :collection => {"1" => "Masculino", "2" => "Femenino"} %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :birthdate, :as => :date %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :rut, :as => :input %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :civil_status_id, :as => :select, :collection => {"1" => "Soltero/a", "2" => "Casado/a", "3" => "Divorciado/a", "4" => "Viudo/a"} %></div> 
+      </div>
+
+      <div class="record-camp backgound-calipso">
+        <div class="line-bottom little-margin"><%= best_in_place @user, :address, :as => :input %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :village, :as => :input %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :mobile, :as => :input %></div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :landline, :as => :input %></div>
+        <div class="line-bottom little-margin"><%= best_in_place @user, :region_id, :as => :select, :collection => Region.all.map {|i|[i.id, i.name]} %> </div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :province_id, :as => :select, :collection => Province.all.map {|i|[i.id, i.name]} %> </div> 
+        <div class="line-bottom little-margin"><%= best_in_place @user, :commune_id, :as => :select, :collection => Commune.all.map {|i|[i.id, i.name]} %> </div>  
+      </div> 
+    </div>
+
+  </div>
+  <div class="col-md-4">
+    <div class="record-list">
       <div class="title-record">
         <h3>MIS DATOS DE REGISTRO</h3>
       </div>
       <ul class="record-list-link">
-        <li>
-          <%= link_to edit_user_registration_path do%>
-            <div class="record-text">
-              <h3>Tus cuenta de Registro</h3>
-              <p>Tus datos de registro van aquí.</p>
-            </div>
-            <div class="record-count">01</div>
-          <% end %>
-        </li>
         <li>
           <%= link_to personal_backgrounds_path do%>
             <div class="record-text">
               <h3>Antecedentes Personales</h3>
               <p>Tus antecedentes personales van aquí.</p>
             </div>
-            <div class="record-count">02</div>
+            <div class="record-count">01</div>
           <% end %>
         </li>
         <li>
@@ -29,7 +47,7 @@
               <h3>Grupo Familiar</h3>
               <p>Los integrantes de tu familia van aquí.</p>
             </div>
-            <div class="record-count">03</div>
+            <div class="record-count">02</div>
           <% end %>
         </li>
         <li>
@@ -38,7 +56,7 @@
               <h3>Beneficiario</h3>
               <p>Los beneficios que has logrado.</p>
             </div>
-            <div class="record-count">04</div>
+            <div class="record-count">03</div>
           <% end %>
         </li>
         <li>
@@ -47,7 +65,7 @@
               <h3>Características de Faena</h3>
               <p>Datos de tu Faena</p>
             </div>
-            <div class="record-count">05</div>
+            <div class="record-count">04</div>
           <% end %>
         </li>
          <li>
@@ -56,14 +74,14 @@
               <h3>Beneficios Anteriores</h3>
               <p>Si tienes otras participaciones en PAMMA</p>
             </div>
-            <div class="record-count">06</div>
+            <div class="record-count">05</div>
           <% end %>
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="col-md-7">
+  <div class="col-md-5">
     <div class="postulation-section">
       <div class="postulation">
         <%= link_to user_postulations_list_path do %>
@@ -71,7 +89,19 @@
         <% end %>
       </div>
       <div class="postulation-body">
-        <p>Desde aca puedes postular, ver periodos y tus postulaciones históricas.</p>
+        <p>Desde aca haz tus postulaciones y revisar anteriores procesos.</p>
+
+        <% @postulations_list.each do |p|%>
+          <div class="row no-padding">
+            <div class="col-md-12">
+              <% if p.postulation_date_id == nil %>
+                <p>Aun no postulas</p>
+              <% else %>
+                <p class="postulation-info">Nombre Periodo de Postulación <%= p.postulation_date_id %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

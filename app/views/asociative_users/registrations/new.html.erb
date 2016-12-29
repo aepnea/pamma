@@ -1,6 +1,10 @@
-<div class="formulario">
+<div class="col-md-2">
+  <h2 class="titulo-intro">
+    INGRESA TUS DATOS EN EL SIGUIENTE FORMULARIO
+  </h2>
+</div>
+<div class="formulario col-md-10">
   <div class="title-row">
-    <h2 class="title-form">Para ingresar necesitas llenar el siguiente formulario <span>(son solo 3 pasos..)</span></h2>
     <p>¿Tienes cuenta? puedes <%= render "asociative_users/shared/links" %>
   </div>
   <div class="steps">
@@ -8,99 +12,104 @@
       <div class="step-container">
         <div class="step1 step">
           <div class="step-inner">
-            <div class="maps">
-              <div class="map map-activo"></div>
-              <div class="map"></div>
-            </div>
             <h3 class="title-h3">
               <span>01</span><p> Datos generales</p>
             </h3>
-            <div class="field">
-              <%= f.label "Nombre:" %><br />
-              <%= f.text_field :name %>
-            </div>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                  <%= f.label "Nombre:" %><br />
+                  <%= f.text_field :name %>
+                </div>
 
-            <div class="field">
-              <%= f.label "Rut:" %><br />
-              <%= f.text_field :rut %>
-              <div id='error_rut'></div>
-            </div>
+                <div class="field">
+                  <%= f.label "Rut:" %><br />
+                  <%= f.text_field :rut %>
+                  <div id='error_rut'></div>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <%= f.label "Celular:" %><br />
+                    <%= f.text_field :mobile %>
+                  </div>
 
-            <div class="field">
-              <%= f.label "Celular:" %><br />
-              <%= f.text_field :mobile %>
-            </div>
+                  <div class="field">
+                    <%= f.label "Teléfono fijo:" %><br />
+                    <%= f.text_field :landline %>
+                  </div>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <%= f.label "Número de Asociados:" %><br />
+                    <%= f.number_field :partners_number %>
+                  </div>
 
-            <div class="field">
-              <%= f.label "Teléfono fijo:" %><br />
-              <%= f.text_field :landline %>
-            </div>
-
-            <div class="field">
-              <%= f.label "Número de Asociados:" %><br />
-              <%= f.number_field :partners_number %>
-            </div>
-
-            <div class="field">
-              <%= f.label "Fecha Fundación:" %><br />
-              <%= f.date_field :date_foundation, class: "datepicker" %>
-            </div>
-
-            <div class="field">
-              <%= f.label "Dirección:" %><br />
-              <%= f.text_field :address %>
+                  <div class="field">
+                    <%= f.label "Fecha Fundación:" %><br />
+                    <%= f.date_field :date_foundation, class: "datepicker" %>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="step1 step">
           <div class="step-inner">
-            <div class="maps">
-              <div class="map"></div>
-              <div class="map map-activo"></div>
-            </div>
             <h3 class="title-h3">
               <span>02</span><p>Ubicación</p>
             </h3>
-            <div class="field">
-              <%= f.label "Villa o Población:" %><br />
-              <%= f.text_field :village %>
-            </div>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                    <%= f.label "Dirección:" %><br />
+                    <%= f.text_field :address %>
+                  </div>
+                <div class="field">
+                  <%= f.label "Villa o Población:" %><br />
+                  <%= f.text_field :village %>
+                </div>
+              </div>
 
-            <div class="field">
-              <%= f.label "Región:" %>
-              <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
-            </div>
+              <div class="form-3">
+                <div class="field">
+                  <%= f.label "Región:" %>
+                  <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
+                </div>
 
-            <div class="field">
-              <%= f.label "Provincia:" %>
-              <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
-            </div>
+                <div class="field">
+                  <%= f.label "Provincia:" %>
+                  <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
+                </div>
 
-            <div class="field">
-              <%= f.label "Comuna:" %>
-              <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
-            </div>
-            
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email %>
-            </div>
+                <div class="field">
+                  <%= f.label "Comuna:" %>
+                  <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
+                </div>
+              </div>
 
-            <div class="field">
-              <%= f.label :password %>
-              <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "off" %>
-            </div>
+              <div class="form-3">
+                <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email %>
+                </div>
 
-            <div class="field">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-            </div>
+                <div class="field">
+                  <%= f.label :password %>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "off" %>
+                </div>
 
-            <div class="actions">
-              <%= f.submit "Sign up",  class: "submit" %>
+                <div class="field">
+                  <%= f.label :password_confirmation %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </div>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Sign up",  class: "submit" %>
+              </div>
             </div>
           </div>
         </div>
