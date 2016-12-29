@@ -1,8 +1,52 @@
-<h1>hola admin</h1>
-<%=link_to "Postulaciones",admin_postulations_path%>
+<div class="row dashboard-row">
+  <div class="col-md-5">
+    <div class="record-date">
+      <div class="title-record">
+        <h3>DATOS DE FICHAS</h3>
+      </div>
+      <ul class="record-list-link">
+        <li>
+          <%= link_to admin_files_user_list_path do%>
+            <div class="record-text">
+              <h3>Listar Fichas Persona Natural</h3>
+              <p>Tus datos de registro van aquí.</p>
+            </div>
+            <div class="record-count"></div>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_files_asociative_user_list_path do%>
+            <div class="record-text">
+              <h3>Listar Fichas Asociativas</h3>
+              <p>Tus antecedentes personales van aquí.</p>
+            </div>
+            <div class="record-count"></div>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_postulations_path do%>
+            <div class="record-text">
+              <h3>Crear Fichas</h3>
+              <p>Los integrantes de tu familia van aquí.</p>
+            </div>
+            <div class="record-count"></div>
+          <% end %>
+        </li>
 
-<%=link_to "Listar Fichas Persona Natural",admin_files_user_list_path%>
+      </ul>
+    </div>
+  </div>
 
-<%=link_to "Listar Fichas Asociativas",admin_files_asociative_user_list_path%>
-
-<%=link_to "Crear Fichas",admin_postulations_path%>
+  <div class="col-md-7">
+    <div class="postulation-section">
+      <div class="postulation">
+        <%= link_to admin_postulations_path do %>
+          <h3 class="title-postulation">Postulaciones</h3>
+        <% end %>
+      </div>
+      <div class="postulation-body">
+        <p>Desde aca puedes postular, ver periodos y tus postulaciones históricas.</p>
+      </div>
+    </div>
+  </div>
+</div>
