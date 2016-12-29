@@ -1,2 +1,83 @@
-<h1>AdminFiles#asociative_user_create</h1>
-<p>Find me in app/views/admin_files/asociative_user_create.html.erb</p>
+
+<div class="row dashboard-row">
+  <div class="col-md-2">
+    <h2 class="titulo-intro">
+      DATOS DE FICHA
+    </h2>
+  </div>
+
+  <div class="col-md-10">
+    <div class="record-list">
+      <ul class="record-list-link">
+        <li class="inline">
+          <%= link_to edit_user_registration_path do%>
+            <div class="record-text">
+              <h3>Información de cuenta</h3>
+              <p></p>
+            </div>
+            <div class="record-count">01</div>
+          <% end %>
+        </li>
+        <li class="inline">
+          <%= link_to personal_backgrounds_path(id: session[:id]) do%>
+            <div class="record-text">
+              <h3>Antecedentes Personales</h3>
+              <p></p>
+            </div>
+            <div class="record-count">02</div>
+          <% end %>
+        </li>
+        <li class="inline">
+          <%= link_to family_groups_path(id: session[:id]) do%>
+            <div class="record-text">
+              <h3>Grupo Familiar</h3>
+              <p></p>
+            </div>
+            <div class="record-count">03</div>
+          <% end %>
+        </li>
+        <li class="inline">
+          <%= link_to beneficiaries_path do%>
+            <div class="record-text">
+              <h3>Beneficiario</h3>
+              <p></p>
+            </div>
+            <div class="record-count">04</div>
+          <% end %>
+        </li>
+        <li class="inline">
+          <%= link_to characterization_works_path do%>
+            <div class="record-text">
+              <h3>Características de Faena</h3>
+              <p></p>
+            </div>
+            <div class="record-count">05</div>
+          <% end %>
+        </li>
+         <li class="inline">
+          <%= link_to pamma_participations_path do%>
+            <div class="record-text">
+              <h3>Beneficios Anteriores</h3>
+              <p></p>
+            </div>
+            <div class="record-count">06</div>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <div class="col-md-7">
+    <div class="postulation-section">
+      <div class="postulation">
+        <%= link_to user_postulations_list_path do %>
+          <h3 class="title-postulation">Postulaciones</h3>
+        <% end %>
+      </div>
+      <div class="postulation-body">
+        <p>Desde aca puedes postular, ver periodos y tus postulaciones históricas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
