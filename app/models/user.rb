@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   belongs_to :province
   belongs_to :commune
   belongs_to :gender
-  belongs_to :civil_status
+  belongs_to :civil_status_type
   has_many :beneficiaries
   # parece que es 1:1
   has_many :characterization_works

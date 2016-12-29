@@ -1,6 +1,6 @@
 <div class="col-md-2">
   <h1 class="titulo-intro">Lista de usuarios naturales.</h1>
-</div> 
+</div>
 
 <div class="col-md-10">
   <%@user_list.each do |u|%>
@@ -9,11 +9,10 @@
         <span class="linting-items-name"><%=u.first_name%></span>
         <span class="linting-items-lastname"><%=u.last_name%></span>
         <span><%=u.rut%></span>
-        <span><%=u.civil_status_type_id%></span>
-        <span><%=u.province_id%></span>
-        <span><%=u.commune_id%></span>
+        <span><%=u.civil_status_type.name%></span>
+        <span><%=u.province.name%></span>
+        <span><%=u.commune.name%></span>
       </div>
     <%end%>
-  <%end%>  
+  <%end%>
 </div>
-
