@@ -401,6 +401,11 @@ footer
       margin-right: 16px
       //position: absolute
       //left: 10px
+.inline
+  display: inline-block !important
+  width: 48%
+  &:nth-child(even)
+    margin-left: 1% !important
 .inner-file
   background: $calipso
   width: 100%
@@ -558,11 +563,28 @@ footer
     color: $rojo
     font-family: 'gobclbold'
     font-size: 28px
+    margin: 0
     padding-bottom: 16px
 .linea
   border-bottom: 1px solid white
   margin-bottom: 26px
   margin-top: 16px
+.linting-items
+  background-color: white
+  border: 1px solid $clarito
+  margin: 0 0 8px 0
+  padding: 5px 10px
+  .linting-items-name,
+  .linting-items-lastname
+    color: $gris
+    font-family: 'gobclbold'
+    text-transform: capitalize
+  span
+    color: $gris
+.link-row
+  text-decoration: none
+  span
+    padding: 0 10px
 .margin-text
   margin-bottom: 1em !important
 .modal-login.modal-activo
