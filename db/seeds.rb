@@ -550,6 +550,18 @@ admin.save!
 
 
 
+######## Super Admin
+admin = Admin.new
+admin.email = 'samestica@minmineria.cl'
+admin.password = '14330934'
+admin.password_confirmation = '14330934'
+admin.admin_type_id = '1'
+admin.region_id = '1'
+admin.province_id = '1'
+admin.commune_id = '1'
+admin.save!
+
+
 
 ####### DATOS DE PRUEBA
 
