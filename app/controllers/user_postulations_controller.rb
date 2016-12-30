@@ -1,20 +1,32 @@
 class UserPostulationsController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
+  #before_action :authenticate_asociative_user!
+
 
   # def show
-  #   current_user 
+  #   current_user
   # end
 
   def list
-    @postulations_list = Postulation.where(:user_id => current_user.id)
-    @user = current_user.id
-
+    if asociative_user_signed_in?
+      @postulations_list = Postulation.where(:asociative_users_id => current_asociative_user.id)
+      @asociative_user = current_asociative_user.id
+    else
+      @postulations_list = Postulation.where(:user_id => current_user.id)
+      @user = current_user.id
+    end
   end
 
   def postulation_period
-    t = DateTime.now
-    region = current_user.region_id
-    @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    if asociative_user_signed_in?
+      t = DateTime.now
+      region = current_asociative_user.region_id
+      @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    else
+      t = DateTime.now
+      region = current_user.region_id
+      @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    end
   end
 
 #  def postulate
