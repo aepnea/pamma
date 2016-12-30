@@ -1,6 +1,14 @@
 class AdminFilesController < ApplicationController
   def user_list
-    @user_list = User.where(region_id: current_admin.region_id)
+    logger.info "#################### ID DE REGION: #{current_admin.region_id}"
+    logger.info "#################### TIPO DE ADMIN: #{current_admin.admin_type_id}"
+    if current_admin.admin_type_id = 1
+      logger.info "#################### ESTOY DENTRO DEL IF"
+
+        @user_list = User.all
+    else
+        @user_list = User.where(region_id: current_admin.region_id)
+    end
   end
 
   def asociative_user_list
