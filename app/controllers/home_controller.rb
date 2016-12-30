@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  
+
   def admin_dashboard
 
   end
@@ -14,5 +14,7 @@ class HomeController < ApplicationController
 
   def index_user_asociative_dashboard
     @asociative_user = current_asociative_user
+    @postulations_list = Postulation.where(:asociative_users_id => current_asociative_user.id)
+
   end
 end
