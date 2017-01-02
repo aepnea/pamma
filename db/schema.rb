@@ -36,9 +36,11 @@ ActiveRecord::Schema.define(version: 20161221113734) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
-    t.integer  "region_id",              limit: 4
+    t.string   "name",                   limit: 255
+    t.string   "rut",                    limit: 255
     t.integer  "admin_type_id",          limit: 4
     t.integer  "seremi_zone_id",         limit: 4
+    t.integer  "region_id",              limit: 4
     t.integer  "province_id",            limit: 4
     t.integer  "commune_id",             limit: 4
     t.datetime "created_at",                                      null: false

@@ -7,7 +7,7 @@
       <div class="postulation-body col-md-8 center">
         <%@period.each do |p|%>
             <div class="postulation-info-orange">
-              Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%>
+              Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%> Region: <%=p.region.name%>
             </div>
         <%end%>
       </div>

@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label "Relación Familiar" %><br>
-    <%= f.number_field :relationship_type_id %>
+    <%= f.collection_select :relationship_type_id, RelationshipType.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label "Actividad" %><br>
@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label "Escolaridad" %><br>
-    <%= f.number_field :scholarship_type_id %>
+    <%= f.collection_select :scholarship_type_id, ScholarshipType.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.hidden_field :user_id, value: "#{current_user.id}" %>

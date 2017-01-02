@@ -18,7 +18,13 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
-      t.integer :region_id
+
+
+      ## datos PAMMA
+
+      t.string :name
+      t.string :rut
+
       t.integer :admin_type_id
       t.integer :seremi_zone_id
 

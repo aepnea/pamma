@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :postulation_standard_id %><br>
-    <%= f.number_field :postulation_standard_id %>
+    <%= f.collection_select :postulation_standard_id, PostulationStandard.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label "Activar/Desactivar" %><br>
@@ -37,9 +37,9 @@
   </div>
   <div class="field">
     <%= f.label "Región de Postulación" %><br>
-    <%= f.number_field :region_id %>
+    <%= f.collection_select :region_id, Region.all, :id, :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Fecha Postulación" %>
   </div>
 <% end %>
