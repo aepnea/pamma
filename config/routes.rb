@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   resources :postulations
   resources :admin_postulations
   resources :postulation_dates
-  resources :create_admins
 
 
 
