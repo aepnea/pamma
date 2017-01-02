@@ -13,7 +13,7 @@
             <div class="pull-right">
               <div class="file-text">
                 <h3>Beneficios Anteriores</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Acá debes ingresar los cualquier tipo de beneficio que has recibido</p>
               </div>
               <div class="file-count"><p>05</p></div>
             </div>
@@ -25,11 +25,11 @@
           <table>
             <thead>
               <tr>
-                <th>Previous beneficiary</th>
-                <th>Number times</th>
-                <th>Benefit type</th>
-                <th>Project state type</th>
-                <th>Support type</th>
+                <th>Beneficios Previos</th>
+                <th>Numero de Veces Otorgado</th>
+                <th>Tipo de Beneficio</th>
+                <th>Estado del Proyecto</th>
+                <th>Beneficio</th>
               </tr>
             </thead>
 
@@ -41,7 +41,6 @@
                   <td><%= best_in_place pamma_participation, :benefit_type_id, :type => :select, :collection => BenefitType.all.map {|i|[i.id, i.name]}%></td>
                   <td><%= best_in_place pamma_participation, :project_state_type_id, :type => :select, :collection => ProjectStateType.all.map {|i|[i.id, i.name]}%></td>
                   <td><%= best_in_place pamma_participation, :support_type_id, :type => :select, :collection => SupportType.all.map {|i|[i.id, i.name]}%></td>
-                  <td><%= best_in_place pamma_participation, :user_id %></td>
                   <td class="destroy-table">
                     <%= link_to pamma_participation, method: :delete, data: { confirm: 'Are you sure?' } do %>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>

@@ -12,34 +12,39 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :previous_beneficiary %><br>
+    <%= f.label "Nombre Beneficiario " %><br>
     <%= f.text_field :previous_beneficiary %>
   </div>
   <div class="field">
-    <%= f.label :number_times %><br>
-    <%= f.number_field :number_times %>
+    <%= f.label "Numero de veces" %><br>
+    <%= f.number_field :number_times%>
   </div>
   <div class="field">
-    <%= f.label :benefit_type_id %><br>
-    <%= f.number_field :benefit_type_id %>
+    <%= f.label "Tipo de beneficio" %><br>
+    <%= f.collection_select :benefit_type_id, BenefitType.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :project_state_type_id %><br>
-    <%= f.number_field :project_state_type_id %>
+    <%= f.label "Estado del proyecto" %><br>
+    <%= f.collection_select :project_state_type_id, ProjectStateType.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :support_type_id %><br>
-    <%= f.number_field :support_type_id %>
+    <%= f.label "Tipo de Ayuda" %><br>
+    <%= f.collection_select :support_type_id, SupportType.all, :id, :name %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :asociative_user_id %><br>
-    <%= f.number_field :asociative_user_id %>
-  </div>
+  <%if user_signed_in?%>
+    <div class="field">
+      <!-- para usuario normal -->
+      <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+    </div>
+  <%else%>
+    <%if asociave_user_signed_in?%>
+      <div class="field">
+        <!-- para usuario asociativo-->
+        <%= f.number_field :asociative_user_id, value: "#{current_asociative_user.id}" %>
+      </div>
+    <%end%>
+  <%end%>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Agregar" %>
   </div>
 <% end %>

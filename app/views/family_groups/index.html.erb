@@ -30,7 +30,6 @@
                 <th>Parentezco</th>
                 <th>Actividad</th>
                 <th>Escolaridad</th>
-                <th>User</th>
               </tr>
             </thead>
 
@@ -42,7 +41,6 @@
                   <td><%= best_in_place family_group, :relationship_type_id, :type => :select, :collection => RelationshipType.all.map {|i|[i.id, i.name]}  %></td>
                   <td><%= best_in_place family_group, :activity, as: :input %></td>
                   <td><%= best_in_place family_group, :scholarship_type_id, :type => :select, :collection => ScholarshipType.all.map {|i|[i.id, i.name]}  %></td>
-                  <td><%= best_in_place family_group, :user_id %></td>
                   <td class="destroy-table">
                     <%= link_to family_group, method: :delete, data: { confirm: 'Are you sure?' } do %>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>

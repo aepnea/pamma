@@ -36,30 +36,29 @@
           <div class="col-md-8 center">
 
   <div class="field">
-    <%= f.label "Nombre" %><br>
+    <%= f.label "Nombre Completo" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
+    <%= f.label "Edad" %><br>
     <%= f.number_field :age %>
   </div>
   <div class="field">
-    <%= f.label :relationship_type_id %><br>
+    <%= f.label "Relación Familiar" %><br>
     <%= f.number_field :relationship_type_id %>
   </div>
   <div class="field">
-    <%= f.label :activity %><br>
+    <%= f.label "Actividad" %><br>
     <%= f.text_field :activity %>
   </div>
   <div class="field">
-    <%= f.label :scholarship_type_id %><br>
+    <%= f.label "Escolaridad" %><br>
     <%= f.number_field :scholarship_type_id %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Ingresar Familar"%>
   </div>
 <% end %>
