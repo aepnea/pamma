@@ -35,8 +35,8 @@ class PammaParticipationsController < ApplicationController
 
     respond_to do |format|
       if @pamma_participation.save
-        format.html { redirect_to @pamma_participation, notice: 'Pamma participation was successfully created.' }
-        format.json { render :show, status: :created, location: @pamma_participation }
+        format.html { redirect_to pamma_participations_url, notice: 'Pamma participation was successfully created.' }
+        format.json { render :index, status: :created, location: @pamma_participation }
       else
         format.html { render :new }
         format.json { render json: @pamma_participation.errors, status: :unprocessable_entity }

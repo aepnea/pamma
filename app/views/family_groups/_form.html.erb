@@ -1,17 +1,17 @@
-<%= form_for(@family_group) do |f| %>
-  <% if @family_group.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@family_group.errors.count, "error") %> prohibited this family_group from being saved:</h2>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@family_group) do |f| %>
+      <% if @family_group.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@family_group.errors.count, "error") %> prohibited this family_group from being saved:</h2>
 
-      <ul>
-      <% @family_group.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @family_group.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="row">
-    <div class="col-md-12">
       <div class="inner-file">
         <div class="header-file">
           <div class="col-md-8 center">
@@ -33,32 +33,36 @@
           </div>
         </div>
         <div class="body-file">
-          <div class="col-md-8 center">
-
-  <div class="field">
-    <%= f.label "Nombre Completo" %><br>
-    <%= f.text_field :name %>
+          <div class="col-md-8 center new-form">
+            <div class="field">
+              <%= f.label "Nombre Completo" %><br>
+              <%= f.text_field :name %>
+            </div>
+            <div class="field field-number">
+              <%= f.label "Edad" %><br>
+              <%= f.number_field :age %>
+            </div>
+            <div class="field">
+              <%= f.label "Relación Familiar" %><br>
+              <%= f.collection_select :relationship_type_id, RelationshipType.all, :id, :name %>
+            </div>
+            <div class="field field-text">
+              <%= f.label "Actividad" %><br>
+              <%= f.collection_select :activity, ActivityType.all, :id, :name %>
+            </div>
+            <div class="field field-text">
+              <%= f.label "Escolaridad" %><br>
+              <%= f.collection_select :scholarship_type_id, ScholarshipType.all, :id, :name %>
+            </div>
+            <div class="field">
+              <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+            </div>
+            <div>
+              <%= f.submit "Ingresar Familar", class: "create" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label "Edad" %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label "Relación Familiar" %><br>
-    <%= f.number_field :relationship_type_id %>
-  </div>
-  <div class="field">
-    <%= f.label "Actividad" %><br>
-    <%= f.text_field :activity %>
-  </div>
-  <div class="field">
-    <%= f.label "Escolaridad" %><br>
-    <%= f.number_field :scholarship_type_id %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Ingresar Familar"%>
-  </div>
-<% end %>
+</div>

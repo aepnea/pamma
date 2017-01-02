@@ -229,6 +229,7 @@ footer
   margin: 0 auto
 .create
   background: $clarito
+  border: 0
   border-radius: 3px
   color: $calipso
   display: inline-block
@@ -238,6 +239,9 @@ footer
   padding: 5px 30px
   text-decoration: none
   transition: .35s
+  input[type="submit"]
+    background-color: transparent
+    border: 0
   svg
     vertical-align: middle
     width: 16px
@@ -476,6 +480,9 @@ footer
               background: white
               border-radius: 3px
               color: $gris
+              height: 28px
+              line-height: 20px
+              overflow: hidden
               padding: 5px 8px
               width: 100%
           .destroy-table
@@ -593,6 +600,27 @@ footer
   opacity: 1
   visibility: visible
   z-index: 100
+.new-form
+  label
+    color: white
+  input[type="text"],
+  input[type="number"],
+  select
+    background: white
+    border: 0
+    border-radius: 3px
+    color: #787878
+    padding: 5px 8px
+    width: 100%
+  select
+    height: 28px
+  .field
+    display: inline-block
+    vertical-align: top
+  .field-number
+    width: 10%
+  .field-text
+    width: 20%
 .none
   display: none
 .no-padding

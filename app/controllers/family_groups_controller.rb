@@ -33,7 +33,7 @@ class FamilyGroupsController < ApplicationController
 
     respond_to do |format|
       if @family_group.save
-        format.html { redirect_to @family_group, notice: 'Family group was successfully created.' }
+        format.html { redirect_to family_groups_url, notice: 'Family group was successfully created.' }
         format.json { render :show, status: :created, location: @family_group }
       else
         format.html { render :new }

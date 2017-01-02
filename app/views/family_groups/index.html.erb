@@ -39,7 +39,7 @@
                   <td><%= best_in_place family_group, :name, as: :input %></td>
                   <td><%= best_in_place family_group, :age, as: :input %></td>
                   <td><%= best_in_place family_group, :relationship_type_id, :type => :select, :collection => RelationshipType.all.map {|i|[i.id, i.name]}  %></td>
-                  <td><%= best_in_place family_group, :activity, as: :input %></td>
+                  <td><%= best_in_place family_group, :activity, :type => :select, :collection => ActivityType.all.map {|i|[i.id, i.name]} %></td>
                   <td><%= best_in_place family_group, :scholarship_type_id, :type => :select, :collection => ScholarshipType.all.map {|i|[i.id, i.name]}  %></td>
                   <td class="destroy-table">
                     <%= link_to family_group, method: :delete, data: { confirm: 'Are you sure?' } do %>
