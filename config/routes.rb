@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
 
-
-
-
-
+#### Para el dashboard de admin
   get 'admin_files/user_list'
-
   get 'admin_files/asociative_user_list'
-
   get 'admin_files/user_create_background'
-
   get 'admin_files/asociative_user_create_background'
 
+
+#### los resources
   resources :benefit_requesteds
   resources :milestones
   resources :personal_backgrounds
@@ -36,14 +32,14 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: 'user/registrations'}
   devise_for :asociative_users, :controllers => { registrations: 'asociative_user/registrations' }
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
 
   # si es admin
   authenticated :admin do
     root "home#admin_dashboard", as: "admin_root"
+    #### para crear/modificar usuarios desde el admin
+    get 'home/create_files'
+
+    resources :usuarios
   end
   devise_scope :admin do
     get '/control' => 'devise/sessions#new'

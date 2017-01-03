@@ -1,0 +1,32 @@
+<h1>Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Rut</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @users.each do |usuario| %>
+      <tr>
+        <td><%= usuario.first_name %></td>
+        <td><%= usuario.last_name %></td>
+        <td><%= usuario.rut %></td>
+        <td><%= usuario.email %></td>
+        <td><%= link_to 'Show', usuario %></td>
+        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Ficha', new_usuario_path %>
+<%= link_to 'Volver', home_create_files_path %>

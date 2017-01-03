@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+##### ESTO ES PARA EL ERROR DEL UPDATE
+  rescue_from ActiveRecord::RecordNotFound, with: :home_redirect
+
+  rescue_from ActionController::UnknownFormat, with: :home_redirect
+  def home_redirect
+      redirect_to usuarios_path
+  end
+
+###### HASTA ACA
 
   def set_postulation_cookie
     ### preguntando si el usuario tiene o no creado una postulacion

@@ -3,6 +3,9 @@ class HomeController < ApplicationController
   def admin_dashboard
 
   end
+  
+  def create_files
+  end
 
   def index
   end
