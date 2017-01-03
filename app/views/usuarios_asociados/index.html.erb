@@ -1,0 +1,27 @@
+<h1>Usuarios Asociados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @asociative_users.each do |usuario_asociado| %>
+      <tr>
+        <td><%= usuario_asociado.name %></td>
+
+        <td><%= link_to 'Show', usuario_asociado%></td>
+        <td><%= link_to 'Edit', edit_usuarios_asociado_path(usuario_asociado) %></td>
+        <td><%= link_to 'Destroy', usuario_asociado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Ficha', new_usuarios_asociado_path %>
+<%= link_to 'Volver', home_create_files_path %>

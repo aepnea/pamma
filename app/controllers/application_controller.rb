@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::UnknownFormat, with: :home_redirect
   def home_redirect
-      redirect_to usuarios_path
+      redirect_to home_create_files_path
+      logger.error " ###################### Problema en ruta edit"
   end
 
 ###### HASTA ACA

@@ -40,6 +40,7 @@ Rails.application.routes.draw do
     get 'home/create_files'
 
     resources :usuarios
+    resources :usuarios_asociados
   end
   devise_scope :admin do
     get '/control' => 'devise/sessions#new'
