@@ -23,7 +23,7 @@
 #  rut                    :string(255)
 #  birthdate              :date
 #  gender_id              :integer
-#  civil_status_id        :integer
+#  civil_status_type_id   :integer
 #  address                :string(255)
 #  village                :string(255)
 #  mobile                 :string(255)

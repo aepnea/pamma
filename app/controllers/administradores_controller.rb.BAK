@@ -1,0 +1,61 @@
+class AdministradoresController < ApplicationController
+  before_action :set_admin, only: [:show, :edit, :update, :destroy]
+  #### Modificado por kna
+    def index
+      @administradores = Admin.all
+    end
+
+    def new
+      @admin = Admin.new
+    end
+
+    def edit
+    end
+
+    def destroy
+      @admin.destroy
+      respond_to do |format|
+        format.html { redirect_to admin_url }
+        format.json { head :no_content }
+      end
+    end
+
+    def create
+      @admin = Admin.new(admin_params)
+
+      respond_to do |format|
+        if @admin.save
+          format.html { redirect_to @admin, notice: 'asociative_user was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @admin }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @admin.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
+  #### hasta aca
+  def show
+
+  end
+
+  def update
+    respond_to do |format|
+      if @admin.update(admin_params)
+        format.json { respond_with_bip(@admin) }
+      else
+        format.html{redirect_to root_path, notice: @admin.errors.full_messages}
+        format.json { respond_with_bip(@admin) }
+      end
+    end
+  end
+
+  private
+    def set_admin
+      @admin = Admin.find(params[:id])
+    end
+
+    def asociative_user_params
+      params.require(:admin).permit(:name, :rut, :admin_type_id, :seremi_zone_id, :region_id, :province_id, :commune_id, :email)
+    end
+end

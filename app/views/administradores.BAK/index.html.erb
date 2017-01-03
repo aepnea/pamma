@@ -1,0 +1,27 @@
+<h1>Usuarios Asociados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @administradores.each do |administradore| %>
+      <tr>
+        <td><%= administradore.name %></td>
+
+        <td><%= link_to 'Show', administradore%></td>
+        <td><%= link_to 'Edit', edit_administradore_path(administradore) %></td>
+        <td><%= link_to 'Destroy', administradore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Ficha', new_administradore_path %>
+<%= link_to 'Volver', home_create_files_path %>

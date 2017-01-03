@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
 
+
   # create via ajax en controlador
   devise_for :users, :controllers => {registrations: 'user/registrations'}
   devise_for :asociative_users, :controllers => { registrations: 'asociative_user/registrations' }
@@ -41,6 +42,8 @@ Rails.application.routes.draw do
 
     resources :usuarios
     resources :usuarios_asociados
+    #### problema con el admin_path
+    ##  resources :administradores
   end
   devise_scope :admin do
     get '/control' => 'devise/sessions#new'

@@ -13,9 +13,11 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :string(255)
 #  last_sign_in_ip        :string(255)
-#  region_id              :integer
+#  name                   :string(255)
+#  rut                    :string(255)
 #  admin_type_id          :integer
 #  seremi_zone_id         :integer
+#  region_id              :integer
 #  province_id            :integer
 #  commune_id             :integer
 #  created_at             :datetime         not null
