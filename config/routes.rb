@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+
+
   get 'admin_files/user_list'
 
   get 'admin_files/asociative_user_list'
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
   resources :postulations
   resources :admin_postulations
   resources :postulation_dates
-
 
 
 
