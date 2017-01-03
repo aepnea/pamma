@@ -1,36 +1,64 @@
-<%= form_for(@beneficiary) do |f| %>
-  <% if @beneficiary.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@beneficiary.errors.count, "error") %> prohibited this beneficiary from being saved:</h2>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@beneficiary) do |f| %>
+      <% if @beneficiary.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@beneficiary.errors.count, "error") %> prohibited this beneficiary from being saved:</h2>
 
-      <ul>
-      <% @beneficiary.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @beneficiary.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="inner-file">
+        <div class="header-file">
+          <div class="col-md-8 center">
+            <div class="header-cont">
+              <div class="pull-left">
+                <%= link_to beneficiaries_path  do %>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.47 15.85"><defs><style>.cls-1{fill:#fff;}</style></defs><title>left</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-1" d="M5.76,2.17.07,7.77a.22.22,0,0,0,0,.31l5.69,5.6A.13.13,0,0,0,6,13.6V10c0-.16-.07-.25-.22-.4L4.17,8c-.07-.07-.07-.11,0-.18L5.76,6.27C5.92,6.12,6,6,6,5.87V2.26a.13.13,0,0,0-.22-.09"/><path class="cls-1" d="M16.24,0,8.43,7.77a.22.22,0,0,0,0,.31l7.81,7.72a.13.13,0,0,0,.22-.09V12.1c0-.16-.07-.25-.22-.4L12.54,8c-.07-.07-.07-.11,0-.18l3.71-3.68c.16-.16.22-.25.22-.4V.14A.13.13,0,0,0,16.24,0"/></g></g></svg>
+                  volver
+                <% end %>
+              </div>
+              <div class="pull-right">
+                <div class="file-text">
+                  <h3>Beneficiario</h3>
+                  <p>Los beneficios que has logrado.</p>
+                </div>
+                <div class="file-count"><p>03</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body-file">
+          <div class="col-md-8 center new-form">
+            <div class="field">
+              <%= f.label "Nombre Completo" %><br>
+              <%= f.text_field :name %>
+            </div>
+            <div class="field field-text">
+              <%= f.label "RUT" %><br>
+              <%= f.text_field :rut %>
+            </div>
+            <div class="field">
+              <%= f.label "Dirección" %><br>
+              <%= f.text_field :address %>
+            </div>
+            <div class="field field-number">
+              <%= f.label "Edad" %><br>
+              <%= f.number_field :age %>
+            </div>
+            <div class="field">
+              <%= f.hidden_field :user_id, value:  "#{current_user.id}" %>
+            </div>
+            <div>
+              <%= f.submit  "Crear Beneficiario", class: "create" %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label "Nombre Completo" %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label "RUT" %><br>
-    <%= f.text_field :rut %>
-  </div>
-  <div class="field">
-    <%= f.label "Dirección" %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label "Edad" %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :user_id, value:  "#{current_user.id}" %>
-  </div>
-  <div class="actions">
-    <%= f.submit  "Crear Beneficiario" %>
-  </div>
+      </div>
+
 <% end %>
