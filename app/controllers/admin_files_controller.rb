@@ -24,7 +24,7 @@ class AdminFilesController < ApplicationController
 
   def asociative_user_create_background
     ### Con este método muestro la ventana para crear antecedentes para un usuario_asociativo determinado
-    id = params[:asociative_user_id]
-    session[:asociative_user_id] = id
+    @id = params[:id]
+    session[:asociative_user_id] = @id
   end
 end

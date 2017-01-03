@@ -4,7 +4,7 @@
 
 <div class="col-md-10">
   <%@asociative_user_list.each do |u|%>
-    <%=link_to admin_files_user_create_background_path(id: u.id), class: "link-row" do%>
+    <%=link_to admin_files_asociative_user_create_background_path(id: u.id), class: "link-row" do%>
       <div class="linting-items">
         <span class="linting-items-name"><%=u.name%></span>
         <span><%=u.province.name%></span>
