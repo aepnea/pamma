@@ -1,1 +1,105 @@
-<div><%= best_in_place @user, :first_name, :as => :input %></div> 
+<div class="col-md-2">
+  <h1 class="titulo-intro">Editar Usuario</h1>
+</div>
+
+<div class="formulario col-md-10">
+  <div class="steps">
+    <div class="login-form">
+      <div class="step-container">
+        <div class="step1 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>01</span><p> Datos personales</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-3">
+                <div class="field">
+                  <span class="span-label">Nombre:</span>
+                  <%= best_in_place @user, :first_name, :as => :input %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Apellido Paterno:</span>
+                  <%= best_in_place @user, :last_name, :as => :input %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Apellido Materno:</span>
+                  <%= best_in_place @user, :surname, :as => :input %>
+                </div>
+              </div>
+              <div class="form-2">
+                <div class="field">
+                  <span class="span-label">Fecha de Nacimiento:</span>
+                  <%= best_in_place @user, :birthdate, :as => :date %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Rut:</span>
+                  <%= best_in_place @user, :rut, :as => :input %>
+                </div>
+              </div>
+              <div class="form-2">
+                <div class="field">
+                  <span class="span-label">Genero:</span>
+                  <%= best_in_place @user, :gender_id, :as => :select, :collection => {"1" => "Masculino", "2" => "Femenino"} %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Estado Civil:</span>
+                  <%= best_in_place @user, :civil_status_type_id, :as => :select, :collection => {"1" => "Soltero/a", "2" => "Casado/a", "3" => "Divorciado/a", "4" => "Viudo/a"} %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>02</span><p>Como ubicarte</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                  <span class="span-label">Dirección:</span>
+                  <%= best_in_place @user, :address, :as => :input %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Región:</span>
+                  <%= best_in_place @user, :region_id, :as => :select, :collection => Region.all.map {|i|[i.id, i.name]} %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Población o villa:</span>
+                  <%= best_in_place @user, :village, :as => :input %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Provincia:</span>
+                  <%= best_in_place @user, :province_id, :as => :select, :collection => Province.all.map {|i|[i.id, i.name]} %>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <span class="span-label">Teléfono movil:</span>
+                    <%= best_in_place @user, :mobile, :as => :input %>
+                  </div>
+                  <div class="field">
+                    <span class="span-label">Teléfono fijo:</span>
+                    <%= best_in_place @user, :landline, :as => :input %>
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="span-label">Comuna:</span>
+                  <%= best_in_place @user, :commune_id, :as => :select, :collection => Commune.all.map {|i|[i.id, i.name]} %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Nombre sociedad minera a la que pertenece:</span>
+                  <%= best_in_place @user, :minning_society_name, :as => :input %>
+                </div>
+                <div class="field">
+                  <span class="span-label">Rut sociedad minera a la que pertenece:</span>
+                  <%= best_in_place @user, :minning_society_rut, :as => :input %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>

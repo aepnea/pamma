@@ -1,32 +1,55 @@
-<h1>Usuarios</h1>
+<div class="col-md-2">
+  <h1 class="titulo-intro">Usuarios</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Rut</th>
-      <th>Email</th>
-    </tr>
-  </thead>
+<div class="col-md-10">
+  <div class="inner-file">
+    <div class="header-file">
+      <div class="col-md-8 center">
+        <div class="header-cont">
+          <div class="pull-left">
+            <%= link_to home_create_files_path do %>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.47 15.85"><defs><style>.cls-1{fill:#fff;}</style></defs><title>left</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-1" d="M5.76,2.17.07,7.77a.22.22,0,0,0,0,.31l5.69,5.6A.13.13,0,0,0,6,13.6V10c0-.16-.07-.25-.22-.4L4.17,8c-.07-.07-.07-.11,0-.18L5.76,6.27C5.92,6.12,6,6,6,5.87V2.26a.13.13,0,0,0-.22-.09"/><path class="cls-1" d="M16.24,0,8.43,7.77a.22.22,0,0,0,0,.31l7.81,7.72a.13.13,0,0,0,.22-.09V12.1c0-.16-.07-.25-.22-.4L12.54,8c-.07-.07-.07-.11,0-.18l3.71-3.68c.16-.16.22-.25.22-.4V.14A.13.13,0,0,0,16.24,0"/></g></g></svg>
+              volver
+            <% end %>
+          </div>
+          <div class="pull-right">
+            <div class="file-text">
+              <h3>Lista de usuarios</h3>
+              <p>Todos los usuarios registrados están aquí</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-file">
+      <div class="col-md-8 center new-form">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Rut</th>
+              <th>Email</th>
+            </tr>
+          </thead>
 
-  <tbody>
+          <tbody>
 
-    <% @users.each do |usuario| %>
-      <tr>
-        <td><%= usuario.first_name %></td>
-        <td><%= usuario.last_name %></td>
-        <td><%= usuario.rut %></td>
-        <td><%= usuario.email %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Crear Ficha', new_usuario_path %>
-<%= link_to 'Volver', home_create_files_path %>
+            <% @users.each do |usuario| %>
+              <tr>
+                <td><%= usuario.first_name %></td>
+                <td><%= usuario.last_name %></td>
+                <td><%= usuario.rut %></td>
+                <td><%= usuario.email %></td>
+                <td><%= link_to 'Show', usuario %></td>
+                <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+                <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to 'Crear Ficha', new_usuario_path, class: "create" %>
+      </div>
+    </div>
+</div>
