@@ -1,17 +1,18 @@
-<div class="formulario">
-  <div class="title-row">
-    <h2 class="title-form">Postulaciones</h2>
-  </div>
-  <div class="col-md-12">
-    <div class="postulation-section-nocolor">
-      <div class="postulation-body col-md-8 center">
-        <%@period.each do |p|%>
-            <div class="postulation-info-orange">
-              Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%> Region: <%=p.region.name%>
-            </div>
-        <%end%>
-      </div>
+<div class="col-md-2">
+  <h1 class="titulo-intro">Postulaciones</h1>
+</div>
+
+<div class="col-md-10">
+  <div class="postulation-section-nocolor">
+    <div class="postulation-body col-md-8 center">
+      <%@period.each do |p|%>
+          <div class="postulation-info-orange">
+            Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%> Region: <%=p.region.name%>
+          </div>
+      <%end%>
     </div>
   </div>
+  <div class="center-text">
+    <%= link_to 'Nuevo periodo de Postulación', new_postulation_date_path, class: "create" %>
+  </div>
 </div>
-<%= link_to 'Nuevo periodo de Postulación', new_postulation_date_path %>

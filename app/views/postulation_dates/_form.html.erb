@@ -1,45 +1,62 @@
-<%= form_for(@postulation_date) do |f| %>
-  <% if @postulation_date.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@postulation_date.errors.count, "error") %> prohibited this postulation_date from being saved:</h2>
+ <div class="steps">
+  <%= form_for(@postulation_date,html: {id: "login-form", class: "login-form"}) do |f| %>
+    <% if @postulation_date.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@postulation_date.errors.count, "error") %> prohibited this postulation_date from being saved:</h2>
 
-      <ul>
-      <% @postulation_date.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @postulation_date.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="step-container">
+      <div class="step1 step">
+        <div class="step-inner">
+          <h3 class="title-h3">
+            <span>01</span><p> Datos personales</p>
+          </h3>
+          <div class="form-group">
+            <div class="form-2">
+              <div class="field">
+                <%= f.label "Nombre Periodo" %><br>
+                <%= f.text_field :name %>
+              </div>
+              <div class="form-2-int">
+                <div class="field">
+                  <%= f.label "Fecha Inicio" %><br>
+                  <%= f.date_field :date_begin, class: "datepicker" %>
+                </div>
+                <div class="field">
+                  <%= f.label "Fecha Termino" %><br>
+                  <%= f.date_field :date_end , class: "datepicker" %>
+                </div>
+              </div>
+              <div class="field">
+                <%= f.label "Tipo de Usuario" %><br>
+                <%= f.text_field :user_type %>
+              </div>
+              <div class="field">
+                <%= f.label :postulation_standard_id %><br>
+                <%= f.collection_select :postulation_standard_id, PostulationStandard.all, :id, :name %>
+              </div>
+              <div class="field">
+                <%= f.label "Activar/Desactivar" %><br>
+                <%= f.check_box :state %>
+              </div>
+              <div class="field">
+                <%= f.label "Región de Postulación" %><br>
+                <%= f.collection_select :region_id, Region.all, :id, :name %>
+              </div>
+              <div class="actions">
+                <%= f.submit "Crear Fecha Postulación", class: "submit" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label "Nombre Periodo" %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Fecha Inicio" %><br>
-    <%= f.date_select :date_begin %>
-  </div>
-  <div class="field">
-    <%= f.label "Fecha Termino" %><br>
-    <%= f.date_select :date_end %>
-  </div>
-  <div class="field">
-    <%= f.label "Tipo de Usuario" %><br>
-    <%= f.text_field :user_type %>
-  </div>
-  <div class="field">
-    <%= f.label :postulation_standard_id %><br>
-    <%= f.collection_select :postulation_standard_id, PostulationStandard.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Activar/Desactivar" %><br>
-    <%= f.check_box :state %>
-  </div>
-  <div class="field">
-    <%= f.label "Región de Postulación" %><br>
-    <%= f.collection_select :region_id, Region.all, :id, :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Crear Fecha Postulación" %>
-  </div>
-<% end %>
+  <% end %>
+</div>

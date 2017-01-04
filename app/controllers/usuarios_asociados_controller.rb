@@ -56,6 +56,6 @@ class UsuariosAsociadosController < ApplicationController
     end
 
     def asociative_user_params
-      params.require(:asociative_user).permit(:name, :rut, :address, :village,  :mobile, :landline, :region_id, :province_id, :commune_id, :date_foundation, :partners_number, :email, :password, :password_confirmation)
+      params.require(:asociative_user).permit(:name, :rut, :address, :village,  :mobile, :landline, :region_id, :province_id, :commune_id, :date_foundation, :partners_number)
     end
 end

@@ -200,7 +200,7 @@ footer
     font-size: 16px
     padding: 5px 20px
     transition: .35s
-    width: 180px
+    min-width: 180px
     &:hover
       background: $rojo
       box-shadow: 0px 15px 25px -10px rgba(0, 0, 0, 0.8)
@@ -227,6 +227,8 @@ footer
   margin: 0
 .center
   margin: 0 auto
+.center-text
+  text-align: center
 .create
   background: $clarito
   border: 0
@@ -249,6 +251,7 @@ footer
     box-shadow: 0px 15px 25px -10px rgba(0, 0, 0, 0.8)
 .create-orange
   background: white
+  border: 1px solid $naranjo
   border-radius: 3px
   color: $naranjo
   display: inline-block
@@ -361,6 +364,10 @@ footer
     //max-width: 350px
     position: relative
     width: 100%
+    i
+      color: #697689
+      font-size: 13px
+      font-style: italic
     input[type="text"],
     input[type="date"],
     input[type="email"],
@@ -514,6 +521,18 @@ footer
     color: white
     font-family: 'gobclregular'
     font-weight: 600
+.like-edit
+  text-align: right
+  a
+    background: $clarito
+    border-radius: 3px
+    color: $calipso
+    padding: 0 10px
+.like-input
+  background: white
+  border-radius: 3px
+  margin-right: 3px
+  padding: 5px 10px
 .line-bottom
   border-bottom: 1px solid rgba($gris, .3)
 .little-margin
@@ -664,7 +683,7 @@ footer
   .postulation-body
     background-color: white
     margin-top: 8px
-    padding: 8px
+    padding: 8px 5%
     h3,
     p
       color: $azulito

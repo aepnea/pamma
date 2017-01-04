@@ -38,13 +38,16 @@
 
             <% @users.each do |usuario| %>
               <tr>
-                <td><%= usuario.first_name %></td>
-                <td><%= usuario.last_name %></td>
-                <td><%= usuario.rut %></td>
-                <td><%= usuario.email %></td>
-                <td><%= link_to 'Show', usuario %></td>
-                <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-                <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td class="like-input"><%= usuario.first_name %></td>
+                <td class="like-input"><%= usuario.last_name %></td>
+                <td class="like-input"><%= usuario.rut %></td>
+                <td class="like-input"><%= usuario.email %></td>
+                <td class="like-edit"><%= link_to 'Editar', usuario %></td>
+                <td class="destroy-table">
+                  <%= link_to usuario, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
+                  <% end %>
+                </td>
               </tr>
             <% end %>
           </tbody>
