@@ -10,6 +10,12 @@
   <link rel="shortcut icon" href="/favicon.png">
 </head>
 <body>
+  <div class="flash <%= 'no-flash' if notice.nil? && alert.nil? %>">
+    <p><%= notice %><%= alert %></p>
+    <div class="cierra-flash">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cruz-blanca{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cruz-blanca" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>  
+    </div>
+  </div>
   <header data-turbolinks-permanent="true">
     <!-- <div class="filter"></div> -->
     <div class="header-inner-container">
@@ -72,7 +78,5 @@
       </div>
     </div>
   </footer>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </body>
 </html>

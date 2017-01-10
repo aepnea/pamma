@@ -1,6 +1,7 @@
 <div class="form-session">
   <div class="form-session-inner">
     <h3 class="title-h3 margin-text"><p>Ingresa a tus nuevos datos</p></h3>
+    <span class="alert-text">Una vez guardados los cambios, recuerda avisarle al usuario.</span>
     <%= form_for @asociative_user do |f| %>
       <% if @asociative_user.errors.any? %>
         <div id="error_explanation">
@@ -25,16 +26,6 @@
           <br />
           <em><%= @minimum_password_length %> characters minimum</em>
         <% end %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
 
       <div class="actions">

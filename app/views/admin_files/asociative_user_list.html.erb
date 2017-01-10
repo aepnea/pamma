@@ -1,15 +1,34 @@
 <div class="col-md-2">
-  <h1 class="titulo-intro">Lista de fichas asociativas.</h1>
+  <h1 class="titulo-intro">Lista de usuarios asociados.</h1>
 </div>
 
 <div class="col-md-10">
-  <%@asociative_user_list.each do |u|%>
-    <%=link_to admin_files_asociative_user_create_background_path(id: u.id), class: "link-row" do%>
-      <div class="linting-items">
-        <span class="linting-items-name"><%=u.name%></span>
-        <span><%=u.province.name%></span>
-        <span><%=u.commune.name%></span>
-      </div>
-    <%end%>
-  <%end%>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Región</th>
+        <th>Provincia</th>
+        <th>Ver Ficha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@asociative_user_list.each do |u|%>
+        <%=link_to admin_files_asociative_user_create_background_path(id: u.id), class: "link-row" do%>
+        <tr>
+          <td><%=u.id%></td>
+          <td><%=u.name%></td>
+          <td><%=u.region.name%></td>
+          <td><%=u.province.name%></td>
+          <td>
+            <%= link_to u, class: "show"  do %>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.09 86"><defs><style>.cls-show{fill:#1b75bb;}</style></defs><title>show</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-show" d="M69.09,14l-13-14H14V14H0V86H55.09V72h14Zm-18,68H4V18H14V72H51.09ZM18,68V4H49V20H65.09V68Z"/></g></g></svg>
+            <% end %>
+          </td>
+        </tr>
+        <%end%>
+      <%end%>
+    </tbody>
+  </table>
 </div>

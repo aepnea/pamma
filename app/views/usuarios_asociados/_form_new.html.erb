@@ -1,67 +1,116 @@
-<%= form_for @asociative_user, :url => { :controller => "usuarios_asociados", :action => "create" } do |f| %>
-  <% if @asociative_user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@asociative_user.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+<div class="col-md-2">
+  <h2 class="titulo-intro">
+    INGRESA TUS DATOS EN EL SIGUIENTE FORMULARIO
+  </h2>
+</div>
+<div class="formulario col-md-10">
+  <div class="steps">
+    <%= form_for @asociative_user, :url => { :controller => "usuarios_asociados", :action => "create" }, html: {id: "login-form", class: "login-form"} do |f| %>
+      <div class="step-container">
+        <div class="step1 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>01</span><p> Datos generales</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                  <%= f.label "Nombre:" %><br />
+                  <%= f.text_field :name %>
+                </div>
 
-      <ul>
-      <% @asociative_user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<!-- tengo que agregar in if can manage? -->
-  <div class="field">
-    <%= f.label "Nombre" %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Fecha de Iniciación" %><br>
-    <%= f.date_field :date_foundation %>
-  </div>
-  <div class="field">
-    <%= f.label "Número de asociados" %><br>
-    <%= f.number_field :partners_number %>
-  </div>
-  <div class="field">
-    <%= f.label "RUT" %><br>
-    <%= f.text_field :rut %>
-  </div>
-  <div class="field">
-    <%= f.label "Dirección" %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label "Villa o Población" %><br>
-    <%= f.text_field :village %>
-  </div>
-  <div class="field">
-    <%= f.label "Region" %><br>
-    <%= f.collection_select :region_id, Region.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Provincia" %><br>
-    <%= f.collection_select :province_id, Province.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Comuna" %><br>
-    <%= f.collection_select :commune_id, Commune.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Celular" %><br>
-    <%= f.text_field :mobile %>
-  </div>
-  <div class="field">
-    <%= f.label "Correo Electrónico" %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
+                <div class="field">
+                  <%= f.label "Rut:" %><br />
+                  <%= f.text_field :rut %>
+                  <div id='error_rut'></div>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <%= f.label "Celular:" %><br />
+                    <%= f.text_field :mobile %>
+                  </div>
 
+                  <div class="field">
+                    <%= f.label "Teléfono fijo:" %><br />
+                    <%= f.text_field :landline %>
+                  </div>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <%= f.label "Número de Asociados:" %><br />
+                    <%= f.number_field :partners_number %>
+                  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+                  <div class="field">
+                    <%= f.label "Fecha Fundación:" %><br />
+                    <%= f.date_field :date_foundation, class: "datepicker" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step1 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>02</span><p>Ubicación</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                    <%= f.label "Dirección:" %><br />
+                    <%= f.text_field :address %>
+                  </div>
+                <div class="field">
+                  <%= f.label "Villa o Población:" %><br />
+                  <%= f.text_field :village %>
+                </div>
+              </div>
+
+              <div class="form-3">
+                <div class="field">
+                  <%= f.label "Región:" %>
+                  <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Provincia:" %>
+                  <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Comuna:" %>
+                  <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
+                </div>
+              </div>
+
+              <div class="form-3">
+                <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :password %>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :password_confirmation %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </div>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Sign up",  class: "submit" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

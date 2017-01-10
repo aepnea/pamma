@@ -47,3 +47,6 @@ $(document).on "turbolinks:load turbolinks:render ready", ()->
   $(".best_in_place").on "ajax:error", (e, data, status, xhr) ->
     console.log data
 
+  $('.flash').on 'click', ->
+    $('.flash').addClass "no-flash"
+

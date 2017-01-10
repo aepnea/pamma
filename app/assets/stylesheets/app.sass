@@ -205,6 +205,13 @@ footer
       background: $rojo
       box-shadow: 0px 15px 25px -10px rgba(0, 0, 0, 0.8)
       color: white
+.alert-text
+  font-size: 14px
+  font-style: italic
+  color: $rojo
+  display: block
+  margin-bottom: 16px
+  text-align: center
 .align-center
   text-align: center
 .best_in_place
@@ -236,7 +243,7 @@ footer
   color: $calipso
   display: inline-block
   font-family: 'gobclbold'
-  margin-left: 5px
+  //margin-left: 5px
   margin-top: 16px
   padding: 5px 30px
   text-decoration: none
@@ -263,6 +270,11 @@ footer
   svg
     vertical-align: middle
     width: 16px
+.crumb
+  color: $rojo
+  font-size: 14px
+  margin: 0 0 16px 0
+  text-align: center
 .dashboard-row
   width: 100%
   .record-list
@@ -298,13 +310,21 @@ footer
         .form_in_place
           input
             text-align: right
+    .record-list-int
+      li
+        display: inline-block
+        vertical-align: top
+        width: 49%
     .record-list-link
+      li
+        display: block
+    .record-list-link,
+    .record-list-int
       margin: 0
       padding: 0
       li
         background-color: white
         border-bottom: 1px solid white
-        display: block
         margin: 8px 0
         text-align: right
         &:hover
@@ -342,6 +362,52 @@ footer
   height: 100%
   position: absolute
   width: 100%
+.field1
+  width: 100%
+.field2
+  width: 49%
+.field3
+  width: 32%
+.field4
+  width: 24%
+.field5
+  width: 19%
+.field6
+  width: 15%
+.field1,
+.field2,
+.field3,
+.field4,
+.field5,
+.field6
+  display: inline-block
+  vertical-align: top
+.flash
+  background: #eb3c46
+  border-bottom: 1px solid #ffffff
+  color: white
+  cursor: pointer
+  height: 25px
+  margin: 0
+  opacity: 1
+  padding: 5px
+  text-align: center
+  transition: .35s
+  visibility: visible
+  width: 100%
+  .cierra-flash
+    width: 15px
+  .cierra-flash,
+  p
+    display: inline-block
+    vertical-align: middle
+  p
+    margin: 0 auto
+    width: 80%
+.no-flash
+  height: 0
+  opacity: 0
+  padding: 0
 .flex
   display: flex
 .form-session
@@ -420,8 +486,10 @@ footer
   &:nth-child(even)
     margin-left: 1% !important
 .inner-file
-  background: $calipso
+  //background: $calipso
   width: 100%
+  &.no-background
+    background: transparent
   .header-file
     background: $dark-calipso
     padding: 20px
@@ -471,26 +539,21 @@ footer
       font-size: 16px
       margin: 0
   .body-file
+    background: $calipso
+  .body-form
+    background: #f9f9f9
+  .body-file,
+  .body-form
     padding: 36px 0
     table
-      width: 100%
-      thead
-        tr
-          th
-            color: white
-            text-align: left
       tbody
         tr
+          background: white !important
           td
-            padding: 3px
             .best_in_place
               background: white
               border-radius: 3px
               color: $gris
-              height: 28px
-              line-height: 20px
-              overflow: hidden
-              padding: 5px 8px
               width: 100%
           .destroy-table
             background: transparent
@@ -522,7 +585,6 @@ footer
     font-family: 'gobclregular'
     font-weight: 600
 .like-edit
-  text-align: right
   a
     background: $clarito
     border-radius: 3px
@@ -621,12 +683,12 @@ footer
   z-index: 100
 .new-form
   label
-    color: white
+    color: $gris
   input[type="text"],
   input[type="number"],
   select
     background: white
-    border: 0
+    border: 1px solid #dddddd
     border-radius: 3px
     color: #787878
     padding: 5px 8px
@@ -644,6 +706,8 @@ footer
     width: 20%
 .none
   display: none
+.no-margin
+  margin: 0
 .no-padding
   padding: 0
 .relative
@@ -739,7 +803,12 @@ select:disabled
     color: $rojo
     font-size: 14px
     margin-bottom: 5px
-
+.show
+  display: block
+  margin: 0 auto
+  width: 20px
+  svg
+    width: 100%
 .steps
   //background: $clarito
   //height: 500px
@@ -762,110 +831,6 @@ select:disabled
         padding: 0
         //vertical-align: top
         width: 100%
-        .step-inner
-          //padding: 0 60px
-          position: relative
-          .form-group
-            margin-bottom: 20px
-            padding: 0 60px
-          .form-1
-            width: 100%
-          .form-2
-            width: 100%
-            .field
-              display: inline-block
-              vertical-align: top
-              width: 49%
-              &:nth-child(odd)
-                margin-right: 1%
-            .form-2-int
-              display: inline-block
-              vertical-align: top
-              width: 49%
-              .field
-                display: inline-block
-                vertical-align: top
-                width: 49%
-              &:nth-child(odd)
-                margin-right: 1%
-          .form-3
-            width: 100%
-            .field
-              display: inline-block
-              vertical-align: top
-              width: 33%
-          .field
-            display: block
-            margin: 0 auto 10px auto
-            //max-width: 350px
-            position: relative
-            width: 100%
-            input[type="text"],
-            input[type="date"],
-            input[type="email"],
-            input[type="number"],
-            input[type="password"],
-            select,
-            span
-              background-color: white !important
-              border: 1px solid $grisClaro
-              //border-radius: 3px
-              color: #697689
-              font-family: 'gobclregular'
-              outline: none
-              padding: 5px 10px
-              position: relative
-              width: 100%
-              &:focus
-                border: 1px solid #FF6F00
-            input[type="password"]
-              font-family: sans-serif
-            .field_with_errors
-              position: relative
-              input[type="text"]
-                //border: 1px solid $rojo
-                border: 1px solid $grisClaro
-              label.message
-                color: $rojo
-                font-family: 'gobclregular'
-                font-size: 14px
-                font-style: italic
-                margin: 0
-            input[type="date"],
-            select
-              font-family: 'gobclregular'
-              font-size: 14px
-              height: 30px
-            select
-              option
-                padding: 5px 10px
-            .span-label
-              border: 0
-              display: block
-              font-size: 14px
-              padding: 0
-            label
-              font-size: 14px
-              //font-style: italic
-              //margin-left: 5px
-            em
-              font-size: 12px
-          .title-h3
-            margin-bottom: 16px
-          .maps
-            border-bottom: 1px solid $azulito
-            padding: 5px
-            text-align: center
-            .map
-              background: white
-              border-radius: 50%
-              display: inline-block
-              height: 15px
-              margin: 0 5px
-              vertical-align: middle
-              width: 15px
-            .map-activo
-              background: $azulito
         .nav-step
           margin: 36px auto
           max-width: 350px
@@ -916,6 +881,135 @@ select:disabled
       margin-right: 16px
       //position: absolute
       //left: 10px
+.step-inner
+  //padding: 0 60px
+  position: relative
+  .form-group
+    margin-bottom: 20px
+    padding: 0 60px
+  .form-1
+    width: 100%
+  .form-2
+    width: 100%
+    .field
+      display: inline-block
+      vertical-align: top
+      width: 49%
+      &:nth-child(odd)
+        margin-right: 1%
+    .form-2-int
+      display: inline-block
+      vertical-align: top
+      width: 49%
+      .field
+        display: inline-block
+        vertical-align: top
+        width: 49%
+      &:nth-child(odd)
+        margin-right: 1%
+  .form-3
+    width: 100%
+    .field
+      display: inline-block
+      vertical-align: top
+      width: 33%
+  .field
+    display: block
+    margin: 0 auto 10px auto
+    //max-width: 350px
+    position: relative
+    width: 100%
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    select,
+    span
+      background-color: white !important
+      border: 1px solid $grisClaro
+      //border-radius: 3px
+      color: #697689
+      font-family: 'gobclregular'
+      outline: none
+      padding: 5px 10px
+      position: relative
+      width: 100%
+      &:focus
+        border: 1px solid #FF6F00
+    input[type="password"]
+      font-family: sans-serif
+    .field_with_errors
+      position: relative
+      input[type="text"]
+        //border: 1px solid $rojo
+        border: 1px solid $grisClaro
+      label.message
+        color: $rojo
+        font-family: 'gobclregular'
+        font-size: 14px
+        font-style: italic
+        margin: 0
+    input[type="date"],
+    select
+      font-family: 'gobclregular'
+      font-size: 14px
+      height: 30px
+    select
+      option
+        padding: 5px 10px
+    .span-label
+      border: 0
+      display: block
+      font-size: 14px
+      padding: 0
+    label
+      font-size: 14px
+      //font-style: italic
+      //margin-left: 5px
+    em
+      font-size: 12px
+  .title-h3
+    margin-bottom: 16px
+  .maps
+    border-bottom: 1px solid $azulito
+    padding: 5px
+    text-align: center
+    .map
+      background: white
+      border-radius: 50%
+      display: inline-block
+      height: 15px
+      margin: 0 5px
+      vertical-align: middle
+      width: 15px
+    .map-activo
+      background: $azulito
+table
+  background: white
+  border-spacing: 0
+  width: 100%
+  thead
+    background: #f9f9f9
+    tr
+      border-bottom: 1px solid $gris
+      th
+        color: $azulito
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+        font-size: 15px
+        padding: 8px
+        text-align: left
+  tbody
+    tr
+      &:nth-of-type(even)
+        background: #f9f9f9
+      td
+        color: $gris
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+        font-size: 15px
+        padding: 8px
+        text-align: left
+        text-transform: capitalize
 .title
   font-size: 20px
   display: block
@@ -933,3 +1027,5 @@ select:disabled
 .width-total
   display: block
   width: 100%
+.white
+  color: white !important

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  benefit_type_id: 1
+  estimated_investment: 1
+  comments: MyText
+  user_id: 1
+  asociative_user_id: 1
+  postulation_id: MyString
+
+two:
+  benefit_type_id: 1
+  estimated_investment: 1
+  comments: MyText
+  user_id: 1
+  asociative_user_id: 1
+  postulation_id: MyString

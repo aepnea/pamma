@@ -13,15 +13,16 @@
             <div class="pull-right">
               <div class="file-text">
                 <h3>Beneficios Anteriores</h3>
-                <p>Acá debes ingresar los cualquier tipo de beneficio que has recibido</p>
+                <p>Acá debes ingresar los tipos de beneficio que has recibido</p>
               </div>
-              <div class="file-count"><p>05</p></div>
+              <div class="file-count"><p>02</p></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="body-file">
-        <div class="col-md-8 center">
+      <div class="body-form">
+        <p class="crumb">Para editar, haz click en el campo que quieres editar</p>
+        <div class="col-md-9 center">
           <table>
             <thead>
               <tr>
@@ -30,6 +31,7 @@
                 <th>Tipo de Beneficio</th>
                 <th>Estado del Proyecto</th>
                 <th>Beneficio</th>
+                <th></th>
               </tr>
             </thead>
 
@@ -43,7 +45,7 @@
                   <td><%= best_in_place pamma_participation, :support_type_id, :type => :select, :collection => SupportType.all.map {|i|[i.id, i.name]}%></td>
                   <td class="destroy-table">
                     <%= link_to pamma_participation, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-remove{fill:#eb3c46;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-remove" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
                     <% end %>
                   </td>
                 </tr>

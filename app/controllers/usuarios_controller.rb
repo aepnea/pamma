@@ -26,7 +26,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'usuario was successfully created.' }
+        format.html { redirect_to root_path, notice: 'usuario was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
@@ -44,6 +44,7 @@ class UsuariosController < ApplicationController
       respond_to do |format|
 
       if @user.update(user_params)
+        format.html { redirect_to root_path, notice: 'El usuario edito sus datos' }
         format.json { respond_with_bip(@user) }
       else
         format.html{redirect_to root_path, notice: @user.errors.full_messages}
@@ -58,6 +59,6 @@ class UsuariosController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :surname, :rut, :birthdate, :gender_id, :civil_status_id, :address, :village, :mobile, :landline, :region_id, :province_id, :commune_id)
+      params.require(:user).permit(:first_name, :last_name, :surname, :rut, :birthdate, :gender_id, :civil_status_id, :address, :village, :mobile, :landline, :region_id, :province_id, :commune_id, :email, :password)
     end
 end

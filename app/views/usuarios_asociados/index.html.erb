@@ -1,9 +1,9 @@
 <div class="col-md-2">
-  <h1 class="titulo-intro">Usuarios Asociados</h1>
+  <h1 class="titulo-intro">Usuarios</h1>
 </div>
 
 <div class="col-md-10">
-  <div class="inner-file">
+  <div class="inner-file no-background">
     <div class="header-file">
       <div class="col-md-8 center">
         <div class="header-cont">
@@ -23,11 +23,15 @@
       </div>
     </div>
     <div class="body-file">
-      <div class="col-md-8 center new-form">
+      <div class="col-md-12">
         <table>
           <thead>
             <tr>
               <th>Nombre</th>
+              <th>Rut</th>
+              <th>Email</th>
+              <th>Editar</th>
+              <th>Borrar</th>
             </tr>
           </thead>
 
@@ -35,12 +39,17 @@
 
             <% @asociative_users.each do |usuario_asociado| %>
               <tr>
-                <td class="like-input"><%= usuario_asociado.name %></td>
-                <td class="like-edit"><%= link_to 'Editar', usuario_asociado%></td>
-
+                <td><%= usuario_asociado.name %></td>
+                <td><%= usuario_asociado.rut %></td>
+                <td><%= usuario_asociado.email %></td>
+                <td>
+                  <%= link_to usuario_asociado, class: "show" do %>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.09 86"><defs><style>.cls-show{fill:#1b75bb;}</style></defs><title>show</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-show" d="M69.09,14l-13-14H14V14H0V86H55.09V72h14Zm-18,68H4V18H14V72H51.09ZM18,68V4H49V20H65.09V68Z"/></g></g></svg>
+                  <% end %>
+                </td>
                 <td class="destroy-table">
                   <%= link_to usuario_asociado, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:#fff;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-1" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-remove{fill:#eb3c46;}</style></defs><title>erase</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="cls-remove" points="14 2.8 11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8 11.2 14 14 11.2 9.8 7 14 2.8"/></g></g></svg>
                   <% end %>
                 </td>
               </tr>

@@ -1,26 +1,22 @@
 <div class="row dashboard-row">
-  <div class="col-md-5">
+  <div class="col-md-12">
     <div class="record-list">
       <div class="title-record">
         <h3>CREAR FICHAS</h3>
       </div>
-      <ul class="record-list-link">
+      <ul class="record-list-int">
         <li>
-          <%= link_to usuarios_path do%>
+          <%= link_to new_usuario_path, class: "create no-margin" do %>
             <div class="record-text">
               <h3>Crear Fichas Persona Natural</h3>
-              <p></p>
             </div>
-            <div class="record-count"></div>
           <% end %>
         </li>
         <li>
-          <%= link_to usuarios_asociados_path do%>
+          <%= link_to new_usuarios_asociado_path, class: "create no-margin" do %>
             <div class="record-text">
               <h3>Crear Fichas Asociativas</h3>
-              <p></p>
             </div>
-            <div class="record-count"></div>
           <% end %>
         </li>
 

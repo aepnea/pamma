@@ -24,35 +24,38 @@
               </div>
               <div class="pull-right">
                 <div class="file-text">
-                  <h3>Grupo Familiar</h3>
-                  <p>Los integrantes de tu familia van aquí.</p>
+                  <h3>Beneficios Anteriores</h3>
+                  <p>Acá debes ingresar los tipos de beneficio que has recibido</p>
                 </div>
                 <div class="file-count"><p>02</p></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="body-file">
-          <div class="col-md-8 center new-form">
-            <div class="field field-text">
+        <div class="body-form">
+          <div class="col-md-9 center new-form">
+            <div class="field4">
               <%= f.label "Nombre Beneficiario " %><br>
               <%= f.text_field :previous_beneficiary %>
             </div>
-            <div class="field field-width">
+            <div class="field6">
               <%= f.label "Numero de veces" %><br>
               <%= f.number_field :number_times%>
             </div>
-            <div class="field field-width">
+            <div class="field5">
               <%= f.label "Tipo de beneficio" %><br>
               <%= f.collection_select :benefit_type_id, BenefitType.all, :id, :name %>
             </div>
-            <div class="field">
+            <div class="field5">
               <%= f.label "Estado del proyecto" %><br>
               <%= f.collection_select :project_state_type_id, ProjectStateType.all, :id, :name %>
             </div>
-            <div class="field">
+            <div class="field5">
               <%= f.label "Tipo de Ayuda" %><br>
               <%= f.collection_select :support_type_id, SupportType.all, :id, :name %>
+            </div>
+            <div>
+              <%= f.submit "Agregar", class: "create"  %>
             </div>
             <%if user_signed_in?%>
               <div class="field">
@@ -60,16 +63,13 @@
                 <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
               </div>
             <%else%>
-              <%if asociave_user_signed_in?%>
+              <%if asociative_user_signed_in?%>
                 <div class="field">
                   <!-- para usuario asociativo-->
-                  <%= f.number_field :asociative_user_id, value: "#{current_asociative_user.id}" %>
+                  <%= f.hidden_field :asociative_user_id, value: "#{current_asociative_user.id}" %>
                 </div>
               <%end%>
             <%end%>
-            <div>
-              <%= f.submit "Agregar", class: "create"  %>
-            </div>
           </div>
         </div>
       </div>

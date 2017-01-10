@@ -1,67 +1,174 @@
-<%= form_for @user, :url => { :controller => "usuarios", :action => "create" } do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+<div class="col-md-2">
+  <h2 class="titulo-intro">
+    INGRESA TUS DATOS EN EL SIGUIENTE FORMULARIO
+  </h2>
+</div>
+<div class="formulario col-md-10">
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<!-- tengo que agregar in if can manage? -->
-  <div class="field">
-    <%= f.label "Nombre" %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label "Apellido" %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label "Segundo Apellido" %><br>
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
-    <%= f.label "RUT" %><br>
-    <%= f.text_field :rut %>
-  </div>
-  <div class="field">
-    <%= f.label "Dirección" %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label "Villa o Población" %><br>
-    <%= f.text_field :village %>
-  </div>
-  <div class="field">
-    <%= f.label "Region" %><br>
-    <%= f.collection_select :region_id, Region.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Provincia" %><br>
-    <%= f.collection_select :province_id, Province.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Comuna" %><br>
-    <%= f.collection_select :commune_id, Commune.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= f.label "Celular" %><br>
-    <%= f.text_field :mobile %>
-  </div>
-  <div class="field">
-    <%= f.label "Correo Electrónico" %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
+  <div class="steps">
+    <%= form_for @user, :url => { :controller => "usuarios", :action => "create" }, html: {id: "login-form", class: "login-form"} do |f| %>
+      <div class="step-container">
+        <div class="step1 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>01</span><p> Datos personales</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-3">
+                <div class="field">
+                  <%= f.label "Nombre:" %><br />
+                  <%= f.text_field :first_name %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Apellido Paterno:" %><br />
+                  <%= f.text_field :last_name %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Apellido Materno:" %><br />
+                  <%= f.text_field :surname %>
+                </div>
+              </div>
+
+              <div class="form-2">
+                <div class="field">
+                  <%= f.label "Fecha Nacimiento:" %><br />
+                  <%= f.date_field :birthdate, class: "datepicker" %>
+                </div>
+                <div class="field">
+                  <%= f.label "Rut:" %><br />
+                  <%= f.text_field :rut %>
+                </div>
+                <div class="field">
+                  <%= f.label "Género:" %>
+                  <%= f.collection_select :gender_id, GenderType.all, :id, :name %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Estado Civil:" %>
+                  <%= f.collection_select :civil_status_type_id, CivilStatusType.all, :id, :name %>
+                </div>         
+                
+              </div>
+              
+            </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
+
+          </div>
+        </div>
+        <!--fin step1  -->
+        
+        <div class="step2 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>02</span><p>Como ubicarte</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                  <%= f.label "Dirección:" %><br />
+                  <%= f.text_field :address %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Región:" %>
+                  <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Población o Villa:" %><br />
+                  <%= f.text_field :village %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Provincia:" %>
+                  <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
+                </div>
+                <div class="form-2-int">
+                  <div class="field">
+                    <%= f.label "Teléfono Movil:" %><br />
+                    <%= f.text_field :mobile %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.label "Teléfono Fijo:" %><br />
+                    <%= f.text_field :landline %>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Comuna:" %>
+                  <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "Nombre Sociedad Minera a la que Pertenece:" %><br />
+                  <%= f.text_field :minning_society_name %>
+                </div>
+
+                <div class="field">
+                  <%= f.label "RUT Sociedad Minera a la que Pertenece:" %><br />
+                  <%= f.text_field :minning_society_rut %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin step2-->
+      
+        
+        <div class="step3 step">
+          <div class="step-inner">
+            <h3 class="title-h3">
+              <span>03</span><p>Ultimos datos y contraseña</p>
+            </h3>
+            <div class="form-group">
+              <div class="form-2">
+                <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :password %>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+              </div>
+              
+              <div class="form-1">
+                <div class="actions">
+                  <%= f.submit "Sign up", class: "submit" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
