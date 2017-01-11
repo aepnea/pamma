@@ -6,8 +6,20 @@ class MilestonesController < ApplicationController
   # GET /milestones
   # GET /milestones.json
   def index
-    @milestones = Milestone.where(user_id: current_user.id)
-    @benefit_requesteds = BenefitRequested.where(user_id: current_user.id)
+    if asociative_user_signed_in?
+      @milestones = Milestone.where(asociative_user_id: current_asociative_user.id)
+      @benefit_requesteds= BenefitRequested.where(asociative_user_id: current_asociative_user.id)
+    elsif user_signed_in?
+      @milestones = Milestone.where(user_id: current_user.id)
+      @benefit_requesteds = BenefitRequested.where(user_id: current_user.id)
+    else
+      #### aca tengo que hacer la querie que me mostrara las postulaciones hechas por los usuarios
+      #####
+
+      
+      @milestones = Milestone.all
+      @benefit_requesteds = BenefitRequested.all
+    end
   end
 
   # GET /milestones/1
