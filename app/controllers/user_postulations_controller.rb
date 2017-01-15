@@ -22,10 +22,17 @@ class UserPostulationsController < ApplicationController
       t = DateTime.now
       region = current_asociative_user.region_id
       @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+      @period.each do |period|
+        session[:postulation_id] = period.id
+      end
     else
       t = DateTime.now
       region = current_user.region_id
       @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+      @period.each do |period|
+        session[:postulation_id] = period.id
+      end
+
     end
   end
 

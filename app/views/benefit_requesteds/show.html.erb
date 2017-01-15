@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
 
-<p>
-  <strong>Benefit type:</strong>
-  <%= @benefit_requested.benefit_type_id %>
-</p>
+    <%= link_to 'Volver', milestones_path %>
+    <div class="inner-file">
+      <div class="header-file">
+        <div class="col-md-8 center">
+          <div class="file-text">
+            <h3>Beneficios Solicitados</h3>
+          </div>
+        </div>
+      </div>
+      <div class="body-file">
+        <div class="col-md-8 center">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo Beneficio</th>
+                <th>Inversión Solicitada</th>
+                <th>Comentarios</th>
+              </tr>
+            </thead>
 
-<p>
-  <strong>Estimated investment:</strong>
-  <%= @benefit_requested.estimated_investment %>
-</p>
+            <tbody>
 
-<p>
-  <strong>Comments:</strong>
-  <%= @benefit_requested.comments %>
-</p>
+                <tr>
+                  <td><%= @benefit_requested.benefit_type.name %></td>
+                  <td><%= @benefit_requested.estimated_investment %></td>
+                  <td><%= @benefit_requested.comments %></td>
 
-<p>
-  <strong>User:</strong>
-  <%= @benefit_requested.user_id %>
-</p>
-
-<p>
-  <strong>Asociative user:</strong>
-  <%= @benefit_requested.asociative_user_id %>
-</p>
-
-<p>
-  <strong>Postulation:</strong>
-  <%= @benefit_requested.postulation_id %>
-</p>
-
-<%= link_to 'Edit', edit_benefit_requested_path(@benefit_requested) %> |
-<%= link_to 'Back', benefit_requesteds_path %>
+                </tr>
+            </tbody>
+          </table>

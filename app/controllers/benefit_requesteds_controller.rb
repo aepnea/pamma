@@ -14,7 +14,19 @@ class BenefitRequestedsController < ApplicationController
 
   # GET /benefit_requesteds/new
   def new
-    @benefit_requested = BenefitRequested.new
+    @postulation = cookies[:id]
+    if current_asociative_user.blank?
+      @user = current_user.id
+      @milestone = Milestone.new
+      @benefit_requested = BenefitRequested.new
+
+    else
+      @asociative_user = current_asociative_user.id
+      @milestone = Milestone.new
+      @benefit_requested = BenefitRequested.new
+      @benefit_requested = BenefitRequested.new
+
+    end
   end
 
   # GET /benefit_requesteds/1/edit
@@ -28,7 +40,7 @@ class BenefitRequestedsController < ApplicationController
 
     respond_to do |format|
       if @benefit_requested.save
-        format.html { redirect_to @benefit_requested, notice: 'Benefit requested was successfully created.' }
+        format.html { redirect_to milestones_path, notice: 'Benefit requested was successfully created.' }
         format.json { render :show, status: :created, location: @benefit_requested }
       else
         format.html { render :new }
@@ -56,7 +68,7 @@ class BenefitRequestedsController < ApplicationController
   def destroy
     @benefit_requested.destroy
     respond_to do |format|
-      format.html { redirect_to benefit_requesteds_url, notice: 'Benefit requested was successfully destroyed.' }
+      format.html { redirect_to milestones_path, notice: 'Benefit requested was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

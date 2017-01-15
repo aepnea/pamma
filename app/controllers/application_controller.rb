@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :home_redirect
 
   rescue_from ActionController::UnknownFormat, with: :home_redirect
+
+
   def home_redirect
       redirect_to home_create_files_path
       logger.error " ###################### Problema en ruta edit"
@@ -28,9 +30,10 @@ class ApplicationController < ActionController::Base
       logger.info "Creando postulation_cookie"
 
     ## si por algun motivo no se encuentra el carro se le crea uno nuevo
-    rescue ActiveRecord::RecordNotFound => e
-      @postulation_cookie = Postulation.create!(user_id: current_user.id)
-      #cookies[:cart_id] = @shopping_cart.id
-      cookies[:id] = {:value => @postulation_cookie.id, :expires => 168.hour.from_now}
-    end
+      rescue ActiveRecord::RecordNotFound => e
+        @postulation_cookie = Postulation.create!(user_id: current_user.id)
+        #cookies[:cart_id] = @shopping_cart.id
+        cookies[:id] = {:value => @postulation_cookie.id, :expires => 168.hour.from_now}
+  end
+
 end

@@ -34,46 +34,8 @@
     <!-- reemplazar submit por un solo botón-->
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Ingresar Hito", class: "create" %>
   </div>
 <% end %>
 
 <!-- FORMULARIO DE BENEFICIO REQUERIDO-->
-
-<%= form_for(@benefit_requested) do |b| %>
-  <% if @benefit_requested.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@benefit_requested.errors.count, "error") %> prohibited this benefit_requested from being saved:</h2>
-
-      <ul>
-      <% @benefit_requested.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= b.label "Beneficio Solicitado" %><br>
-    <%= b.collection_select :benefit_type_id, BenefitType.all, :id, :name %>
-  </div>
-  <div class="field">
-    <%= b.label "Inversión Estimada" %><br>
-    <%= b.number_field :estimated_investment %>
-  </div>
-  <div class="field">
-    <%= b.label :comments %><br>
-    <%= b.text_area :comments %>
-  </div>
-
-      <%= b.hidden_field :user_id, value: @user %>
-      <%= b.hidden_field :asociative_user_id, value: @asociative_user %>
-      <%= b.hidden_field :postulation_id, value: @postulation %>
-
-
-<!-- reemplazar submit por un solo botón-->
-
-  <div class="actions">
-    <%= link_to "Save", "#", class: 'submit' %>
-  </div>
-<% end %>

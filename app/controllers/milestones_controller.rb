@@ -16,10 +16,11 @@ class MilestonesController < ApplicationController
       #### aca tengo que hacer la querie que me mostrara las postulaciones hechas por los usuarios
       #####
 
-      
+
       @milestones = Milestone.all
       @benefit_requesteds = BenefitRequested.all
     end
+
   end
 
   # GET /milestones/1
@@ -56,7 +57,7 @@ class MilestonesController < ApplicationController
 
     respond_to do |format|
       if @milestone.save
-        format.html { redirect_to @milestone, notice: 'Milestone was successfully created.' }
+        format.html { redirect_to milestones_path, notice: 'Milestone was successfully created.' }
         format.json { render :show, status: :created, location: @milestone }
       else
         format.html { render :new }
