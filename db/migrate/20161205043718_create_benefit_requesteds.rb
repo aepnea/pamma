@@ -7,6 +7,7 @@ class CreateBenefitRequesteds < ActiveRecord::Migration
       t.integer :user_id
       t.integer :asociative_user_id
       t.integer :postulation_id
+      t.integer :postulation_date_id
 
       t.timestamps null: false
     end

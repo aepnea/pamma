@@ -5,10 +5,11 @@ class AdminPostulationsController < ApplicationController
   # GET /postulations.json
   def index
   #  @postulations = PostulationDate.all
-  t = DateTime.now
-  region = current_admin.region_id
-  @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    t = DateTime.now
+    region = current_admin.region_id
+    @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
   end
+
 
   # GET /postulations/1
   # GET /postulations/1.json

@@ -37,98 +37,98 @@
           <div class="form-group">
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :work_name %><br>
+                  <%= f.label "Nombre Faena" %><br>
                   <%= f.text_field :work_name %>
                 </div>
                 <div class="field">
-                  <%= f.label :localization %><br>
+                  <%= f.label "Ubicación" %><br>
                   <%= f.text_field :localization %>
                 </div>
               </div>
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :sector %><br>
+                  <%= f.label "Sector" %><br>
                   <%= f.text_field :sector %>
                 </div>
                 <div class="field">
-                  <%= f.label :mountain_range %><br>
+                  <%= f.label "Rango Montañoso" %><br>
                   <%= f.text_field :mountain_range %>
                 </div>
               </div>
 
               <div class="form-3">
                 <div class="field">
-                  <%= f.label :region_id %><br>
+                  <%= f.label "Región" %><br>
                   <%= f.collection_select :region_id, Region.order(:id), :id, :name, {:include_blank => 'Selecciona una región'}, {:id => "region_id"} %>
                 </div>
                 <div class="field">
-                  <%= f.label :province_id %><br>
+                  <%= f.label "Provincia" %><br>
                   <%= f.grouped_collection_select :province_id, Region.order(:name), :provinces, :name, :id, :name, {:include_blank => 'Selecciona una Provincia'}, {:id => "province_id", :disabled => "disabled"} %>
                 </div>
                 <div class="field">
-                  <%= f.label :commune_id %><br>
+                  <%= f.label "Comuna" %><br>
                   <%= f.grouped_collection_select :commune_id, Province.all, :communes, :name, :id, :name, {:include_blank => 'Selecciona una comuna'}, {:id => "commune_id", :disabled => "disabled"} %>
                 </div>
               </div>
 
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :utm_north_coordinate %><br>
+                  <%= f.label "Cordenada UTM Norte" %><br>
                   <%= f.text_field :utm_north_coordinate %>
                 </div>
                 <div class="field">
-                  <%= f.label :utm_east_coordinate %><br>
+                  <%= f.label "Cordenada UTM Este" %><br>
                   <%= f.text_field :utm_east_coordinate %>
                 </div>
               </div>
-              
+
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :buyer_power %><br>
+                  <%= f.label "Poder Vendedor" %><br>
                   <%= f.text_field :buyer_power %>
                 </div>
                 <div class="field">
-                  <%= f.label :distance %><br>
+                  <%= f.label "Distancia" %><br>
                   <%= f.text_field :distance %>
                 </div>
               </div>
 
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :mining_district %><br>
+                  <%= f.label "Distrito Minero" %><br>
                   <%= f.text_field :mining_district %>
                 </div>
                 <div class="field">
-                  <%= f.label :number_workers %><br>
+                  <%= f.label "Cantidad de Trabajadores" %><br>
                   <%= f.number_field :number_workers %>
                 </div>
               </div>
 
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :owner_type_id %><br>
-                  <%= f.number_field :owner_type_id %>
+                  <%= f.label "Tipo de Pertenencia" %><br>
+                  <%= f.collection_select :owner_type_id, OwnerType.all, :id, :name %>
                 </div>
                 <div class="field">
-                  <%= f.label :mining_properties_constitution_type_id %><br>
-                  <%= f.number_field :mining_properties_constitution_type_id %>
+                  <%= f.label "Tipo de Constitución Minera" %><br>
+                  <%= f.collection_select :mining_properties_constitution_type_id, MiningPropertiesConstitutionType.all, :id, :name %>
                 </div>
               </div>
 
               <div class="form-2">
                 <div class="field">
-                  <%= f.label :operation_type_id %><br>
-                  <%= f.number_field :operation_type_id %>
+                  <%= f.label "Tipo de Operación" %><br>
+                  <%= f.collection_select :operation_type_id, OperationType.all, :id, :name %>
                 </div>
                 <div class="field">
-                  <%= f.label :extracted_mineral_type_id %><br>
-                  <%= f.number_field :extracted_mineral_type_id %>
+                  <%= f.label "Principal Mineral Extraído" %><br>
+                  <%= f.collection_select :extracted_mineral_type_id, ExtractedMineralType.all, :id, :name %>
                 </div>
               </div>
 
               <div class="field">
-                <%= f.label :mining_information_available_type_id %><br>
-                <%= f.number_field :mining_information_available_type_id %>
+                <%= f.label "Información Minera Disponible" %><br>
+                <%= f.collection_select :mining_information_available_type_id, MiningInformationAvailableType.all, :id, :name %>
               </div>
               <div>
                 <%= f.submit "Agregar", class: "create"  %>

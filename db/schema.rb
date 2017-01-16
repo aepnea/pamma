@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20161221113734) do
     t.integer  "user_id",              limit: 4
     t.integer  "asociative_user_id",   limit: 4
     t.integer  "postulation_id",       limit: 4
+    t.integer  "postulation_date_id",  limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
   end

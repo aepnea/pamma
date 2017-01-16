@@ -16,4 +16,5 @@
 
 class PostulationDate < ActiveRecord::Base
   belongs_to :region
+  has_many :benefit_requesteds
 end

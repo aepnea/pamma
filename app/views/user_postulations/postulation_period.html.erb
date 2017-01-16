@@ -6,7 +6,11 @@
     <div class="postulation-section-nocolor">
       <div class="postulation-body col-md-8 center">
         <%@period.each do |p|%>
-          <%= link_to p.name, milestones_path, class: "postulation-info-orange width-total" %>
+            <%if state = true%>
+              <%= link_to p.name, milestones_path, class: "postulation-info-orange width-total" %>
+            <%elsif state = false%>
+              No hay Periodos de Postualción Disponibles.
+            <%end%>
         <%end%>
       </div>
     </div>

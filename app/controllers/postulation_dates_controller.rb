@@ -42,7 +42,7 @@ class PostulationDatesController < ApplicationController
   def update
     respond_to do |format|
       if @postulation_date.update(postulation_date_params)
-        format.html { redirect_to @postulation_date, notice: 'Postulation date was successfully updated.' }
+        format.html { redirect_to admin_postulations_path, notice: 'Postulation date was successfully updated.' }
         format.json { render :show, status: :ok, location: @postulation_date }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PostulationDatesController < ApplicationController
   def destroy
     @postulation_date.destroy
     respond_to do |format|
-      format.html { redirect_to postulation_dates_url, notice: 'Postulation date was successfully destroyed.' }
+      format.html { redirect_to admin_postulations_path, notice: 'Postulation date was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

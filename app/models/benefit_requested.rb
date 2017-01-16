@@ -19,6 +19,7 @@ class BenefitRequested < ActiveRecord::Base
   belongs_to :asociative_user
 
   belongs_to :postulation
+  belongs_to :postulation_date
 #  has_one :milestone
 #  accepts_nested_attributes_for :milestone, :reject_if => :all_blank, :update_only => true, :allow_destroy => true
 

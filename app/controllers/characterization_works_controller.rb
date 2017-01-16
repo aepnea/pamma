@@ -39,7 +39,8 @@ class CharacterizationWorksController < ApplicationController
 
     respond_to do |format|
       if @characterization_work.save
-        format.html { redirect_to @characterization_work, notice: 'Characterization work was successfully created.' }
+
+        format.html { redirect_to root_path, notice: 'Characterization work was successfully created.' }
         format.json { render :show, status: :created, location: @characterization_work }
       else
         format.html { render :new }

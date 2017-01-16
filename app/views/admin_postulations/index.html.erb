@@ -1,13 +1,53 @@
-<div class="col-md-2">
-  <h1 class="titulo-intro">Postulaciones</h1>
-</div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="inner-file">
+            <div class="header-file">
+              <div class="col-md-8 center">
+                <div class="file-text">
+                  <h3>Periodos de Postulación</h3>
+                  <p>Periodos de Postulación abiertos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="body-file">
+              <div class="col-md-8 center">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Fecha Inicio</th>
+                      <th>Fecha Término</th>
+                      <th>Región</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <%@period.each do |p|%>
+                      <tr>
 
-<div class="col-md-10">
-  <div class="postulation-section-nocolor">
-    <div class="postulation-body col-md-8 center">
-      <%@period.each do |p|%>
-          <div class="postulation-info-orange">
-            Nombre: <%= link_to p.name, milestones_path %>  Fecha Inicio:  <%=p.date_begin%>  Fecha Término: <%=p.date_end%> Region: <%=p.region.name%>
+                       <%if user_signed_in?%>
+                         <td><%= p.name %></td>
+                         <td><%= p.date_begin %></td>
+                         <td><%= p.date_end %></td>
+                         <td><%=p.region.name%></td>
+
+                      </tr>
+                       <%elsif asociative_user_signed_in?%>
+                         <td><%= p.name %></td>
+                         <td><%= p.date_begin %></td>
+                         <td><%= p.date_end %></td>
+                         <td><%=p.region.name%></td>
+
+                      </tr>
+                       <%elsif admin_signed_in?%>
+                         <td><%= p.name %></td>
+                         <td><%= p.date_begin %></td>
+                         <td><%= p.date_end %></td>
+                         <td><%=p.region.name%></td>
+                         <td><%= link_to 'Editar', edit_postulation_date_path(p) %></td>
+                        <td><%= link_to 'Borrar', p, method: :delete, data: { confirm: 'Estas seguro de eliminar?' } %></td>
+                    </tr>
+
+            <%end%>
           </div>
       <%end%>
     </div>

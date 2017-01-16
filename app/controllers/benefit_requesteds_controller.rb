@@ -40,7 +40,41 @@ class BenefitRequestedsController < ApplicationController
 
     respond_to do |format|
       if @benefit_requested.save
-        format.html { redirect_to milestones_path, notice: 'Benefit requested was successfully created.' }
+        ### Para crear postulacion
+        if user_signed_in?
+          user_id = current_user.id
+          pb = PersonalBackground.select(:id).where(user_id: user_id)
+          pb.each do |p|
+             @pb_id = p.id
+          end
+          fg = FamilyGroup.select(:id).where(user_id: user_id)
+          fg.each do |f|
+            @fg_id = f.id
+          end
+          cw = CharacterizationWork.select(:id).where(user_id: user_id)
+          cw.each do |c|
+            @cw_id = c.id
+          end
+          br = BenefitRequested.select(:id).where(user_id: user_id)
+          br.each do |b|
+            @br_id = b.id
+          end
+          Postulation.create([{postulation_date_id: session[:postulation_date_id], user_id: user_id, personal_backgrounds_id: @pb_id, family_group_id: @fg_id, characterization_work_id: @cw_id, benefit_requested_id: @br_id, postulation_state_id: '3'}])
+        elsif asociative_user_signed_in?
+          asociative_user_id = current_asociative_user.id
+          cw = CharacterizationWork.select(:id).where(asociative_user_id: asociative_user_id)
+          cw.each do |c|
+            @cw_id = c.id
+          end
+          br = BenefitRequested.select(:id).where(asociative_user_id: asociative_user_id)
+          br.each do |b|
+            @br_id = b.id
+          end
+          Postulation.create([{postulation_date_id: session[:postulation_date_id], asociative_users_id: asociative_user_id, characterization_work_id: @cw_id, benefit_requested_id: @br_id, postulation_state_id: '3'}])
+
+        end
+
+        format.html { redirect_to milestones_path, notice: 'Usted ha postulado a este fondo' }
         format.json { render :show, status: :created, location: @benefit_requested }
       else
         format.html { render :new }
@@ -81,6 +115,6 @@ class BenefitRequestedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def benefit_requested_params
-      params.require(:benefit_requested).permit(:benefit_type_id, :estimated_investment, :comments, :user_id, :asociative_user_id, :postulation_id)
+      params.require(:benefit_requested).permit(:benefit_type_id, :estimated_investment, :comments, :user_id, :asociative_user_id, :postulation_id, :postulation_date_id)
     end
 end

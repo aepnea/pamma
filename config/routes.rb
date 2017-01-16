@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'postulation_grant/index'
+
 #### Para el dashboard de admin
   get 'admin_files/user_list'
   get 'admin_files/asociative_user_list'
@@ -39,6 +41,9 @@ Rails.application.routes.draw do
     root "home#admin_dashboard", as: "admin_root"
     #### para crear/modificar usuarios desde el admin
     get 'home/create_files'
+
+    ### para cambiar estado de postulaciones
+    get 'postulation_grant/index'
 
     resources :usuarios
     resources :usuarios_asociados
