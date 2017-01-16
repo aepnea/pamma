@@ -35,7 +35,7 @@
                          <td><%= p.name %></td>
                          <td><%= p.date_begin %></td>
                          <td><%= p.date_end %></td>
-                         <td><%=p.region.name%></td>
+                         <td><%=p.region.name%></td>z
 
                       </tr>
                        <%elsif admin_signed_in?%>
@@ -44,6 +44,7 @@
                          <td><%= p.date_end %></td>
                          <td><%=p.region.name%></td>
                          <td><%= link_to 'Editar', edit_postulation_date_path(p) %></td>
+                         <td><%= link_to 'Gestionar', postulation_grant_index_path(id: p.id) %></td>
                         <td><%= link_to 'Borrar', p, method: :delete, data: { confirm: 'Estas seguro de eliminar?' } %></td>
                     </tr>
 

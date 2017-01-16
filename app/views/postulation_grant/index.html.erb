@@ -1,4 +1,45 @@
-<h1>PostulationGrant#index</h1>
-<p>Find me in app/views/postulation_grant/index.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="inner-file">
+      <div class="header-file">
+        <div class="col-md-8 center">
+          <div class="file-text">
+            <h3>Postulaciones Recibidas</h3>
+            <p>Acá puedes gestionar todas las postulaciones</p>
+          </div>
+        </div>
+      </div>
+      <div class="body-file">
+        <div class="col-md-8 center">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Monto Solicitado</th>
+                <th>Comuna</th>
+                <th>Región</th>
+                <th>Estado Solicitud</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--acá va el each-->
+              <%@br.each do |b| %>
+              <tr>
+                 <td><%=b.comments%></td>
+                 <td><%=  %></td>
+                 <td><%=  %></td>
+                 <td><%=  %></td>
+                 <td><%=  %></td>
+                 <td><%=  %></td>
+                 <td><%= link_to 'Gestionar' %></td>
+
+              </tr>
+            </tbody>
+              <%end%>
+    </div>
+  </div>
+</div>
+
 
 <!--nombre comuna monto solicitado-->

@@ -9,10 +9,10 @@
       <% @postulations_list.each do |p|%>
         <div class="row no-padding">
           <div class="col-md-6">
-            <p class="postulation-info">Nombre Periodo de Postulación <%= p.postulation_date.name%></p>
+            <p class="postulation-info">Nombre Periodo de Postulación <%= p.postulation_date_id%></p>
           </div>
           <div class="col-md-6">
-            <p class="postulation-info">Estado Postulación:<%= p.postulation_state.name %></p>
+            <p class="postulation-info">Estado Postulación:<%= p.postulation_state_id %></p>
           </div>
         </div>
       <% end %>

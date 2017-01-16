@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-12">
+        <%= form_for(@benefit_requested) do |b| %>
+          <% if @benefit_requested.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@benefit_requested.errors.count, "error") %> prohibited this benefit_requested from being saved:</h2>
+
+              <ul>
+              <% @benefit_requested.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+      <div class="inner-file">
+        <div class="header-file">
+          <div class="col-md-8 center">
+            <div class="header-cont">
+              <div class="pull-left">
+              </div>
+              <div class="pull-right">
+                <div class="file-text">
+                  <h3>Beneficio Solicitado</h3>
+                  <p>Ingresar el beneficio solicitado acá.</p>
+                </div>
+                <div class="file-count"><p></p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body-form">
+          <div class="col-md-9 center new-form">
+             <div class="field">
+               <%= b.label "Beneficio Solicitado" %><br>
+               <%= b.collection_select :benefit_type_id, BenefitType.all, :id, :name %>
+             </div>
+             <div class="field">
+               <%= b.label "Inversión Estimada" %><br>
+               <%= b.number_field :estimated_investment %>
+             </div>
+             <div class="field">
+               <%= b.label :comments %><br>
+               <%= b.text_area :comments %>
+             </div>
+
+                 <%= b.hidden_field :user_id, value: @user %>
+                 <%= b.hidden_field :asociative_user_id, value: @asociative_user %>
+                 <%= b.hidden_field :postulation_date_id, value: session[:postulation_date_id] %>
+
+
+           <!-- reemplazar submit por un solo botón-->
+
+           <div class="actions">
+             <%= b.submit "Ingresar Beneficio", class: "create" %>
+           </div>
+           <% end %>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
