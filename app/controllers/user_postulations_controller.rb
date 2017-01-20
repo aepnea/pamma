@@ -20,16 +20,20 @@ class UserPostulationsController < ApplicationController
   def postulation_period
     if asociative_user_signed_in?
       t = DateTime.now
-      region = current_asociative_user.region_id
-      @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
-      @period.each do |period|
+      @period = PostulationDate.where(["date_end > ? ", t.strftime("%Y %m %d") ])
+      ## Descomentar para regionalizacion
+      #region = current_asociative_user.region_id
+      #@period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+      #@period.each do |period|
         session[:postulation_date_id] = period.id
 
       end
     else
       t = DateTime.now
-      region = current_user.region_id
-      @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+      @period = PostulationDate.where(["date_end > ? ", t.strftime("%Y %m %d") ])
+      ## Descomentar para regionalizacion
+      #region = current_user.region_id
+      #@period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
       @period.each do |period|
         session[:postulation_date_id] = period.id
       end

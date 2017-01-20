@@ -20,8 +20,10 @@ class PostulationsController < ApplicationController
   # GET /postulations/1/edit
   def edit
     t = DateTime.now
-    region = current_user.region_id
-    @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    @period = PostulationDate.where(["date_end > ? ", t.strftime("%Y %m %d") ])
+    ## Descomentar para regionalizacion
+    #region = current_user.region_id
+    #@period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
   end
 
   # POST /postulations

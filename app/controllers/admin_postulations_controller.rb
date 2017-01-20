@@ -6,8 +6,10 @@ class AdminPostulationsController < ApplicationController
   def index
   #  @postulations = PostulationDate.all
     t = DateTime.now
-    region = current_admin.region_id
-    @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
+    @period = PostulationDate.where(["date_end > ?", t.strftime("%Y %m %d") ])
+  # Descomentar  para regionalizacion
+  #  region = current_admin.region_id
+  #  @period = PostulationDate.where(["date_end > ? AND region_id = #{region}", t.strftime("%Y %m %d") ])
   end
 
 

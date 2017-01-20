@@ -2,17 +2,22 @@ class AdminFilesController < ApplicationController
   def user_list
     logger.info "#################### ID DE REGION: #{current_admin.region_id}"
     logger.info "#################### TIPO DE ADMIN: #{current_admin.admin_type_id}"
-    if current_admin.admin_type_id = 1
-      logger.info "#################### ESTOY DENTRO DEL IF"
 
-        @user_list = User.all
-    else
-        @user_list = User.where(region_id: current_admin.region_id)
-    end
+    @user_list = User.all
+    ### Descomentar para regionalizacion
+    #if current_admin.admin_type_id = 1
+    #  logger.info "#################### ESTOY DENTRO DEL IF"
+    #
+    #    @user_list = User.all
+    #else
+    #    @user_list = User.where(region_id: current_admin.region_id)
+    #end
   end
 
   def asociative_user_list
     ### utilizar esta variable en la vista
+    #@asociative_user_list = AsociativeUser.all
+    ##Descomentar para regionalizacion
     @asociative_user_list = AsociativeUser.where(region_id: current_admin.region_id)
   end
 
